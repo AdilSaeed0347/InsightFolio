@@ -1,0 +1,397 @@
+/* frontend/styles/chatbot.css
+/* Chatbot styles with robot-like design and animations */
+
+/* Chatbot Container */
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2000;
+}
+
+/* Chatbot Button (Minimized State) */
+.chatbot-button {
+    background: linear-gradient(135deg, #8798e4 0%, #c4a6e1 100%); /* Controls the gradient background of the chatbot button (purple shades) */
+    border-radius: 30px; /* Reduced from 50px for a smaller button */
+    padding: 10px 15px; /* Reduced padding for a smaller size */
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Adjusted shadow for smaller size */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduced gap for compactness */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.chatbot-button:hover {
+    transform: translateY(-2px); /* Reduced lift on hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.chatbot-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); /* Controls the shine effect on hover (white transparent) */
+    transition: left 0.5s;
+}
+
+.chatbot-button:hover:before {
+    left: 100%;
+}
+
+/* Robot Icon Styles */
+.robot-icon {
+    position: relative;
+    width: 30px; /* Reduced from 40px for smaller size */
+    height: 40px; /* Reduced from 50px */
+}
+
+.robot-head {
+    width: 22px; /* Reduced from 30px */
+    height: 18px; /* Reduced from 25px */
+    background: #fff; /* Controls the robot head background (white) */
+    border-radius: 10px 10px 6px 6px; /* Adjusted for proportion */
+    position: relative;
+    margin: 0 auto;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); /* Reduced shadow */
+}
+
+.robot-eyes {
+    position: absolute;
+    top: 6px; /* Adjusted for smaller head */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9px; /* Reduced from 12px */
+    height: 3px; /* Reduced from 4px */
+    background: #60a5fa; /* Softer blue for better contrast */
+    border-radius: 2px;
+    animation: robotBlink 3s infinite;
+}
+
+.robot-eyes:before,
+.robot-eyes:after {
+    content: '';
+    position: absolute;
+    width: 3px; /* Reduced from 4px */
+    height: 3px; /* Reduced from 4px */
+    background: #60a5fa; /* Softer blue for better contrast */
+    border-radius: 50%;
+    top: 0;
+}
+
+.robot-eyes:before {
+    left: 2px;
+}
+
+.robot-eyes:after {
+    right: 2px;
+}
+
+.robot-body {
+    width: 15px; /* Reduced from 20px */
+    height: 12px; /* Reduced from 15px */
+    background: #e5f3ff; /* Controls the robot body background (light blue) */
+    border-radius: 3px; /* Adjusted for proportion */
+    margin: 2px auto 0;
+    position: relative;
+}
+
+.robot-body:after {
+    content: '';
+    position: absolute;
+    width: 6px; /* Reduced from 8px */
+    height: 2px;
+    background: #6e98f3; /* Controls the robot body detail line (medium blue) */
+    top: 5px; /* Adjusted for smaller body */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1px;
+}
+
+.robot-arm {
+    position: absolute;
+    width: 2px; /* Reduced from 3px */
+    height: 10px; /* Reduced from 12px */
+    background: #fff; /* Controls the robot arms background (white) */
+    border-radius: 2px;
+    top: 22px; /* Adjusted for smaller body */
+    animation: robotHandShake 1.5s ease-in-out infinite;
+}
+
+.robot-arm-left {
+    left: 6px; /* Adjusted for smaller icon */
+    transform-origin: bottom;
+    animation-delay: 0s;
+}
+
+.robot-arm-right {
+    right: 6px; /* Adjusted for smaller icon */
+    transform-origin: bottom;
+    animation-delay: 0.5s;
+}
+
+/* Chat Message Bubble with Dynamic Animation */
+.chat-message {
+    background: #f3f4f6; /* Softer gray background for better contrast (replaced sharp blue #fff) */
+    color: #374151; /* Darker text color for readability (replaced #333) */
+    padding: 6px 10px; /* Reduced padding */
+    border-radius: 12px; /* Adjusted for smaller size */
+    font-size: 0.8em; /* Reduced from 0.9em */
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* Adjusted shadow */
+    position: relative;
+    animation: messageTypeIn 2s ease-out forwards, messageFloat 2s ease-in-out infinite 2s; /* Dynamic typing + float */
+    opacity: 0; /* Start hidden for animation */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+}
+
+.chat-message:after {
+    content: '';
+    position: absolute;
+    left: -6px; /* Adjusted for smaller size */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border: 6px solid transparent; /* Adjusted for smaller size */
+    border-right-color: #f3f4f6; /* Matches new background */
+}
+
+/* Chat Window (Expanded State) */
+.chat-window {
+    background: #fff; /* Controls the chat window background (white) */
+    border-radius: 12px; /* Adjusted for smaller look */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12); /* Adjusted shadow */
+    width: 320px; /* Reduced from 350px */
+    height: 450px; /* Reduced from 500px */
+    position: absolute;
+    bottom: 70px; /* Adjusted for smaller button */
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: chatWindowSlideUp 0.3s ease-out;
+}
+
+/* Chat Header */
+.chat-header {
+    background: linear-gradient(135deg, #8798e4 0%, #c4a6e1 100%); /* Matches button gradient */
+    color: white; /* Controls the chat header text color (white) */
+    padding: 10px 15px; /* Reduced padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em; /* Reduced from 1.1em */
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white; /* Controls the close button color (white) */
+    font-size: 1.3em; /* Reduced from 1.5em */
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+    background: rgba(255,255,255,0.2); /* Controls the close button hover background (semi-transparent white) */
+}
+
+/* Chat Messages Area */
+.chat-messages {
+    flex: 1;
+    padding: 15px; /* Reduced from 20px */
+    overflow-y: auto;
+    background: #f8f9fa; /* Controls the messages area background (light gray) */
+}
+
+/* Message Styles */
+.message {
+    margin-bottom: 12px; /* Reduced from 15px */
+    max-width: 80%;
+    animation: messageSlideIn 0.3s ease-out;
+}
+
+.message.user-message {
+    margin-left: auto;
+}
+
+.message.user-message .message-content {
+    background: #60a5fa; /* Controls the user message background (softer blue) */
+    color: white; /* Controls the user message text color (white) */
+    margin-left: auto;
+}
+
+.message.bot-message .message-content {
+    background: #f3f4f6; /* Matches chat-message background for consistency */
+    color: #374151; /* Matches chat-message text color */
+    border: 1px solid #e5e7eb; /* Controls the bot message border (light gray) */
+}
+
+.message-content {
+    padding: 10px 12px; /* Reduced from 12px 16px */
+    border-radius: 12px; /* Adjusted for smaller size */
+    font-size: 0.85em; /* Reduced from 0.9em */
+    line-height: 1.4;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06); /* Adjusted shadow */
+}
+
+.message-time {
+    font-size: 0.65em; /* Reduced from 0.7em */
+    color: #666; /* Controls the message time text color (medium gray) */
+    margin-top: 4px; /* Reduced from 5px */
+    text-align: right;
+}
+
+.message.user-message .message-time {
+    text-align: right;
+}
+
+.message.bot-message .message-time {
+    text-align: left;
+}
+
+/* Chat Input Container */
+.chat-input-container {
+    padding: 15px; /* Reduced from 20px */
+    background: white; /* Controls the input container background (white) */
+    border-top: 1px solid #e5e7eb; /* Controls the input container border (light gray) */
+    display: flex;
+    gap: 8px; /* Reduced from 10px */
+}
+
+#chat-input {
+    flex: 1;
+    border: 2px solid #e5e7eb; /* Controls the input border (light gray) */
+    border-radius: 15px; /* Reduced from 20px */
+    padding: 8px 12px; /* Reduced from 12px 16px */
+    font-size: 0.85em; /* Reduced from 0.9em */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#chat-input:focus {
+    border-color: #60a5fa; /* Softer blue for focus */
+}
+
+.send-btn {
+    background: #60a5fa; /* Softer blue for consistency */
+    color: white; /* Controls the send button text color (white) */
+    border: none;
+    width: 35px; /* Reduced from 40px */
+    height: 35px; /* Reduced from 40px */
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em; /* Reduced from 1.2em */
+    transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+    background: #3b82f6; /* Slightly darker softer blue */
+    transform: scale(1.05);
+}
+
+.send-btn:disabled {
+    background: #9ca3af; /* Controls the send button disabled background (gray) */
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Animations */
+@keyframes robotBlink {
+    0%, 90%, 100% { height: 3px; }
+    95% { height: 1px; }
+}
+
+@keyframes robotHandShake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(20deg); }
+    75% { transform: rotate(-20deg); }
+}
+
+@keyframes messageTypeIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes messageFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-2px); } /* Reduced float */
+}
+
+@keyframes chatWindowSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes messageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px); /* Reduced from 10px */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design for Chatbot */
+@media (max-width: 768px) {
+    .chat-window {
+        width: 280px; /* Reduced from 300px */
+        height: 400px; /* Reduced from 450px */
+        bottom: 65px; /* Adjusted */
+    }
+    
+    .chatbot-button {
+        padding: 8px 12px; /* Reduced */
+    }
+    
+    .chat-message {
+        font-size: 0.75em; /* Reduced from 0.8em */
+    }
+}
+
+
+.message-content a {
+    color: blue !important;
+    text-decoration: underline;
+}
+.message-content strong {
+    font-weight: bold;
+}
+
+
+.chat-messages {
+    max-height: 400px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}

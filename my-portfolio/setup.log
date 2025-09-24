@@ -1,0 +1,119 @@
+2025-09-11 13:13:40,318 - INFO - Loading faiss with AVX2 support.
+2025-09-11 13:13:40,753 - INFO - Successfully loaded faiss with AVX2 support.
+2025-09-11 13:13:41,456 - INFO - Use pytorch device_name: cpu
+2025-09-11 13:13:41,456 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-11 13:13:47,984 - INFO - Loaded FAISS index with 21 vectors
+2025-09-11 13:13:48,200 - INFO - Built TF-IDF index with 21 documents
+2025-09-11 13:13:48,201 - INFO - Loaded 21 documents
+2025-09-11 13:13:48,201 - INFO - Enhanced retriever initialized with 21 documents
+2025-09-11 13:13:48,202 - INFO - FAISS: True, TF-IDF: True
+2025-09-11 13:13:48,218 - INFO -    - Total chunks: 21
+2025-09-11 13:13:48,218 - INFO -    - Project chunks: 16
+2025-09-11 13:13:48,219 - INFO -    - Unique sources: 1
+2025-09-11 13:13:49,762 - INFO - Use pytorch device_name: cpu
+2025-09-11 13:13:49,763 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-11 13:13:54,571 - INFO - Loaded FAISS index with 21 vectors
+2025-09-11 13:13:54,641 - INFO - Built TF-IDF index with 21 documents
+2025-09-11 13:13:54,641 - INFO - Loaded 21 documents
+2025-09-11 13:13:54,645 - INFO - Enhanced retriever initialized with 21 documents
+2025-09-11 13:13:54,645 - INFO - FAISS: True, TF-IDF: True
+2025-09-11 13:13:54,666 - INFO - Processing query: Who is Adil Saeed?
+2025-09-11 13:13:55,688 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-11 13:13:55,690 - ERROR - AI analysis error: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-11 13:14:47,274 - INFO - [STARTING] Starting Adil's Portfolio RAG Setup...
+2025-09-11 13:14:47,331 - INFO - [SUCCESS] Environment configuration looks good!
+2025-09-11 13:14:47,332 - INFO - [SUCCESS] Directory ensured: rag/documents
+2025-09-11 13:14:47,332 - INFO - [SUCCESS] Directory ensured: rag/vectorstore
+2025-09-11 13:14:47,333 - INFO - [SUCCESS] Directory ensured: rag/embeddings
+2025-09-11 13:14:47,334 - INFO - [SUCCESS] Directory ensured: logs
+2025-09-11 13:14:47,335 - INFO - [SUCCESS] Directory ensured: backend/routes
+2025-09-11 13:14:47,336 - INFO - [SUCCESS] Directory ensured: backend/services
+2025-09-11 13:14:59,364 - INFO - Loading faiss with AVX2 support.
+2025-09-11 13:14:59,384 - INFO - Successfully loaded faiss with AVX2 support.
+2025-09-11 13:14:59,695 - INFO - [STARTING] Initializing RAG system...
+2025-09-11 13:14:59,699 - INFO - Use pytorch device_name: cpu
+2025-09-11 13:14:59,699 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-11 13:15:05,330 - INFO - Loaded FAISS index with 21 vectors
+2025-09-11 13:15:05,351 - INFO - Built TF-IDF index with 21 documents
+2025-09-11 13:15:05,378 - INFO - Loaded 21 documents
+2025-09-11 13:15:05,380 - INFO - Enhanced retriever initialized with 21 documents
+2025-09-11 13:15:05,380 - INFO - FAISS: True, TF-IDF: True
+2025-09-11 13:15:05,381 - INFO - [INFO] Current stats: {'total_chunks': 21, 'project_chunks': 16, 'unique_sources': 1, 'embedding_dimension': 384, 'use_faiss': True, 'use_tfidf': True, 'available_libraries': {'faiss': True, 'sklearn': True, 'pypdf2': True, 'docx': True}, 'index_size': 21, 'has_tfidf': True}
+2025-09-11 13:15:05,381 - INFO - [SUCCESS] RAG system already has documents loaded!
+2025-09-11 13:15:05,381 - INFO -    - Total chunks: 21
+2025-09-11 13:15:05,382 - INFO -    - Project chunks: 16
+2025-09-11 13:15:05,382 - INFO -    - Unique sources: 1
+2025-09-11 13:15:05,963 - INFO - [TESTING] Testing RAG system...
+2025-09-11 13:15:06,381 - INFO - Use pytorch device_name: cpu
+2025-09-11 13:15:06,381 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-11 13:15:11,485 - INFO - Loaded FAISS index with 21 vectors
+2025-09-11 13:15:11,565 - INFO - Built TF-IDF index with 21 documents
+2025-09-11 13:15:11,567 - INFO - Loaded 21 documents
+2025-09-11 13:15:11,568 - INFO - Enhanced retriever initialized with 21 documents
+2025-09-11 13:15:11,569 - INFO - FAISS: True, TF-IDF: True
+2025-09-11 13:15:11,571 - INFO - [TEST] Testing query: Who is Adil Saeed?
+2025-09-11 13:15:11,575 - INFO - Processing query: Who is Adil Saeed?
+2025-09-11 13:15:12,568 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-11 13:15:12,569 - ERROR - AI analysis error: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-11 13:15:12,570 - ERROR - [ERROR] Query failed: 'dict' object has no attribute 'query_type'
+2025-09-11 13:15:12,571 - ERROR - [ERROR] Some RAG system tests failed!
+2025-09-11 13:15:12,573 - ERROR - [FAILED] RAG system testing failed!
+2025-09-11 13:17:42,747 - INFO - [STARTING] Starting Adil's Portfolio RAG Setup...
+2025-09-11 13:17:42,790 - INFO - [SUCCESS] Environment configuration looks good!
+2025-09-11 13:17:42,791 - INFO - [SUCCESS] Directory ensured: rag/documents
+2025-09-11 13:17:42,792 - INFO - [SUCCESS] Directory ensured: rag/vectorstore
+2025-09-11 13:17:42,793 - INFO - [SUCCESS] Directory ensured: rag/embeddings
+2025-09-11 13:17:42,794 - INFO - [SUCCESS] Directory ensured: logs
+2025-09-11 13:17:42,794 - INFO - [SUCCESS] Directory ensured: backend/routes
+2025-09-11 13:17:42,795 - INFO - [SUCCESS] Directory ensured: backend/services
+2025-09-11 13:17:53,724 - INFO - Loading faiss with AVX2 support.
+2025-09-11 13:17:53,756 - INFO - Successfully loaded faiss with AVX2 support.
+2025-09-11 13:17:54,024 - INFO - [STARTING] Initializing RAG system...
+2025-09-11 13:17:54,028 - INFO - Use pytorch device_name: cpu
+2025-09-11 13:17:54,028 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-11 13:17:59,399 - INFO - Loaded FAISS index with 21 vectors
+2025-09-11 13:17:59,429 - INFO - Built TF-IDF index with 21 documents
+2025-09-11 13:17:59,429 - INFO - Loaded 21 documents
+2025-09-11 13:17:59,433 - INFO - Enhanced retriever initialized with 21 documents
+2025-09-11 13:17:59,433 - INFO - FAISS: True, TF-IDF: True
+2025-09-11 13:17:59,433 - INFO - [INFO] Current stats: {'total_chunks': 21, 'project_chunks': 16, 'unique_sources': 1, 'embedding_dimension': 384, 'use_faiss': True, 'use_tfidf': True, 'available_libraries': {'faiss': True, 'sklearn': True, 'pypdf2': True, 'docx': True}, 'index_size': 21, 'has_tfidf': True}
+2025-09-11 13:17:59,434 - INFO - [SUCCESS] RAG system already has documents loaded!
+2025-09-11 13:17:59,435 - INFO -    - Total chunks: 21
+2025-09-11 13:17:59,435 - INFO -    - Project chunks: 16
+2025-09-11 13:17:59,437 - INFO -    - Unique sources: 1
+2025-09-11 13:18:00,055 - INFO - [TESTING] Testing RAG system...
+2025-09-11 13:18:00,464 - INFO - Use pytorch device_name: cpu
+2025-09-11 13:18:00,464 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-11 13:18:05,133 - INFO - Loaded FAISS index with 21 vectors
+2025-09-11 13:18:05,162 - INFO - Built TF-IDF index with 21 documents
+2025-09-11 13:18:05,168 - INFO - Loaded 21 documents
+2025-09-11 13:18:05,169 - INFO - Enhanced retriever initialized with 21 documents
+2025-09-11 13:18:05,169 - INFO - FAISS: True, TF-IDF: True
+2025-09-11 13:18:05,171 - INFO - [TEST] Testing query: Who is Adil Saeed?
+2025-09-11 13:18:05,172 - INFO - Processing query: Who is Adil Saeed?
+2025-09-11 13:18:05,927 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-11 13:18:05,933 - ERROR - AI analysis error: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-11 13:18:05,935 - INFO - [SUCCESS] Query successful - Type: about_adil
+2025-09-11 13:18:05,936 - INFO - [TEST] Testing query: What projects has Adil worked on?
+2025-09-11 13:18:05,937 - INFO - Processing query: What projects has Adil worked on?
+2025-09-11 13:18:06,190 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-11 13:18:06,191 - ERROR - AI analysis error: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-11 13:18:06,192 - INFO - Processing query: 'what projects has adil worked on?'
+2025-09-11 13:18:06,523 - INFO - Returning 5 results
+2025-09-11 13:18:06,903 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-11 13:18:06,905 - ERROR - LLM generation error: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-11 13:18:06,907 - INFO - [SUCCESS] Query successful - Type: projects
+2025-09-11 13:18:06,909 - INFO - [TEST] Testing query: How can I contact Adil?
+2025-09-11 13:18:06,910 - INFO - Processing query: How can I contact Adil?
+2025-09-11 13:18:07,179 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-11 13:18:07,182 - ERROR - AI analysis error: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-11 13:18:07,183 - INFO - [SUCCESS] Query successful - Type: contact
+2025-09-11 13:18:07,185 - INFO - [TEST] Testing query: Tell me about his education
+2025-09-11 13:18:07,185 - INFO - Processing query: Tell me about his education
+2025-09-11 13:18:07,423 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-11 13:18:07,425 - ERROR - AI analysis error: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-11 13:18:07,426 - INFO - [SUCCESS] Query successful - Type: about_adil
+2025-09-11 13:18:07,427 - INFO - [SUCCESS] All RAG system tests passed!
+2025-09-11 13:18:07,429 - INFO - [COMPLETE] Setup completed successfully!
+2025-09-11 13:18:07,429 - INFO - You can now run the server with:
+2025-09-11 13:18:07,429 - INFO -    uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload

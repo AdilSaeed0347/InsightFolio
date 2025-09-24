@@ -1,0 +1,32 @@
+2025-09-05 16:15:15,983 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN...
+2025-09-05 16:15:16,432 - INFO - Use pytorch device_name: cpu
+2025-09-05 16:15:16,432 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-05 16:15:22,615 - INFO - Loaded embedding model: all-MiniLM-L6-v2 (dimension: 384)
+2025-09-05 16:15:22,638 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore\index.faiss
+2025-09-05 16:15:22,706 - INFO - Loaded metadata for 23 documents
+2025-09-05 16:15:22,707 - INFO - DocumentRetriever initialized successfully
+2025-09-05 16:15:22,797 - INFO - Created 30 chunks from source: documents/Adil Saeed.docx
+2025-09-05 16:15:24,725 - INFO - Saved FAISS index and metadata for 53 documents
+2025-09-05 16:15:24,725 - INFO - Successfully added 30 chunks from source: documents/Adil Saeed.docx
+2025-09-05 16:15:24,728 - INFO - Saved metadata for 53 documents
+2025-09-05 16:15:24,728 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-05 16:15:24,729 - INFO - Loaded document: Adil Saeed.docx
+2025-09-05 16:15:24,729 - INFO - Loaded 1 documents successfully
+2025-09-05 16:15:24,830 - INFO - Loaded metadata for 53 documents
+2025-09-05 16:15:24,831 - INFO - RAGPipeline initialized successfully with enhanced features
+2025-09-05 16:21:52,541 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN...
+2025-09-05 16:21:52,886 - INFO - Use pytorch device_name: cpu
+2025-09-05 16:21:52,887 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-05 16:21:58,655 - INFO - Loaded embedding model: all-MiniLM-L6-v2 (dimension: 384)
+2025-09-05 16:21:58,721 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore\index.faiss
+2025-09-05 16:21:58,727 - INFO - Loaded metadata for 53 documents
+2025-09-05 16:21:58,728 - INFO - DocumentRetriever initialized successfully
+2025-09-05 16:21:58,800 - INFO - Created 30 chunks from source: documents/Adil Saeed.docx
+2025-09-05 16:22:00,970 - INFO - Saved FAISS index and metadata for 83 documents
+2025-09-05 16:22:00,970 - INFO - Successfully added 30 chunks from source: documents/Adil Saeed.docx
+2025-09-05 16:22:00,974 - INFO - Saved metadata for 83 documents
+2025-09-05 16:22:00,975 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-05 16:22:00,975 - INFO - Loaded document: Adil Saeed.docx
+2025-09-05 16:22:00,976 - INFO - Loaded 1 documents successfully
+2025-09-05 16:22:01,206 - INFO - Loaded metadata for 83 documents
+2025-09-05 16:22:01,207 - INFO - RAGPipeline initialized successfully with enhanced features

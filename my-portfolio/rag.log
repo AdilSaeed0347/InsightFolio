@@ -1,0 +1,919 @@
+2025-09-04 18:57:09,489 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-04 18:57:09,489 - INFO - Model for 'en': llama3-8b-8192
+2025-09-04 18:57:09,489 - INFO - Model for 'ur': llama3-8b-8192
+2025-09-04 18:57:09,936 - INFO - Use pytorch device_name: cpu
+2025-09-04 18:57:09,936 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-04 18:57:36,560 - INFO - Retrieved 3 documents for query: skills
+2025-09-04 18:57:36,560 - INFO - Prepared context: Source 1 (from about_bio): I am a Full Stack Developer with expertise in Python, JavaScript, React, FastAPI, and machine learning. I specialize in building modern web applications with AI integration ... (truncated)
+2025-09-04 18:57:36,560 - INFO - Using model llama3-8b-8192 for language en
+2025-09-04 18:57:37,646 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-04 18:57:37,653 - ERROR - Groq API error: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-04 18:57:37,657 - INFO - Generated response for query: skills
+2025-09-04 18:59:37,800 - INFO - Retrieved 3 documents for query: skills
+2025-09-04 18:59:37,801 - INFO - Prepared context: Source 1 (from about_bio): I am a Full Stack Developer with expertise in Python, JavaScript, React, FastAPI, and machine learning. I specialize in building modern web applications with AI integration ... (truncated)
+2025-09-04 18:59:37,802 - INFO - Using model llama3-8b-8192 for language en
+2025-09-04 18:59:38,279 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-04 18:59:38,282 - ERROR - Groq API error: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-04 18:59:38,283 - INFO - Generated response for query: skills
+2025-09-04 19:01:19,189 - INFO - Retrieved 3 documents for query: skills
+2025-09-04 19:01:19,191 - INFO - Prepared context: Source 1 (from about_bio): I am a Full Stack Developer with expertise in Python, JavaScript, React, FastAPI, and machine learning. I specialize in building modern web applications with AI integration ... (truncated)
+2025-09-04 19:01:19,193 - INFO - Using model llama3-8b-8192 for language en
+2025-09-04 19:01:19,753 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-04 19:01:19,758 - ERROR - Groq API error: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-04 19:01:19,761 - INFO - Generated response for query: skills
+2025-09-04 19:05:33,130 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-04 19:05:33,130 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-04 19:05:33,131 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-04 19:05:34,115 - INFO - Use pytorch device_name: cpu
+2025-09-04 19:05:34,115 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-04 19:05:40,160 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-04 19:05:50,528 - INFO - Retrieved 3 documents for query: adill skills
+2025-09-04 19:05:50,529 - INFO - Prepared context: Source 1 (from about_bio): I am a Full Stack Developer with expertise in Python, JavaScript, React, FastAPI, and machine learning. I specialize in building modern web applications with AI integration ... (truncated)
+2025-09-04 19:05:50,530 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 19:05:51,998 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 19:05:52,069 - INFO - Generated response for query: adill skills
+2025-09-04 19:05:59,925 - INFO - Retrieved 3 documents for query: who is adil
+2025-09-04 19:05:59,929 - INFO - Prepared context: Source 1 (from projects_urdu): Mere projects mein RAG chatbot, e-commerce platform, aur data analysis tools shamil hain. Main clean code aur user-friendly design par focus karta hoon.
+
+Source 2 (from ... (truncated)
+2025-09-04 19:05:59,932 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 19:06:00,312 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 19:06:00,319 - INFO - Generated response for query: who is adil
+2025-09-04 19:06:09,449 - INFO - Retrieved 3 documents for query: adil educaion
+2025-09-04 19:06:09,451 - INFO - Prepared context: Source 1 (from about_urdu): Main ek Full Stack Developer hoon aur mujhe Python, JavaScript, React, aur AI mein expertise hai. Main modern web applications banata hoon jo AI integration ke sath hote ha... (truncated)
+2025-09-04 19:06:09,453 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 19:06:10,655 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 19:06:10,666 - INFO - Generated response for query: adil educaion
+2025-09-04 19:06:40,344 - INFO - Retrieved 3 documents for query: please mujhi batao adil ki bara mai ju bhi apko pata hu
+2025-09-04 19:06:40,346 - INFO - Prepared context: Source 1 (from about_urdu): Main ek Full Stack Developer hoon aur mujhe Python, JavaScript, React, aur AI mein expertise hai. Main modern web applications banata hoon jo AI integration ke sath hote ha... (truncated)
+2025-09-04 19:06:40,348 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 19:06:41,093 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 19:06:41,098 - INFO - Generated response for query: please mujhi batao adil ki bara mai ju bhi apko pata hu
+2025-09-04 21:39:53,474 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-04 21:39:53,476 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-04 21:39:53,476 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-04 21:39:53,858 - INFO - Use pytorch device_name: cpu
+2025-09-04 21:39:53,858 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-04 21:39:59,170 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-04 21:39:59,175 - INFO - Initialized FAISS index with dimension: 384
+2025-09-04 21:39:59,176 - INFO - DocumentRetriever initialized successfully
+2025-09-04 21:39:59,176 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-04 21:40:39,211 - WARNING - No documents in the vector store
+2025-09-04 21:40:39,211 - INFO - Retrieved 0 documents for query: adil
+2025-09-04 21:40:39,211 - WARNING - No documents retrieved for context
+2025-09-04 21:40:39,212 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 21:40:39,212 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 21:40:39,925 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 21:40:39,939 - INFO - Generated response for query: adil
+2025-09-04 21:40:46,474 - WARNING - No documents in the vector store
+2025-09-04 21:40:46,475 - INFO - Retrieved 0 documents for query: skills
+2025-09-04 21:40:46,475 - WARNING - No documents retrieved for context
+2025-09-04 21:40:46,475 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 21:40:46,475 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 21:40:46,955 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 21:40:46,957 - INFO - Generated response for query: skills
+2025-09-04 21:41:12,234 - WARNING - No documents in the vector store
+2025-09-04 21:41:12,234 - INFO - Retrieved 0 documents for query: adil skills
+2025-09-04 21:41:12,234 - WARNING - No documents retrieved for context
+2025-09-04 21:41:12,241 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 21:41:12,242 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 21:41:12,757 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 21:41:12,763 - INFO - Generated response for query: adil skills
+2025-09-04 21:41:25,329 - WARNING - No documents in the vector store
+2025-09-04 21:41:25,330 - INFO - Retrieved 0 documents for query: who is adil saeed
+2025-09-04 21:41:25,331 - WARNING - No documents retrieved for context
+2025-09-04 21:41:25,332 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 21:41:25,335 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 21:41:25,762 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 21:41:25,767 - INFO - Generated response for query: who is adil saeed
+2025-09-04 21:41:57,971 - WARNING - No documents in the vector store
+2025-09-04 21:41:57,972 - INFO - Retrieved 0 documents for query: muhji adil ki bara mai batao
+2025-09-04 21:41:57,974 - WARNING - No documents retrieved for context
+2025-09-04 21:41:57,975 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 21:41:57,975 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 21:41:58,565 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 21:41:58,572 - INFO - Generated response for query: muhji adil ki bara mai batao
+2025-09-04 21:42:10,317 - WARNING - No documents in the vector store
+2025-09-04 21:42:10,318 - INFO - Retrieved 0 documents for query: please give me
+2025-09-04 21:42:10,319 - WARNING - No documents retrieved for context
+2025-09-04 21:42:10,321 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 21:42:10,322 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 21:42:10,715 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 21:42:10,720 - INFO - Generated response for query: please give me
+2025-09-04 21:42:17,534 - WARNING - No documents in the vector store
+2025-09-04 21:42:17,535 - INFO - Retrieved 0 documents for query: adil kon hai
+2025-09-04 21:42:17,535 - WARNING - No documents retrieved for context
+2025-09-04 21:42:17,535 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 21:42:17,535 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 21:42:18,131 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 21:42:18,135 - INFO - Generated response for query: adil kon hai
+2025-09-04 22:08:51,430 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-04 22:08:51,431 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-04 22:08:51,431 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-04 22:08:51,785 - INFO - Use pytorch device_name: cpu
+2025-09-04 22:08:51,787 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-04 22:08:57,531 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-04 22:08:57,537 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 22:08:57,537 - INFO - Initialized FAISS index with dimension: 384
+2025-09-04 22:08:57,537 - INFO - DocumentRetriever initialized successfully
+2025-09-04 22:08:57,537 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-04 22:08:57,538 - WARNING - Documents directory not found: C:\Users\HP\Desktop\my-portfolio\my-portfolio\backend\services\../documents
+2025-09-04 22:08:57,539 - INFO - RAGPipeline initialized with documents
+2025-09-04 22:09:18,405 - INFO - Detected language: en for query: adil
+2025-09-04 22:09:18,407 - WARNING - No documents in the vector store
+2025-09-04 22:09:18,408 - INFO - Retrieved 0 documents for query: adil
+2025-09-04 22:09:18,409 - WARNING - No documents retrieved for context
+2025-09-04 22:09:18,411 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 22:09:18,412 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:09:19,217 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:09:19,272 - INFO - Generated response for query: adil
+2025-09-04 22:09:41,408 - INFO - Detected language: en for query: adil
+2025-09-04 22:09:41,410 - WARNING - No documents in the vector store
+2025-09-04 22:09:41,411 - INFO - Retrieved 0 documents for query: adil
+2025-09-04 22:09:41,412 - WARNING - No documents retrieved for context
+2025-09-04 22:09:41,414 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 22:09:41,415 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:09:42,391 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:09:42,397 - INFO - Generated response for query: adil
+2025-09-04 22:09:49,338 - INFO - Detected language: en for query: adil saeed who is he
+2025-09-04 22:09:49,338 - WARNING - No documents in the vector store
+2025-09-04 22:09:49,338 - INFO - Retrieved 0 documents for query: adil saeed who is he
+2025-09-04 22:09:49,339 - WARNING - No documents retrieved for context
+2025-09-04 22:09:49,339 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 22:09:49,339 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:09:50,067 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:09:50,067 - INFO - Generated response for query: adil saeed who is he
+2025-09-04 22:10:04,910 - INFO - Detected language: en for query: please give his projects details
+2025-09-04 22:10:04,912 - WARNING - No documents in the vector store
+2025-09-04 22:10:04,913 - INFO - Retrieved 0 documents for query: please give his projects details
+2025-09-04 22:10:04,914 - WARNING - No documents retrieved for context
+2025-09-04 22:10:04,915 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 22:10:04,915 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:10:06,124 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:10:06,130 - INFO - Generated response for query: please give his projects details
+2025-09-04 22:16:28,328 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-04 22:16:28,328 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-04 22:16:28,329 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-04 22:16:28,651 - INFO - Use pytorch device_name: cpu
+2025-09-04 22:16:28,652 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-04 22:16:35,893 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-04 22:16:35,896 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 22:16:35,896 - INFO - Initialized FAISS index with dimension: 384
+2025-09-04 22:16:35,897 - INFO - DocumentRetriever initialized successfully
+2025-09-04 22:16:35,897 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-04 22:16:35,899 - WARNING - Documents directory not found: C:\Users\HP\Desktop\my-portfolio\my-portfolio\backend\services\../documents
+2025-09-04 22:27:43,521 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-04 22:27:43,521 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-04 22:27:43,521 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-04 22:27:44,300 - INFO - Use pytorch device_name: cpu
+2025-09-04 22:27:44,300 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-04 22:27:51,133 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-04 22:27:51,142 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 22:27:51,143 - INFO - Initialized FAISS index with dimension: 384
+2025-09-04 22:27:51,144 - INFO - DocumentRetriever initialized successfully
+2025-09-04 22:27:51,145 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-04 22:27:51,558 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:51,614 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:51,690 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:51,731 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:51,787 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:51,828 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:51,869 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:51,979 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,032 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,085 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,123 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,194 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,255 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,320 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,370 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,420 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,471 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,518 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,585 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,642 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,690 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,756 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,871 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,874 - INFO - Saved FAISS index to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 22:27:52,876 - ERROR - Error saving metadata to C:\Users\HP\Desktop\my-portfolio\my-portfolio\backend\services\../vectorstore/documents.json: [Errno 2] No such file or directory: 'C:\\Users\\HP\\Desktop\\my-portfolio\\my-portfolio\\backend\\services\\../vectorstore/documents.json'
+2025-09-04 22:27:52,876 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-04 22:27:52,877 - INFO - Loaded document: C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\documents\Adil Saeed.docx
+2025-09-04 22:27:52,878 - INFO - RAGPipeline initialized with documents
+2025-09-04 22:28:49,977 - INFO - Detected language: en for query: adil
+2025-09-04 22:28:50,073 - INFO - Retrieved 3 documents for query: adil
+2025-09-04 22:28:50,073 - INFO - Retrieved 3 documents for query: adil
+2025-09-04 22:28:50,073 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): He resides in Peshawar.
+Saad Khan: MBBS Student at Bacha Khan Medical College
+Saad Khan is enrolled in the MBBS program at Bacha Khan Medical College (BKMC) ... (truncated)
+2025-09-04 22:28:50,078 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:28:51,996 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:28:52,027 - INFO - Generated response for query: adil
+2025-09-04 22:29:09,531 - INFO - Detected language: en for query: shortly in 10 word explain me adil skills
+2025-09-04 22:29:09,593 - INFO - Retrieved 3 documents for query: shortly in 10 word explain me adil skills
+2025-09-04 22:29:09,598 - INFO - Retrieved 3 documents for query: shortly in 10 word explain me adil skills
+2025-09-04 22:29:09,599 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): He resides in Peshawar.
+Saad Khan: MBBS Student at Bacha Khan Medical College
+Saad Khan is enrolled in the MBBS program at Bacha Khan Medical College (BKMC) ... (truncated)
+2025-09-04 22:29:09,599 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:29:10,481 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:29:10,488 - INFO - Generated response for query: shortly in 10 word explain me adil skills
+2025-09-04 22:29:28,495 - INFO - Detected language: en for query: adil saeed educaion
+2025-09-04 22:29:28,522 - INFO - Retrieved 2 documents for query: adil saeed educaion
+2025-09-04 22:29:28,523 - INFO - Retrieved 2 documents for query: adil saeed educaion
+2025-09-04 22:29:28,524 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Alongside academics, he has consistently worked on impactful projects such as sentiment analysis, face recognition, OCR systems, login risk detection, and me... (truncated)
+2025-09-04 22:29:28,525 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:29:29,047 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:29:29,053 - INFO - Generated response for query: adil saeed educaion
+2025-09-04 22:29:37,617 - INFO - Detected language: en for query: adil saeed education
+2025-09-04 22:29:37,698 - INFO - Retrieved 2 documents for query: adil saeed education
+2025-09-04 22:29:37,699 - INFO - Retrieved 2 documents for query: adil saeed education
+2025-09-04 22:29:37,702 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Alongside academics, he has consistently worked on impactful projects such as sentiment analysis, face recognition, OCR systems, login risk detection, and me... (truncated)
+2025-09-04 22:29:37,704 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:29:38,396 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:29:38,402 - INFO - Generated response for query: adil saeed education
+2025-09-04 22:29:49,524 - INFO - Detected language: en for query: adil saeed friends
+2025-09-04 22:29:49,548 - INFO - Retrieved 3 documents for query: adil saeed friends
+2025-09-04 22:29:49,549 - INFO - Retrieved 3 documents for query: adil saeed friends
+2025-09-04 22:29:49,550 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Alongside academics, he has consistently worked on impactful projects such as sentiment analysis, face recognition, OCR systems, login risk detection, and me... (truncated)
+2025-09-04 22:29:49,550 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:29:50,521 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:29:50,529 - INFO - Generated response for query: adil saeed friends
+2025-09-04 22:30:05,977 - INFO - Detected language: en for query: please ell me about all his friends
+2025-09-04 22:30:06,085 - INFO - Retrieved 2 documents for query: please ell me about all his friends
+2025-09-04 22:30:06,086 - INFO - Retrieved 2 documents for query: please ell me about all his friends
+2025-09-04 22:30:06,089 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): He resides in Peshawar.
+Saad Khan: MBBS Student at Bacha Khan Medical College
+Saad Khan is enrolled in the MBBS program at Bacha Khan Medical College (BKMC) ... (truncated)
+2025-09-04 22:30:06,091 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:30:07,091 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:30:07,096 - INFO - Generated response for query: please ell me about all his friends
+2025-09-04 22:30:25,230 - INFO - Detected language: en for query: tell me who create you
+2025-09-04 22:30:25,288 - INFO - Retrieved 3 documents for query: tell me who create you
+2025-09-04 22:30:25,289 - INFO - Retrieved 3 documents for query: tell me who create you
+2025-09-04 22:30:25,290 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Asad Ali is not only a testament to hard work and determination but also to the incredible impact a supportive elder sibling can have on shaping the life of ... (truncated)
+2025-09-04 22:30:25,291 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:30:26,558 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:30:26,564 - INFO - Generated response for query: tell me who create you
+2025-09-04 22:30:43,082 - INFO - Detected language: en for query: please chatot who creae you
+2025-09-04 22:30:43,159 - INFO - Retrieved 4 documents for query: please chatot who creae you
+2025-09-04 22:30:43,165 - INFO - Retrieved 4 documents for query: please chatot who creae you
+2025-09-04 22:30:43,169 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Asad Ali is not only a testament to hard work and determination but also to the incredible impact a supportive elder sibling can have on shaping the life of ... (truncated)
+2025-09-04 22:30:43,170 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:30:44,486 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:30:44,488 - INFO - Generated response for query: please chatot who creae you
+2025-09-04 22:30:59,511 - INFO - Detected language: en for query: solve 2/2 for me
+2025-09-04 22:30:59,595 - INFO - Retrieved 5 documents for query: solve 2/2 for me
+2025-09-04 22:30:59,596 - INFO - Retrieved 5 documents for query: solve 2/2 for me
+2025-09-04 22:30:59,598 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Adil is currently expanding his knowledge through studies at Ghulam Ishaq Khan Institute of Engineering Sciences and Technology (GIKI) and by actively joinin... (truncated)
+2025-09-04 22:30:59,600 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:31:00,394 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:31:00,398 - INFO - Generated response for query: solve 2/2 for me
+2025-09-04 22:31:29,136 - INFO - Detected language: en for query: who is adil doing right now give me his email i want to contact him
+2025-09-04 22:31:29,258 - INFO - Retrieved 3 documents for query: who is adil doing right now give me his email i want to contact him
+2025-09-04 22:31:29,260 - INFO - Retrieved 3 documents for query: who is adil doing right now give me his email i want to contact him
+2025-09-04 22:31:29,261 - INFO - Prepared context: **Introduction**:
+Adil Saeed is a Software Engineer.
+
+**Profiles / Contact**:
+
+- Email: [adil@example.com](mailto:adil@example.com)... (truncated)
+2025-09-04 22:31:29,266 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:31:29,739 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:31:29,742 - INFO - Generated response for query: who is adil doing right now give me his email i want to contact him
+2025-09-04 22:31:44,732 - INFO - Detected language: en for query: who is adil saeed doing current now
+2025-09-04 22:31:44,835 - INFO - Retrieved 2 documents for query: who is adil saeed doing current now
+2025-09-04 22:31:44,837 - INFO - Retrieved 2 documents for query: who is adil saeed doing current now
+2025-09-04 22:31:44,838 - INFO - Prepared context: **Introduction**:
+Adil Saeed is a Software Engineer.... (truncated)
+2025-09-04 22:31:44,839 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:31:45,566 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:31:45,570 - INFO - Generated response for query: who is adil saeed doing current now
+2025-09-04 22:31:57,528 - INFO - Detected language: en for query: give me his github
+2025-09-04 22:31:57,595 - INFO - Retrieved 3 documents for query: give me his github
+2025-09-04 22:31:57,599 - INFO - Retrieved 3 documents for query: give me his github
+2025-09-04 22:31:57,599 - INFO - Prepared context: **Profiles / Contact**:
+
+- GitHub: [Adil GitHub](https://github.com/adil-saeed)... (truncated)
+2025-09-04 22:31:57,602 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 22:31:58,331 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 22:31:58,336 - INFO - Generated response for query: give me his github
+2025-09-04 22:57:44,109 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-04 22:57:44,109 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-04 22:57:44,112 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-04 22:57:44,633 - INFO - Use pytorch device_name: cpu
+2025-09-04 22:57:44,633 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-04 22:57:51,366 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-04 22:57:51,465 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 22:57:51,466 - INFO - Initialized FAISS index with dimension: 384
+2025-09-04 22:57:51,467 - INFO - DocumentRetriever initialized successfully
+2025-09-04 22:57:51,468 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-04 23:03:29,453 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-04 23:03:29,454 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-04 23:03:29,455 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-04 23:03:30,598 - INFO - Use pytorch device_name: cpu
+2025-09-04 23:03:30,600 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-04 23:03:38,322 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-04 23:03:38,337 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 23:03:38,338 - INFO - Initialized FAISS index with dimension: 384
+2025-09-04 23:03:38,338 - INFO - DocumentRetriever initialized successfully
+2025-09-04 23:03:38,338 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-04 23:03:38,934 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,003 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,101 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,154 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,237 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,286 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,335 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,484 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,551 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,603 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,652 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,718 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,796 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,886 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:39,952 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:40,030 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:40,084 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:40,159 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:40,244 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:40,319 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:40,385 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:40,466 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:40,614 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:03:40,616 - INFO - Saved FAISS index to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 23:03:40,616 - ERROR - Error saving metadata to C:\Users\HP\Desktop\my-portfolio\my-portfolio\backend\services\../vectorstore/documents.json: [Errno 2] No such file or directory: 'C:\\Users\\HP\\Desktop\\my-portfolio\\my-portfolio\\backend\\services\\../vectorstore/documents.json'
+2025-09-04 23:03:40,616 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-04 23:03:40,616 - INFO - Loaded document: C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\documents\Adil Saeed.docx
+2025-09-04 23:03:40,620 - INFO - RAGPipeline initialized with documents
+2025-09-04 23:03:44,972 - INFO - Detected language: en for query: why you are no taking
+2025-09-04 23:03:45,055 - INFO - Retrieved 0 documents for query: why you are no taking
+2025-09-04 23:03:45,056 - INFO - Retrieved 0 documents for query: why you are no taking
+2025-09-04 23:03:45,058 - WARNING - No documents retrieved for context
+2025-09-04 23:03:45,063 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 23:03:45,065 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:03:46,905 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:03:46,952 - INFO - Generated response for query: why you are no taking
+2025-09-04 23:04:10,253 - INFO - Detected language: en for query: who isa adil saeed
+2025-09-04 23:04:10,313 - INFO - Retrieved 1 documents for query: who isa adil saeed
+2025-09-04 23:04:10,314 - INFO - Retrieved 1 documents for query: who isa adil saeed
+2025-09-04 23:04:10,315 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Alongside academics, he has consistently worked on impactful projects such as sentiment analysis, face recognition, OCR systems, login risk detection, and me... (truncated)
+2025-09-04 23:04:10,317 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:04:10,842 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:04:10,849 - INFO - Generated response for query: who isa adil saeed
+2025-09-04 23:04:27,294 - INFO - Detected language: en for query: please give me his education info ?
+2025-09-04 23:04:27,327 - INFO - Retrieved 1 documents for query: please give me his education info ?
+2025-09-04 23:04:27,327 - INFO - Retrieved 1 documents for query: please give me his education info ?
+2025-09-04 23:04:27,328 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Through these roles, he has shown not only his expertise and reliability but also his ability to lead and manage responsibilities with professionalism and in... (truncated)
+2025-09-04 23:04:27,328 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:04:27,931 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:04:27,936 - INFO - Generated response for query: please give me his education info ?
+2025-09-04 23:15:31,778 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-04 23:15:31,778 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-04 23:15:31,778 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-04 23:15:32,364 - INFO - Use pytorch device_name: cpu
+2025-09-04 23:15:32,364 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-04 23:15:39,048 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-04 23:15:39,118 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 23:15:39,119 - INFO - Initialized FAISS index with dimension: 384
+2025-09-04 23:15:39,119 - INFO - DocumentRetriever initialized successfully
+2025-09-04 23:15:39,120 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-04 23:15:39,535 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:39,586 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:39,666 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:39,704 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:39,763 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:39,804 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:39,849 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:39,972 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,045 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,103 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,159 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,244 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,332 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,406 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,466 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,520 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,578 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,636 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,700 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,756 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,828 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:40,898 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:41,020 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:15:41,022 - INFO - Saved FAISS index to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 23:15:41,026 - INFO - Saved metadata to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-04 23:15:41,027 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-04 23:15:41,028 - INFO - Loaded document: C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\documents\Adil Saeed.docx
+2025-09-04 23:15:41,259 - INFO - Loaded metadata from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-04 23:15:41,260 - INFO - RAGPipeline initialized with documents
+2025-09-04 23:15:50,146 - INFO - Detected language: en for query: adil
+2025-09-04 23:15:50,231 - INFO - Retrieved 1 documents for query: adil
+2025-09-04 23:15:50,233 - INFO - Retrieved 1 documents for query: adil
+2025-09-04 23:15:50,239 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): He resides in Peshawar.
+Saad Khan: MBBS Student at Bacha Khan Medical College
+Saad Khan is enrolled in the MBBS program at Bacha Khan Medical College (BKMC) ... (truncated)
+2025-09-04 23:15:50,240 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:15:51,399 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:15:51,451 - INFO - Generated response for query: adil
+2025-09-04 23:16:12,809 - INFO - Detected language: en for query: adil saeed
+2025-09-04 23:16:12,873 - INFO - Retrieved 2 documents for query: adil saeed
+2025-09-04 23:16:12,874 - INFO - Retrieved 2 documents for query: adil saeed
+2025-09-04 23:16:12,876 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Alongside academics, he has consistently worked on impactful projects such as sentiment analysis, face recognition, OCR systems, login risk detection, and me... (truncated)
+2025-09-04 23:16:12,878 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:16:14,082 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:16:14,089 - INFO - Generated response for query: adil saeed
+2025-09-04 23:16:35,953 - INFO - Detected language: en for query: tell me about his education
+2025-09-04 23:16:36,018 - INFO - Retrieved 0 documents for query: tell me about his education
+2025-09-04 23:16:36,021 - INFO - Retrieved 0 documents for query: tell me about his education
+2025-09-04 23:16:36,022 - WARNING - No documents retrieved for context
+2025-09-04 23:16:36,023 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 23:16:36,024 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:16:36,705 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:16:36,706 - INFO - Generated response for query: tell me about his education
+2025-09-04 23:18:00,966 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-04 23:18:00,966 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-04 23:18:00,967 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-04 23:18:01,403 - INFO - Use pytorch device_name: cpu
+2025-09-04 23:18:01,403 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-04 23:18:07,196 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-04 23:18:07,255 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 23:18:07,256 - INFO - Initialized FAISS index with dimension: 384
+2025-09-04 23:18:07,257 - INFO - DocumentRetriever initialized successfully
+2025-09-04 23:18:07,259 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-04 23:18:07,379 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:07,414 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:07,471 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:07,501 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:07,550 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:07,589 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:07,627 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:07,727 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:07,767 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:07,815 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:07,844 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:07,894 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:07,965 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:08,032 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:08,080 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:08,128 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:08,174 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:08,225 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:08,285 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:08,330 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:08,379 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:08,441 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:08,532 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:18:08,533 - INFO - Saved FAISS index to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 23:18:08,536 - INFO - Saved metadata to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-04 23:18:08,536 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-04 23:18:08,536 - INFO - Loaded document: C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\documents\Adil Saeed.docx
+2025-09-04 23:18:08,684 - INFO - Loaded metadata from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-04 23:18:08,685 - INFO - RAGPipeline initialized with documents
+2025-09-04 23:18:27,886 - INFO - Detected language: en for query: adil saeed who is he ?
+2025-09-04 23:18:27,925 - INFO - Retrieved 1 documents for query: adil saeed who is he ?
+2025-09-04 23:18:27,925 - INFO - Retrieved 1 documents for query: adil saeed who is he ?
+2025-09-04 23:18:27,928 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Alongside academics, he has consistently worked on impactful projects such as sentiment analysis, face recognition, OCR systems, login risk detection, and me... (truncated)
+2025-09-04 23:18:27,929 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:18:29,043 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:18:29,069 - INFO - Generated response for query: adil saeed who is he ?
+2025-09-04 23:18:48,029 - INFO - Detected language: en for query: tell me about his educaion
+2025-09-04 23:18:48,064 - INFO - Retrieved 1 documents for query: tell me about his educaion
+2025-09-04 23:18:48,065 - INFO - Retrieved 1 documents for query: tell me about his educaion
+2025-09-04 23:18:49,219 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:18:50,114 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:18:50,118 - INFO - Generated response for query: tell me about his educaion
+2025-09-04 23:19:05,154 - INFO - Detected language: en for query: and what his skills
+2025-09-04 23:19:05,230 - INFO - Retrieved 0 documents for query: and what his skills
+2025-09-04 23:19:05,232 - INFO - Retrieved 0 documents for query: and what his skills
+2025-09-04 23:19:05,234 - WARNING - No documents retrieved for context
+2025-09-04 23:19:05,234 - INFO - Prepared context: No relevant information found in the portfolio documents.... (truncated)
+2025-09-04 23:19:05,235 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:19:06,030 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:19:06,035 - INFO - Generated response for query: and what his skills
+2025-09-04 23:19:18,810 - INFO - Detected language: en for query: adil saeed skills please give me list from
+2025-09-04 23:19:18,898 - INFO - Retrieved 1 documents for query: adil saeed skills please give me list from
+2025-09-04 23:19:18,905 - INFO - Retrieved 1 documents for query: adil saeed skills please give me list from
+2025-09-04 23:19:18,907 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Alongside academics, he has consistently worked on impactful projects such as sentiment analysis, face recognition, OCR systems, login risk detection, and me... (truncated)
+2025-09-04 23:19:18,910 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:19:19,824 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:19:19,830 - INFO - Generated response for query: adil saeed skills please give me list from
+2025-09-04 23:25:01,741 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-04 23:25:01,741 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-04 23:25:01,741 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-04 23:25:02,600 - INFO - Use pytorch device_name: cpu
+2025-09-04 23:25:02,600 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-04 23:25:09,138 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-04 23:25:09,221 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 23:25:09,222 - INFO - Initialized FAISS index with dimension: 384
+2025-09-04 23:25:09,222 - INFO - DocumentRetriever initialized successfully
+2025-09-04 23:25:09,222 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-04 23:25:09,415 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:09,463 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:09,538 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:09,586 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:09,650 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:09,696 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:09,749 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:09,869 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:09,933 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:09,988 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,028 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,093 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,165 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,247 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,306 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,367 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,423 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,486 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,549 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,620 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,680 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,747 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,869 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,885 - INFO - Saved FAISS index to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 23:25:10,888 - INFO - Saved metadata to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-04 23:25:10,889 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-04 23:25:10,890 - INFO - Loaded document: C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\documents\Adil Saeed.docx
+2025-09-04 23:25:11,055 - INFO - Loaded metadata from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-04 23:25:11,056 - INFO - RAGPipeline initialized with documents
+2025-09-04 23:26:00,908 - INFO - Detected language: en for query: adil saeed skills
+2025-09-04 23:26:00,991 - INFO - Retrieved 1 documents for query: adil saeed skills
+2025-09-04 23:26:00,992 - INFO - Retrieved 1 documents for query: adil saeed skills
+2025-09-04 23:26:00,996 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Alongside academics, he has consistently worked on impactful projects such as sentiment analysis, face recognition, OCR systems, login risk detection, and me... (truncated)
+2025-09-04 23:26:01,005 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:26:02,796 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:26:02,916 - INFO - Generated response for query: adil saeed skills
+2025-09-04 23:26:47,376 - INFO - Detected language: en for query: give me adil saeed github link along with linkdin also
+2025-09-04 23:26:47,443 - INFO - Retrieved 1 documents for query: give me adil saeed github link along with linkdin also
+2025-09-04 23:26:47,445 - INFO - Retrieved 1 documents for query: give me adil saeed github link along with linkdin also
+2025-09-04 23:26:47,446 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Alongside academics, he has consistently worked on impactful projects such as sentiment analysis, face recognition, OCR systems, login risk detection, and me... (truncated)
+2025-09-04 23:26:47,446 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:26:47,961 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:26:47,964 - INFO - Generated response for query: give me adil saeed github link along with linkdin also
+2025-09-04 23:27:18,069 - INFO - Detected language: en for query: give me adil saeed favurite tecahers
+2025-09-04 23:27:18,155 - INFO - Retrieved 1 documents for query: give me adil saeed favurite tecahers
+2025-09-04 23:27:18,155 - INFO - Retrieved 1 documents for query: give me adil saeed favurite tecahers
+2025-09-04 23:27:18,162 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Alongside academics, he has consistently worked on impactful projects such as sentiment analysis, face recognition, OCR systems, login risk detection, and me... (truncated)
+2025-09-04 23:27:18,166 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:27:19,221 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:27:19,222 - INFO - Generated response for query: give me adil saeed favurite tecahers
+2025-09-04 23:35:31,876 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-04 23:35:31,877 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-04 23:35:31,878 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-04 23:35:32,390 - INFO - Use pytorch device_name: cpu
+2025-09-04 23:35:32,391 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-04 23:35:38,588 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-04 23:35:38,963 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 23:35:38,964 - INFO - Initialized FAISS index with dimension: 384
+2025-09-04 23:35:38,964 - INFO - DocumentRetriever initialized successfully
+2025-09-04 23:35:38,964 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-04 23:35:39,396 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:39,813 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,353 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,397 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,451 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,486 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,527 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,632 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,671 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,719 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,751 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,805 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,862 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,927 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:40,973 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:41,018 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:41,064 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:41,109 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:41,171 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:41,222 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:41,264 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:41,313 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:41,404 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-04 23:35:41,406 - INFO - Saved FAISS index to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-04 23:35:41,409 - INFO - Saved metadata to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-04 23:35:41,410 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-04 23:35:41,410 - INFO - Loaded document: C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\documents\Adil Saeed.docx
+2025-09-04 23:35:41,816 - INFO - Loaded metadata from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-04 23:35:41,817 - INFO - RAGPipeline initialized with documents
+2025-09-04 23:36:40,314 - INFO - Detected language: en for query: who is adil saeed can you give his socila media acount links
+2025-09-04 23:36:40,407 - INFO - Retrieved 1 documents for query: who is adil saeed can you give his socila media acount links
+2025-09-04 23:36:40,409 - INFO - Retrieved 1 documents for query: who is adil saeed can you give his socila media acount links
+2025-09-04 23:36:40,416 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Alongside academics, he has consistently worked on impactful projects such as sentiment analysis, face recognition, OCR systems, login risk detection, and me... (truncated)
+2025-09-04 23:36:40,422 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:36:41,640 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:36:41,714 - INFO - Generated response for query: who is adil saeed can you give his socila media acount links
+2025-09-04 23:36:55,757 - INFO - Detected language: en for query: github link
+2025-09-04 23:36:55,824 - INFO - Retrieved 4 documents for query: github link
+2025-09-04 23:36:55,826 - INFO - Retrieved 4 documents for query: github link
+2025-09-04 23:36:55,831 - INFO - Prepared context: Source 1 (from documents/Adil Saeed.docx): Secondary School Certificate (SSC), Pre-Medical  
+   New Islamia School and College, Charsadda  
+   Sep 2018 – Sep 2020 | Grade: A  
+   Skills Developed: Ana... (truncated)
+2025-09-04 23:36:55,837 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-04 23:36:56,395 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 23:36:56,405 - INFO - Generated response for query: github link
+2025-09-05 00:23:14,527 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-05 00:23:14,527 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-05 00:23:14,527 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-05 00:23:14,986 - INFO - Use pytorch device_name: cpu
+2025-09-05 00:23:14,992 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-05 00:23:20,958 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-05 00:23:21,073 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-05 00:23:21,075 - INFO - Initialized FAISS index with dimension: 384
+2025-09-05 00:23:21,075 - INFO - DocumentRetriever initialized successfully
+2025-09-05 00:23:21,076 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-05 00:23:21,536 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:21,596 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:21,682 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:21,721 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:21,776 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:21,814 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:21,859 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:21,955 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:21,995 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,039 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,070 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,125 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,187 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,259 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,308 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,351 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,400 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,446 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,509 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,560 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,604 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,651 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,755 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,759 - INFO - Saved FAISS index to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-05 00:23:22,761 - INFO - Saved metadata to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-05 00:23:22,761 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-05 00:23:22,762 - INFO - Loaded document: C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\documents\Adil Saeed.docx
+2025-09-05 00:23:22,968 - INFO - Loaded metadata from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-05 00:23:22,969 - INFO - RAGPipeline initialized with documents
+2025-09-05 00:53:33,574 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-05 00:53:33,575 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-05 00:53:33,575 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-05 00:53:34,167 - INFO - Use pytorch device_name: cpu
+2025-09-05 00:53:34,167 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-05 00:53:40,154 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-05 00:53:40,312 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-05 00:53:40,313 - INFO - Initialized FAISS index with dimension: 384
+2025-09-05 00:53:40,313 - INFO - DocumentRetriever initialized successfully
+2025-09-05 00:53:40,313 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-05 00:53:40,830 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:40,894 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:40,972 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,047 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,093 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,141 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,181 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,288 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,331 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,367 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,402 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,454 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,511 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,572 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,616 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,669 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,718 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,773 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,837 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,884 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,936 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:41,997 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:42,106 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 00:53:42,111 - INFO - Saved FAISS index to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-05 00:53:42,113 - INFO - Saved metadata to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-05 00:53:42,114 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-05 00:53:42,114 - INFO - Loaded document: C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\documents\Adil Saeed.docx
+2025-09-05 00:53:42,255 - INFO - Loaded metadata from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-05 00:53:42,256 - INFO - RAGPipeline initialized with documents
+2025-09-05 00:54:48,907 - INFO - Detected language: en for query: who is adil saeed
+2025-09-05 00:54:48,985 - INFO - Retrieved 1 documents for query: who is adil saeed
+2025-09-05 00:54:48,987 - INFO - Retrieved 1 documents for query: who is adil saeed
+2025-09-05 00:54:48,992 - INFO - Prepared context: **Adil Saeed Intro:** No introduction information available.... (truncated)
+2025-09-05 00:54:48,994 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-05 00:54:50,424 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 00:54:50,516 - INFO - Generated response for query: who is adil saeed
+2025-09-05 00:54:55,459 - INFO - Detected language: en for query: asbfdjawbfjqe
+2025-09-05 00:54:55,527 - INFO - Retrieved 2 documents for query: asbfdjawbfjqe
+2025-09-05 00:54:55,531 - INFO - Retrieved 2 documents for query: asbfdjawbfjqe
+2025-09-05 00:54:55,532 - INFO - Prepared context: **Adil Saeed Additional Info:** No specific information found for this query.... (truncated)
+2025-09-05 00:54:55,534 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-05 00:54:56,181 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 00:54:56,186 - INFO - Generated response for query: asbfdjawbfjqe
+2025-09-05 00:55:11,332 - INFO - Detected language: en for query: adil saeed github link
+2025-09-05 00:55:11,384 - INFO - Retrieved 1 documents for query: adil saeed github link
+2025-09-05 00:55:11,384 - INFO - Retrieved 1 documents for query: adil saeed github link
+2025-09-05 00:55:11,384 - INFO - Prepared context: **Adil Saeed Social Media Links:** No social media links available.... (truncated)
+2025-09-05 00:55:11,384 - INFO - Using model llama-3.1-8b-instant for language en
+2025-09-05 00:55:12,219 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 00:55:12,220 - INFO - Generated response for query: adil saeed github link
+2025-09-05 01:04:12,331 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-05 01:04:12,331 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-05 01:04:12,331 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-05 01:04:12,797 - INFO - Use pytorch device_name: cpu
+2025-09-05 01:04:12,797 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-05 01:04:19,270 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-05 01:04:19,391 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-05 01:04:19,396 - INFO - Initialized FAISS index with dimension: 384
+2025-09-05 01:04:19,396 - INFO - DocumentRetriever initialized successfully
+2025-09-05 01:04:19,397 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-05 01:04:19,532 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:19,566 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:19,631 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:19,666 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:19,719 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:19,753 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:19,782 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:19,882 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:19,924 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:19,970 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:19,998 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,050 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,106 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,170 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,216 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,258 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,303 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,352 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,410 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,453 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,499 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,559 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,663 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,665 - INFO - Saved FAISS index to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-05 01:04:20,667 - INFO - Saved metadata to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-05 01:04:20,667 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-05 01:04:20,668 - INFO - Loaded document: C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\documents\Adil Saeed.docx
+2025-09-05 01:04:20,805 - INFO - Loaded metadata from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-05 01:04:20,806 - INFO - RAGPipeline initialized with documents
+2025-09-05 01:05:32,605 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-05 01:05:32,606 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-05 01:05:32,606 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-05 01:05:33,021 - INFO - Use pytorch device_name: cpu
+2025-09-05 01:05:33,021 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-05 01:05:39,139 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-05 01:05:39,174 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-05 01:05:39,175 - INFO - Initialized FAISS index with dimension: 384
+2025-09-05 01:05:39,175 - INFO - DocumentRetriever initialized successfully
+2025-09-05 01:05:39,177 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-05 01:05:39,312 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,349 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,416 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,446 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,491 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,525 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,557 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,675 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,720 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,758 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,786 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,836 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,890 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,946 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:39,995 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:40,044 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:40,086 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:40,138 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:40,197 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:40,241 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:40,294 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:40,348 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:40,448 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:05:40,450 - INFO - Saved FAISS index to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-05 01:05:40,453 - INFO - Saved metadata to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-05 01:05:40,454 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-05 01:05:40,454 - INFO - Loaded document: C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\documents\Adil Saeed.docx
+2025-09-05 01:05:40,519 - INFO - Loaded metadata from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-05 01:05:40,526 - INFO - RAGPipeline initialized with documents
+2025-09-05 01:06:21,840 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-05 01:06:21,841 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-05 01:06:21,841 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-05 01:06:22,454 - INFO - Use pytorch device_name: cpu
+2025-09-05 01:06:22,455 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-05 01:06:28,791 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-05 01:06:28,839 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-05 01:06:28,844 - INFO - Initialized FAISS index with dimension: 384
+2025-09-05 01:06:28,844 - INFO - DocumentRetriever initialized successfully
+2025-09-05 01:06:28,845 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-05 01:06:29,001 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,035 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,098 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,135 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,186 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,224 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,257 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,366 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,405 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,448 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,480 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,534 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,585 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,851 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,926 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:29,977 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:30,023 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:30,066 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:30,129 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:30,182 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:30,229 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:30,278 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:30,374 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:06:30,376 - INFO - Saved FAISS index to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-05 01:06:30,378 - INFO - Saved metadata to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-05 01:06:30,378 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-05 01:06:30,379 - INFO - Loaded document: C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\documents\Adil Saeed.docx
+2025-09-05 01:06:30,476 - INFO - Loaded metadata from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-05 01:06:30,476 - INFO - RAGPipeline initialized with documents
+2025-09-05 01:07:20,684 - INFO - Loaded GROQ_API_KEY: gsk_cpeVQN... (truncated for security)
+2025-09-05 01:07:20,686 - INFO - Model for 'en': llama-3.1-8b-instant
+2025-09-05 01:07:20,686 - INFO - Model for 'ur': llama-3.1-8b-instant
+2025-09-05 01:07:21,113 - INFO - Use pytorch device_name: cpu
+2025-09-05 01:07:21,113 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-05 01:07:26,618 - INFO - Loaded embedding model: all-MiniLM-L6-v2
+2025-09-05 01:07:26,643 - INFO - Loaded FAISS index from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-05 01:07:26,646 - INFO - Initialized FAISS index with dimension: 384
+2025-09-05 01:07:26,646 - INFO - DocumentRetriever initialized successfully
+2025-09-05 01:07:26,647 - INFO - Initialized models: {'en': 'llama-3.1-8b-instant', 'ur': 'llama-3.1-8b-instant'}
+2025-09-05 01:07:26,799 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:26,834 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:26,901 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:26,933 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:26,981 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,018 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,054 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,157 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,205 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,244 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,272 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,325 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,376 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,443 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,492 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,533 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,582 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,635 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,691 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,741 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,786 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,845 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,951 - INFO - Added document chunk from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,953 - INFO - Saved FAISS index to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\modules\../vectorstore/index.faiss
+2025-09-05 01:07:27,955 - INFO - Saved metadata to C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-05 01:07:27,955 - INFO - Added document from source: documents/Adil Saeed.docx
+2025-09-05 01:07:27,956 - INFO - Loaded document: C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\documents\Adil Saeed.docx
+2025-09-05 01:07:28,018 - INFO - Loaded metadata from C:\Users\HP\Desktop\my-portfolio\my-portfolio\rag\vectorstore\documents.json
+2025-09-05 01:07:28,025 - INFO - RAGPipeline initialized with documents
+2025-09-09 23:00:35,462 - INFO - Starting up Adil's Portfolio Chatbot API...
+2025-09-09 23:00:35,464 - INFO - RAG Pipeline will be initialized on first request
+2025-09-09 23:00:35,464 - INFO - API documentation available at: http://localhost:8000/docs
+2025-09-09 23:00:35,668 - INFO - Incoming request: OPTIONS http://localhost:8000/api/chat
+2025-09-09 23:00:35,673 - INFO - Request processed in 0.005s - Status: 200
+2025-09-09 23:00:35,677 - INFO - Incoming request: POST http://localhost:8000/api/chat
+2025-09-09 23:00:35,679 - INFO - Chat request: 'adil saeed ?...' (lang: en)
+2025-09-09 23:00:36,065 - INFO - Use pytorch device_name: cpu
+2025-09-09 23:00:36,065 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-09 23:00:44,958 - INFO - RAGPipeline initialized
+2025-09-09 23:00:44,967 - INFO - RAG Pipeline initialized
+2025-09-09 23:00:46,802 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 23:00:46,836 - ERROR - Error processing query: name 'datetime' is not defined
+2025-09-09 23:00:46,837 - INFO - Query processed in 11.16s
+2025-09-09 23:00:46,839 - INFO - Request processed in 11.162s - Status: 200
+2025-09-09 23:01:20,420 - INFO - Incoming request: POST http://localhost:8000/api/chat
+2025-09-09 23:01:20,424 - INFO - Chat request: 'adil saeed ?...' (lang: en)
+2025-09-09 23:01:23,713 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 23:01:23,723 - ERROR - Error processing query: name 'datetime' is not defined
+2025-09-09 23:01:23,725 - INFO - Query processed in 3.30s
+2025-09-09 23:01:23,727 - INFO - Request processed in 3.308s - Status: 200
+2025-09-09 23:02:58,333 - INFO - Shutting down Adil's Portfolio Chatbot API...
+2025-09-09 23:03:23,307 - INFO - Starting up Adil's Portfolio Chatbot API...
+2025-09-09 23:03:23,307 - INFO - RAG Pipeline will be initialized on first request
+2025-09-09 23:03:23,308 - INFO - API documentation available at: http://localhost:8000/docs
+2025-09-09 23:03:24,891 - INFO - Incoming request: POST http://localhost:8000/api/chat
+2025-09-09 23:03:24,904 - INFO - Chat request: 'adil saeed ?...' (lang: en)
+2025-09-09 23:03:25,541 - INFO - Use pytorch device_name: cpu
+2025-09-09 23:03:25,543 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-09 23:03:34,187 - INFO - RAGPipeline initialized
+2025-09-09 23:03:34,188 - INFO - RAG Pipeline initialized
+2025-09-09 23:03:36,305 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 23:03:36,346 - ERROR - Error processing query: type object 'datetime.datetime' has no attribute 'datetime'
+2025-09-09 23:03:36,347 - INFO - Query processed in 11.44s
+2025-09-09 23:03:36,349 - INFO - Request processed in 11.457s - Status: 200
+2025-09-09 23:04:00,055 - INFO - Incoming request: POST http://localhost:8000/api/chat
+2025-09-09 23:04:00,055 - INFO - Chat request: 'adil saeed ?...' (lang: en)
+2025-09-09 23:04:02,255 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 23:04:02,259 - ERROR - Error processing query: type object 'datetime.datetime' has no attribute 'datetime'
+2025-09-09 23:04:02,259 - INFO - Query processed in 2.20s
+2025-09-09 23:04:02,265 - INFO - Request processed in 2.209s - Status: 200
+2025-09-09 23:04:31,611 - INFO - Incoming request: POST http://localhost:8000/api/chat
+2025-09-09 23:04:31,616 - INFO - Chat request: 'adil saeed ?...' (lang: en)
+2025-09-09 23:04:38,886 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 23:04:38,892 - ERROR - Error processing query: type object 'datetime.datetime' has no attribute 'datetime'
+2025-09-09 23:04:38,893 - INFO - Query processed in 7.28s
+2025-09-09 23:04:38,896 - INFO - Request processed in 7.287s - Status: 200
+2025-09-09 23:07:11,509 - INFO - Shutting down Adil's Portfolio Chatbot API...

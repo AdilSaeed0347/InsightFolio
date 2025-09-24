@@ -1,0 +1,343 @@
+/* Set main content to Times New Roman */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer specifically in Arial */
+.footer, 
+.footer .footer-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px; /* optional: adjust size */
+    color: #c2bebe;     /* keep your footer text color */
+}
+
+/* Container base style */
+.container {
+    font-family: 'Times New Roman', Times, serif; /* Apply serif font for main content containers */
+    font-size: large; /* Slightly larger font size for readability */
+}
+
+/* ===============================
+   Projects Section
+================================== */
+.projects-section {
+    padding: 5px 20px; /* Maintain reduced top padding for spacing */
+    background: #f9fafb; /* Light gray background for section */
+    font-size: large; /* Text size in this section */
+    font-family: 'Times New Roman', Times, serif; /* Serif font for projects */
+}
+
+/* Container inside Projects Section */
+.projects-section .container {
+    display: block; /* Reset to block for custom grid-like behavior */
+    max-width: 1200px; /* Classic portfolio width */
+    margin: 0 auto; /* Center the container */
+}
+
+/* ===============================
+   Gig Cards Container
+================================== */
+.gig-cards {
+    display: grid; /* Changed from flex to grid for row control */
+    grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+    gap: 20px; /* Space between cards */
+    justify-items: center; /* Center items in the grid */
+}
+
+/* ===============================
+   Gig Card (Project Card)
+================================== */
+.gig-card {
+    width: 92%; /* Full width within grid cell */
+    background: #fff;
+    border: 2px solid #ccc; /* Classic border for old style */
+    padding: 10px; /* Inner padding for older look */
+    margin-bottom: 20px; /* Space between rows */
+    box-shadow: none; /* Remove modern shadow for older aesthetic */
+    transition: border-color 2s ease; /* Slower hover effect, synced with zoom */
+    border-radius: 12px; /* Rounded edges for each gig card */
+}
+
+.gig-card:hover {
+    border-color: #000; /* Darker border on hover */
+}
+
+/* ===============================
+   Project Image
+================================== */
+.gig-card .project-image {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.gig-card .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 2s ease; /* Updated to 2s for slower zoom */
+}
+
+.gig-card:hover .project-image img {
+    transform: scale(1.03); /* Zoom-in effect on hover */
+}
+
+/* Overlay label on image */
+.gig-card .overlay {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 5px; /* Less rounded for older look */
+    font-size: 0.8em;
+}
+
+/* ===============================
+   Project Content
+================================== */
+.gig-card .project-content {
+    padding: 10px;
+}
+
+.gig-card .project-content h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.gig-card .project-content p {
+    font-size: 0.85em;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* ===============================
+   Technologies Tags
+================================== */
+.gig-card .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.gig-card .tech-tag {
+    background: #f0f4ff;
+    color: #2563eb;
+    padding: 4px 10px;
+    border: 1px solid #ccc; /* Classic border for tags */
+    border-radius: 5px;
+    font-size: 0.75em;
+}
+
+/* ===============================
+   Buttons (Live Demo & GitHub)
+================================== */
+.gig-card .project-links {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.gig-card .btn-tertiary {
+    background: #f0f4ff;
+    color: #2563eb;
+    padding: 6px 12px;
+    border: 1px solid #ccc; /* Classic button border */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.gig-card .btn-tertiary:hover {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* ===============================
+   More Info Section
+================================== */
+.more-info {
+    padding: 12px;
+    background: #f0f4ff;
+    border-top: 1px solid #ccc; /* Classic divider */
+}
+
+.more-info h4 {
+    font-size: 1em;
+    margin: 8px 0 4px;
+    color: #111;
+}
+
+.more-info p {
+    font-size: 0.8em;
+    color: #333;
+}
+
+/* ===============================
+   Footer inside card
+================================== */
+.gig-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #444;
+    border-top: 1px solid #ccc;
+    padding-top: 8px;
+}
+
+/* ===============================
+   Hide Elements
+================================== */
+.hidden {
+    display: none;
+}
+
+/* ===============================
+   Hero Section
+================================== */
+.hero-section {
+    background: linear-gradient(135deg, #f8f8f9 0%, #e1dee5 100%);
+    color: rgb(10, 9, 9);
+    padding: 40px 0;
+    text-align: center;
+    max-height: 180px;
+    border-radius: 10px;
+}
+
+/* ===============================
+   Main Content & Animations
+================================== */
+.main-content {
+    margin-top: 70px; /* Keep for navbar offset */
+    min-height: calc(100vh - 70px);
+    opacity: 0;
+    animation: smoothFadeUp 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.main-content > section {
+    opacity: 0;
+    animation: smoothFadeUp 1s ease-out forwards;
+}
+
+.main-content > section:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.main-content > section:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+/* ===============================
+   Keyframes
+================================== */
+@keyframes smoothFadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   Responsive
+================================== */
+@media (max-width: 1024px) {
+    .gig-cards {
+        grid-template-columns: repeat(2, 1fr); /* Two columns up to tablet size */
+    }
+}
+
+@media (max-width: 768px) {
+    .gig-card {
+        width: 100%; /* Full width on smaller tablets */
+        padding: 15px; /* Increased padding for touch */
+    }
+    .gig-cards {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 15px; /* Reduced gap for mobile */
+    }
+    .gig-card .project-image {
+        height: 120px; /* Slightly smaller image on mobile */
+    }
+    .gig-card .project-content h3 {
+        font-size: 1em; /* Smaller heading */
+    }
+    .gig-card .project-content p {
+        font-size: 0.75em; /* Smaller text */
+    }
+    .gig-card .btn-tertiary {
+        padding: 8px 14px; /* Larger touch targets */
+        font-size: 0.9em;
+    }
+    .filter-buttons {
+        gap: 10px; /* Reduced gap for mobile */
+        margin: 5px 10px 20px; /* Adjusted margins */
+    }
+    .filter-btn {
+        padding: 6px 12px; /* Smaller buttons for mobile */
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .gig-card .project-image {
+        height: 100px; /* Even smaller on very small screens */
+    }
+    .gig-card .project-content {
+        padding: 10px; /* Adjusted padding */
+    }
+    .gig-card .tech-tag {
+        font-size: 0.7em; /* Smaller tags */
+        padding: 3px 8px;
+    }
+    .gig-footer {
+        font-size: 0.75em; /* Smaller footer text */
+    }
+}
+
+/* ===============================
+   Filter Buttons
+================================== */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 5px 20px 30px; /* Maintain spacing */
+    flex-wrap: wrap;
+    color: #2563eb;
+}
+
+.filter-btn {
+    background: #e0e0e0; /* Old button background */
+    color: #1758d8; /* Old text color */
+    border: 1px solid #111010; /* Old border style */
+    padding: 8px 15px; /* Old padding */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 5px; /* Rounded edges */
+    background-color: #cfdff7;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #5886ea; /* Blue color from previous design */
+    color: #fff; /* White text on hover */
+    border-color: #2563eb; /* Matching blue border */
+}
+
+/* Hide Class for Filtered Cards */
+.gig-card.hide {
+    display: none;
+}

@@ -1,0 +1,450 @@
+/* frontend/styles/global.css */
+/* Global styles for the entire portfolio website */
+
+/* CSS Reset and Base Styles */
+
+html {
+    overflow-y: scroll; /* Forces scrollbar always, preventing shift */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Wrapper fills page height and pushes footer code to buttom  */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full page height */
+}
+
+/* Let main content grow */
+.hero-section,
+.main-content {
+    flex: 1;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Container for consistent width across pages */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar Styles */
+/* Navigation Bar Styles */
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* Enhanced Logo Styling with Circular Frame and Animation */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.nav-logo-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* border: 2px solid #f4a261; Warm gold border */
+    box-shadow: 0 2px 5px rgba(244, 162, 97, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    animation: logoPulse 3s infinite ease-in-out; /* Dynamic animation */
+}
+
+.nav-logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #2a4365; /* Deep slate blue */
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+.nav-logo:hover .nav-logo-icon {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(244, 162, 97, 0.4);
+}
+
+.nav-logo:hover .nav-logo-text {
+    color: #f4a261; /* Warm gold on hover */
+}
+
+/* Animation Keyframes for Logo */
+@keyframes logoPulse {
+    0% {
+        filter: brightness(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3)); /* Base state */
+        transform: scale(1);
+        opacity: 0.95;
+    }
+    50% {
+        filter: brightness(1.2) drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); /* White filter effect */
+        transform: scale(1.03);
+        opacity: 1;
+    }
+    100% {
+        filter: brightness(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+        transform: scale(1);
+        opacity: 0.95;
+    }
+}
+
+/* Navigation Links - Horizontal & Animated */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a5568;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+/* Hover underline effect */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -3px;
+    background: linear-gradient(90deg, #f4a261, #e76f51); /* Warm gradient */
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #e76f51; /* Warm coral */
+    background-color: rgba(231, 111, 81, 0.1);
+}
+
+/* Elegant Active State Design */
+.nav-links a.active {
+    color: #ffffff;
+    background: linear-gradient(135deg, #f4a261, #e76f51); /* Warm gradient */
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    padding: 8px 16px;
+    border-radius: 10px;
+}
+
+.nav-links a.active::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, #f4a261, #e76f51);
+    border-radius: 12px;
+    z-index: -1;
+    padding: 3px;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a.active:hover::before {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+    .nav-logo {
+        font-size: 1.3em;
+    }
+    .nav-logo-icon {
+        width: 28px;
+        height: 28px;
+    }
+    .nav-logo-text {
+        font-size: 1.1em;
+    }
+    .nav-links {
+        gap: 20px;
+    }
+    .nav-links a {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+}
+/* Main Content Styles */
+.main-content {
+    margin-top: 70px; /* Account for fixed navbar */
+    min-height: calc(100vh - 70px);
+}
+
+/* Hero Section Styles - Compact Version */
+.hero-section {
+    background: linear-gradient(135deg, #f8f8f9 0%, #e1dee5 100%);
+    color: rgb(10, 9, 9);
+    padding: 40px 0; /* reduced from 80px to 40px */
+    text-align: center;
+    max-height: 380px;
+}
+
+.hero-section h1 {
+    font-size: 2em; /* reduced from 3em */
+    margin-bottom: 15px; /* less spacing */
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1em; /* reduced from 1.2em */
+    max-width: 500px; /* slightly smaller width */
+    margin: 0 auto 20px; /* reduced bottom margin */
+    opacity: 0.9;
+}
+
+/* Button Styles */
+.btn-primary {
+    background: #2563eb;
+    color: white;
+    padding: 10px 25px; /* slightly smaller */
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #2563eb;
+    padding: 10px 25px; /* slightly smaller */
+    text-decoration: none;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 30px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-section p {
+        font-size: 0.9em;
+        max-width: 90%;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 8px 20px;
+    }
+}
+
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+.highlight {
+    color: #fbbf24;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+        gap: 20px;
+    }
+    
+    .main-content {
+        margin-top: 120px; /* Account for taller mobile nav */
+    }
+    
+    .hero-section h1 {
+        font-size: 2em;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* ======================
+   GLOBAL FOOTER
+   ====================== */
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main, .main-content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  background: #3a3f47;
+  color: #fff;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  margin-top: auto; /* push footer to bottom */
+}
+
+.footer .footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer .footer-text {
+  color: #aaa;
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+}
+
+
+/* ===============================
+   Chatbot Close Button (Tight Fit)
+   =============================== */
+.close-chat {
+  all: unset;                    /* reset everything */
+  cursor: pointer;
+  font-size: 1.6rem;             /* size of × */
+  color: #fdf9f9;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.3rem;                 /* equal width */
+  height: 1.3rem;                /* equal height */
+  line-height: 1;                /* removes extra vertical space */
+
+  border-radius: 50%;            /* circle shape */
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.close-chat:hover {
+  background: rgb(250, 121, 121);
+  color: #fff;
+}
+
+.close-chat:active {
+  transform: scale(0.9);
+}
+
+/* Chatbot Header (static blue background) */
+.chat-header {
+    background: #007bff; /* solid blue */
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* XAdilTeam Shine Animation */
+.chat-header h3 {
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,     /* white */
+        #6dd5ed 20%,    /* soft aqua */
+        #70bfd2 40%,    /* deep teal blue */
+        #caedde 60%,    /* purple glow */
+        #70cee3 80%,    /* neon cyan */
+        #ffffff 100%    /* white */
+    );
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 8s linear infinite;
+}
+
+/* Smooth gradient shift */
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
