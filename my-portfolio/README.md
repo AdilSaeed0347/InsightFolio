@@ -73,6 +73,8 @@ my-portfolio/
 ├── .env                             # API keys, secrets
 └── README.md                        # Project documentation
 
+
+
 ## 🚀 How to Run the Project
 
 ### 1️⃣ Start the Frontend
