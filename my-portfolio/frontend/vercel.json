@@ -10,8 +10,9 @@
     { "src": "assets/**/*", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/", "dest": "/pages/index.html" },
-    { "src": "/about", "dest": "/pages/home.html" },
+    { "src": "/", "dest": "/pages/home.html" },          // Make home.html root page
+    { "src": "/home", "dest": "/pages/home.html" },
+    { "src": "/index", "dest": "/pages/index.html" },
     { "src": "/projects", "dest": "/pages/projects.html" },
     { "src": "/contact", "dest": "/pages/contact.html" }
   ]
