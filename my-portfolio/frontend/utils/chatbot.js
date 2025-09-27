@@ -22,6 +22,7 @@ class PortfolioChatbot {
         
         const chatMessages = document.getElementById('chat-messages');
         if (chatMessages) chatMessages.addEventListener('scroll', () => this.handleScroll());
+         this.showWelcomePopup();
     }
 
     bindEvents() {
@@ -46,6 +47,30 @@ class PortfolioChatbot {
             });
         }
     }
+    showWelcomePopup() {
+    const welcomePopup = document.getElementById("chatbot-welcome");
+    const chatButton = document.getElementById("chatbot-button");
+
+    if (!welcomePopup) return;
+
+    // Show popup after 2s
+    setTimeout(() => {
+        welcomePopup.classList.remove("hidden");
+
+        // Hide after 6s
+        setTimeout(() => {
+            welcomePopup.classList.add("hidden");
+        }, 6000);
+    }, 2000);
+
+    // Hide popup instantly if user opens chat
+    if (chatButton) {
+        chatButton.addEventListener("click", () => {
+            welcomePopup.classList.add("hidden");
+        });
+    }
+}
+
 
     setupMicrophone() {
         const micBtn = document.getElementById('micBtn');
@@ -163,19 +188,22 @@ class PortfolioChatbot {
         this.saveHistory();
         this.scrollToBottom(true);
     }
+openChat() {
+    const chatWindow = document.getElementById('chat-window');
+    const chatButton = document.getElementById('chatbot-button');
+    const welcomePopup = document.getElementById("chatbot-welcome");
 
-    openChat() {
-        const chatWindow = document.getElementById('chat-window');
-        const chatButton = document.getElementById('chatbot-button');
-        if (chatWindow && chatButton) {
-            this.isOpen = true;
-            chatButton.style.display = 'none';
-            chatWindow.classList.remove('hidden');
-            this.scrollToBottom(true);
-            this.updateButtonState();
-            setTimeout(() => document.getElementById('chat-input')?.focus(), 300);
-        }
+    if (chatWindow && chatButton) {
+        this.isOpen = true;
+        chatButton.style.display = 'none';
+        chatWindow.classList.remove('hidden');
+        if (welcomePopup) welcomePopup.classList.add("hidden"); // ✅ hide popup
+        this.scrollToBottom(true);
+        this.updateButtonState();
+        setTimeout(() => document.getElementById('chat-input')?.focus(), 10000);
     }
+}
+
 
     closeChat() {
         const chatWindow = document.getElementById('chat-window');
