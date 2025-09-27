@@ -11,6 +11,8 @@
   ],
   "routes": [
     { "src": "/", "dest": "/pages/index.html" },
-    { "src": "/(.*)", "dest": "/pages/$1.html" }
+    { "src": "/about", "dest": "/pages/home.html" },
+    { "src": "/projects", "dest": "/pages/projects.html" },
+    { "src": "/contact", "dest": "/pages/contact.html" }
   ]
 }
