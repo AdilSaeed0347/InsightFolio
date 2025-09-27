@@ -1,5 +1,6 @@
 /* frontend/styles/chatbot.css
-/* Chatbot styles with robot-like design and animations */
+   Chatbot Floating Button - Professional Blue Style
+*/
 
 /* Chatbot Container */
 #chatbot-container {
@@ -9,130 +10,54 @@
     z-index: 2000;
 }
 
-/* Chatbot Button (Minimized State) */
+/* Chatbot Button (Floating Bubble) */
 .chatbot-button {
-    background: linear-gradient(135deg, #8798e4 0%, #c4a6e1 100%); /* Controls the gradient background of the chatbot button (purple shades) */
-    border-radius: 30px; /* Reduced from 50px for a smaller button */
-    padding: 10px 15px; /* Reduced padding for a smaller size */
-    cursor: pointer;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Adjusted shadow for smaller size */
+    background: linear-gradient(135deg, #3b82f6, #2563eb); /* Modern blue gradient */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
-    gap: 10px; /* Reduced gap for compactness */
-    transition: all 0.3s ease;
+    justify-content: center;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
     position: relative;
     overflow: hidden;
 }
 
+/* Hover effect */
 .chatbot-button:hover {
-    transform: translateY(-2px); /* Reduced lift on hover */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transform: scale(1.07);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.35);
 }
 
-.chatbot-button:before {
+/* Optional shiny swipe effect */
+.chatbot-button::before {
     content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); /* Controls the shine effect on hover (white transparent) */
-    transition: left 0.5s;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent
+    );
+    transition: left 0.6s;
 }
-
-.chatbot-button:hover:before {
+.chatbot-button:hover::before {
     left: 100%;
 }
 
-/* Robot Icon Styles */
-.robot-icon {
-    position: relative;
-    width: 30px; /* Reduced from 40px for smaller size */
-    height: 40px; /* Reduced from 50px */
-}
-
-.robot-head {
-    width: 22px; /* Reduced from 30px */
-    height: 18px; /* Reduced from 25px */
-    background: #fff; /* Controls the robot head background (white) */
-    border-radius: 10px 10px 6px 6px; /* Adjusted for proportion */
-    position: relative;
-    margin: 0 auto;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); /* Reduced shadow */
-}
-
-.robot-eyes {
-    position: absolute;
-    top: 6px; /* Adjusted for smaller head */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 9px; /* Reduced from 12px */
-    height: 3px; /* Reduced from 4px */
-    background: #60a5fa; /* Softer blue for better contrast */
-    border-radius: 2px;
-    animation: robotBlink 3s infinite;
-}
-
-.robot-eyes:before,
-.robot-eyes:after {
-    content: '';
-    position: absolute;
-    width: 3px; /* Reduced from 4px */
-    height: 3px; /* Reduced from 4px */
-    background: #60a5fa; /* Softer blue for better contrast */
-    border-radius: 50%;
-    top: 0;
-}
-
-.robot-eyes:before {
-    left: 2px;
-}
-
-.robot-eyes:after {
-    right: 2px;
-}
-
-.robot-body {
-    width: 15px; /* Reduced from 20px */
-    height: 12px; /* Reduced from 15px */
-    background: #e5f3ff; /* Controls the robot body background (light blue) */
-    border-radius: 3px; /* Adjusted for proportion */
-    margin: 2px auto 0;
-    position: relative;
-}
-
-.robot-body:after {
-    content: '';
-    position: absolute;
-    width: 6px; /* Reduced from 8px */
-    height: 2px;
-    background: #6e98f3; /* Controls the robot body detail line (medium blue) */
-    top: 5px; /* Adjusted for smaller body */
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 1px;
-}
-
-.robot-arm {
-    position: absolute;
-    width: 2px; /* Reduced from 3px */
-    height: 10px; /* Reduced from 12px */
-    background: #fff; /* Controls the robot arms background (white) */
-    border-radius: 2px;
-    top: 22px; /* Adjusted for smaller body */
-    animation: robotHandShake 1.5s ease-in-out infinite;
-}
-
-.robot-arm-left {
-    left: 6px; /* Adjusted for smaller icon */
-    transform-origin: bottom;
-    animation-delay: 0s;
-}
-
-.robot-arm-right {
-    right: 6px; /* Adjusted for smaller icon */
-    transform-origin: bottom;
-    animation-delay: 0.5s;
+/* Chat Bubble Icon */
+.chatbot-icon {
+    width: 28px;
+    height: 28px;
+    fill: #fff; /* white for strong contrast */
+    pointer-events: none;
 }
 
 /* Chat Message Bubble with Dynamic Animation */
@@ -394,4 +319,41 @@
     max-height: 400px;
     overflow-y: auto;
     scroll-behavior: smooth;
+}
+/* Runtime Welcome Popup */
+.welcome-popup {
+    position: absolute;
+    bottom: 90px;
+    right: 20px;
+    background: #2d2f36;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 16px 16px 16px 4px;
+    font-size: 0.9em;
+    line-height: 1.4;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+    animation: fadeIn 0.5s ease-in-out;
+    z-index: 3000;
+    white-space: nowrap; /* ✅ force single line */
+}
+
+
+/* arrow under bubble */
+.welcome-popup::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: 20px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #2d2f36 transparent transparent transparent;
+}
+
+.welcome-popup.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
