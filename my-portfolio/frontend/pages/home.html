@@ -60,7 +60,7 @@
                         <div class="articles-card">
                             <div class="articles-header">
                                 <h3 class="articles-title">My Articles & Research</h3>
-                                <div class="articles-icon">📚</div>
+                                
                             </div>
                             <div class="articles-content">
                                 <p class="dynamic-caption" id="dynamic-caption">
@@ -119,16 +119,26 @@
         <!-- Enhanced Chatbot Code -->
         <div id="chatbot-container">
             <div id="chatbot-button" class="chatbot-button">
-                <div class="robot-icon">
-                    <div class="robot-head">
-                        <div class="robot-eyes"></div>
-                    </div>
-                    <div class="robot-body"></div>
-                    <div class="robot-arm robot-arm-left"></div>
-                    <div class="robot-arm robot-arm-right"></div>
-                </div>
-                <div class="chat-message">✋ How can I help you?</div>
+                <div id="chatbot-button" class="chatbot-button">
+  <!-- Professional SMS/Chat Icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" 
+       viewBox="0 0 24 24" 
+       class="chatbot-icon">
+    <path d="M20 2H4c-1.1 0-2 .9-2 2v16l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+    <line x1="7" y1="9" x2="17" y2="9" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <line x1="7" y1="13" x2="13" y2="13" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</div>
+
+                <!-- <div class="chat-message">✋ How can I help you?</div> -->
             </div>
+
+            <!-- 👇 Runtime Welcome Popup -->
+           <div id="chatbot-welcome" class="welcome-popup hidden">
+             👋 Hi, I’m AdilChat, How can I help you.
+             </div>
+
+
             <div id="chat-window" class="chat-window hidden">
                 <div class="chat-header">
                     <h3>AdilChat</h3>
