@@ -42,7 +42,7 @@ function clearAllAnimations() {
     certificateSliderInterval = null;
 }
 
-// Ultra-smooth role typing animation - no blinking or stuttering
+// Ultra-smooth role typing animation
 function initializeRoleTyping() {
     const roles = [
         "Junior Machine Learning Engineer",
@@ -59,7 +59,6 @@ function initializeRoleTyping() {
     
     if (!dynamicRole) return;
 
-    // Ensure element is properly set up
     dynamicRole.textContent = '';
     dynamicRole.style.opacity = '1';
     dynamicRole.style.visibility = 'visible';
@@ -69,7 +68,6 @@ function initializeRoleTyping() {
         const currentRole = roles[roleIndex];
         
         if (isDeleting) {
-            // Smoothly delete characters
             charIndex--;
             dynamicRole.textContent = currentRole.substring(0, Math.max(0, charIndex));
             
@@ -77,39 +75,40 @@ function initializeRoleTyping() {
                 isDeleting = false;
                 roleIndex = (roleIndex + 1) % roles.length;
                 charIndex = 0;
-                roleTypingTimeout = setTimeout(typeRole, 1000); // Pause before typing next
+                roleTypingTimeout = setTimeout(typeRole, 1000);
                 return;
             }
             
-            roleTypingTimeout = setTimeout(typeRole, 30); // Fast deletion
+            roleTypingTimeout = setTimeout(typeRole, 30);
         } else {
-            // Smoothly type characters
             charIndex++;
             dynamicRole.textContent = currentRole.substring(0, charIndex);
             
             if (charIndex >= currentRole.length) {
                 isDeleting = true;
-                roleTypingTimeout = setTimeout(typeRole, 2500); // Display complete text
+                roleTypingTimeout = setTimeout(typeRole, 2500);
                 return;
             }
             
-            roleTypingTimeout = setTimeout(typeRole, 120); // Smooth typing speed
+            roleTypingTimeout = setTimeout(typeRole, 120);
         }
     }
 
-    // Start typing after initial delay
     roleTypingTimeout = setTimeout(typeRole, 1500);
 }
 
-// Articles animation - stable and smooth
+// ⭐⭐⭐ UPDATED: Articles animation WITH Medium link ⭐⭐⭐
 function initializeArticlesAnimation() {
+
+    const mediumLink = "https://medium.com/@adilahmad0347"; // <<--- CHANGE THIS TO YOUR MEDIUM LINK
+
     const captions = [
         "How Deepseek introduces Mixture of Experts system",
         "Why Claude and Grok rapidly took high position in LLMs", 
         "The Evolution of Retrieval-Augmented Generation (RAG)",
-        "Computer Vision: From CNNs to Vision Transformers",
-        "Natural Language Processing: The Future of AI Communication",
-        "Deep Learning Architectures: Innovations and Applications"
+        "Domain expertise is more valuable than coding in the era of AI",
+        "Why Aspiring Generative AI Engineers Should Learn with Google Gemini",
+        "From Research to Production PyTorch"
     ];
     
     let captionIndex = 0;
@@ -120,8 +119,9 @@ function initializeArticlesAnimation() {
     
     if (!dynamicCaption) return;
     
-    // Initialize with first caption
+    // Initialize first caption
     dynamicCaption.textContent = captions[0];
+    dynamicCaption.href = mediumLink;  // NEW — makes it clickable
     dynamicCaption.classList.remove('fade-out', 'fade-in');
     captionIndex = 1;
     
@@ -129,28 +129,27 @@ function initializeArticlesAnimation() {
         if (isAnimating || isPaused) return;
         isAnimating = true;
         
-        // Fade out
         dynamicCaption.classList.remove('fade-in');
         dynamicCaption.classList.add('fade-out');
         
         setTimeout(() => {
             if (!isPaused) {
-                // Update text
                 dynamicCaption.textContent = captions[captionIndex];
+                dynamicCaption.href = mediumLink; // NEW — clickable always
+                
                 captionIndex = (captionIndex + 1) % captions.length;
                 
-                // Fade in
                 dynamicCaption.classList.remove('fade-out');
                 dynamicCaption.classList.add('fade-in');
                 
                 setTimeout(() => {
                     dynamicCaption.classList.remove('fade-in');
                     isAnimating = false;
-                }, 1400); // Keep the beautiful slow fade-in
+                }, 1400);
             } else {
                 isAnimating = false;
             }
-        }, 1000); // Keep the beautiful slow fade-out
+        }, 1000);
     }
     
     function startAnimation() {
@@ -173,17 +172,15 @@ function initializeArticlesAnimation() {
         }
     }
     
-    // Start animation
     startAnimation();
     
-    // Hover controls
     if (articlesCard) {
         articlesCard.addEventListener('mouseenter', stopAnimation);
         articlesCard.addEventListener('mouseleave', resumeAnimation);
     }
 }
 
-// Certificate slider - faster intervals but beautiful slow transitions
+// Certificate slider (unchanged)
 function initializeCertificateSlider() {
     const certificates = [
         {
@@ -229,7 +226,6 @@ function initializeCertificateSlider() {
     let isUpdating = false;
     let isPaused = false;
     
-    // Get all elements
     const elements = {
         card: document.getElementById('certificate-card'),
         img: document.getElementById('certificate-img'),
@@ -241,7 +237,6 @@ function initializeCertificateSlider() {
         section: document.querySelector('.certificate-card-wrapper')
     };
 
-    // Validate elements exist
     const requiredElements = ['card', 'img', 'title', 'desc', 'issuer', 'dropdownToggle', 'dropdownMenu'];
     for (let key of requiredElements) {
         if (!elements[key]) {
@@ -266,22 +261,18 @@ function initializeCertificateSlider() {
             return;
         }
         
-        // Clear existing classes
         const animatedElements = [elements.title, elements.img, elements.desc, elements.issuer];
         animatedElements.forEach(el => el.classList.remove('fade-in', 'fade-out'));
         
-        // Add fade-out - beautiful slow transition
         animatedElements.forEach(el => el.classList.add('fade-out'));
         
         setTimeout(() => {
-            // Update content
             elements.img.src = cert.img;
             elements.title.textContent = cert.title;
             elements.desc.textContent = cert.desc;
             elements.issuer.textContent = cert.issuer;
             elements.card.href = cert.link;
             
-            // Add fade-in - beautiful slow transition
             animatedElements.forEach(el => {
                 el.classList.remove('fade-out');
                 el.classList.add('fade-in');
@@ -290,8 +281,8 @@ function initializeCertificateSlider() {
             setTimeout(() => {
                 animatedElements.forEach(el => el.classList.remove('fade-in'));
                 isUpdating = false;
-            }, 1400); // Keep the beautiful slow fade-in duration
-        }, 1000); // Keep the beautiful slow fade-out duration
+            }, 1400);
+        }, 1000);
     }
 
     function startSlider() {
@@ -301,7 +292,7 @@ function initializeCertificateSlider() {
                 currentIndex = (currentIndex + 1) % certificates.length;
                 updateCertificate(currentIndex);
             }
-        }, 3500); // Shorter interval as requested - 3.5 seconds
+        }, 3500);
     }
 
     function stopSlider() {
@@ -319,22 +310,17 @@ function initializeCertificateSlider() {
         }
     }
 
-    // Initialize
     updateCertificate(currentIndex, true);
     setTimeout(startSlider, 2000);
 
-    // Hover controls
     if (elements.section) {
         elements.section.addEventListener('mouseenter', stopSlider);
         elements.section.addEventListener('mouseleave', resumeSlider);
     }
 
-    // Enhanced Dropdown functionality - Fixed and Working
     elements.dropdownToggle.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        
-        console.log('Dropdown clicked'); // Debug log
         
         isDropdownOpen = !isDropdownOpen;
         
@@ -342,23 +328,18 @@ function initializeCertificateSlider() {
             elements.dropdownMenu.classList.add('active');
             elements.dropdownToggle.style.transform = 'rotate(180deg)';
             stopSlider();
-            console.log('Dropdown opened'); // Debug log
         } else {
             elements.dropdownMenu.classList.remove('active');
             elements.dropdownToggle.style.transform = 'rotate(0deg)';
             if (!isUserControlled) {
                 setTimeout(startSlider, 500);
             }
-            console.log('Dropdown closed'); // Debug log
         }
     });
 
-    // Fixed Dropdown items with proper event handling
     const dropdownItems = elements.dropdownMenu.querySelectorAll('li[data-index]');
-    console.log(`Found ${dropdownItems.length} dropdown items`); // Debug log
     
     dropdownItems.forEach((item, index) => {
-        // Ensure data-index is set correctly
         if (!item.hasAttribute('data-index')) {
             item.setAttribute('data-index', index);
         }
@@ -367,66 +348,31 @@ function initializeCertificateSlider() {
             e.preventDefault();
             e.stopPropagation();
             
-            console.log(`Dropdown item ${index} clicked`); // Debug log
-            
-            // Stop slider and set user control
             stopSlider();
             isUserControlled = true;
             isDropdownOpen = false;
             
-            // Get index and validate
             const newIndex = parseInt(this.getAttribute('data-index'));
-            console.log(`Switching to certificate index: ${newIndex}`); // Debug log
             
             if (!isNaN(newIndex) && newIndex >= 0 && newIndex < certificates.length) {
                 currentIndex = newIndex;
                 updateCertificate(currentIndex);
             }
             
-            // Close dropdown
             elements.dropdownMenu.classList.remove('active');
             elements.dropdownToggle.style.transform = 'rotate(0deg)';
-            
-            // Visual feedback
-            this.style.background = 'rgba(139, 92, 246, 0.2)';
-            this.style.transform = 'translateX(4px)';
-            
-            setTimeout(() => {
-                this.style.background = '';
-                this.style.transform = 'translateX(0)';
-            }, 300);
-        });
-        
-        // Enhanced hover effects
-        item.addEventListener('mouseenter', function() {
-            if (!this.style.background.includes('rgba(139, 92, 246, 0.2)')) {
-                this.style.background = 'rgba(139, 92, 246, 0.05)';
-                this.style.transform = 'translateX(2px)';
-            }
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            if (!this.style.background.includes('rgba(139, 92, 246, 0.2)')) {
-                this.style.background = '';
-                this.style.transform = 'translateX(0)';
-            }
         });
     });
 
-    // Improved Global click handler
     function handleGlobalClick(e) {
-        // Check if click is outside the entire certificate section
         if (elements.section && !elements.section.contains(e.target)) {
             if (isDropdownOpen) {
-                console.log('Closing dropdown due to outside click'); // Debug log
                 isDropdownOpen = false;
                 elements.dropdownMenu.classList.remove('active');
                 elements.dropdownToggle.style.transform = 'rotate(0deg)';
             }
             
-            // Reset user control and resume slider
             if (isUserControlled) {
-                console.log('Resuming auto-slider due to outside click'); // Debug log
                 isUserControlled = false;
                 setTimeout(() => {
                     isPaused = false;
@@ -436,7 +382,6 @@ function initializeCertificateSlider() {
         }
     }
 
-    // Remove any existing global click handlers first
     document.removeEventListener('click', handleGlobalClick);
     document.addEventListener('click', handleGlobalClick);
 }

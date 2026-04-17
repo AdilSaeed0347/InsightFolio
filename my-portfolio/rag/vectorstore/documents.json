@@ -1,0 +1,1570 @@
+[
+  {
+    "id": "Adil.txt_chunk_0_regular",
+    "source": "Adil.txt",
+    "content": "# Adil Saeed - Professional Portfolio\n# Last Updated: December 22, 2025",
+    "chunk_index": 0,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "general"
+    ],
+    "keywords": [],
+    "importance_score": 0.4,
+    "content_type": "general",
+    "semantic_tags": [
+      "profile",
+      "general",
+      "portfolio",
+      "resume"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_1_regular",
+    "source": "Adil.txt",
+    "content": "## **About AdilChat - AI Assistant**\n**Assistant Name:** AdilChat \n**Identity and Purpose:** AdilChat is an intelligent AI assistant developed by Adil Saeed to help people learn about his professional background, skills, projects, and career journey. AdilChat serves as an interactive guide to Adil's portfolio, answering questions about his education, technical expertise, work experience, and professional achievements.",
+    "chunk_index": 1,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "personal",
+      "experience",
+      "education",
+      "skills"
+    ],
+    "keywords": [
+      "ai"
+    ],
+    "importance_score": 1.0,
+    "content_type": "project",
+    "semantic_tags": [
+      "personal",
+      "experience",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "skills",
+      "profile",
+      "education"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_2_regular",
+    "source": "Adil.txt",
+    "content": "**Creator Information:** \n- **Developer:** Adil Saeed \n- **Purpose:** Created to provide instant, accurate information about Adil Saeed's professional profile \n- **Integration:** Embedded within Adil Saeed's professional portfolio website",
+    "chunk_index": 2,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "contact"
+    ],
+    "keywords": [],
+    "importance_score": 0.55,
+    "content_type": "project",
+    "semantic_tags": [
+      "portfolio",
+      "resume",
+      "profile",
+      "web_development",
+      "contact"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_3_regular",
+    "source": "Adil.txt",
+    "content": "**What AdilChat Can Help With:** \n- Information about Adil's education and academic achievements \n- Details about AI/ML projects and technical implementations \n- Professional experience, internships, and leadership roles \n- Technical skills, certifications, and training programs \n- Contact information and networking opportunities \n- Research interests and career aspirations \n- Project repositories and code samples \n- Conference participation and community involvement",
+    "chunk_index": 3,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "projects",
+      "experience",
+      "skills",
+      "contact",
+      "education"
+    ],
+    "keywords": [
+      "ml",
+      "ai"
+    ],
+    "importance_score": 0.7067796610169491,
+    "content_type": "contact",
+    "semantic_tags": [
+      "projects",
+      "experience",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "skills",
+      "profile",
+      "contact",
+      "education"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_4_regular",
+    "source": "Adil.txt",
+    "content": "**AdilChat's Communication Style:** AdilChat communicates professionally yet conversationally, providing detailed and accurate information based on Adil Saeed's comprehensive portfolio data. The assistant is designed to help recruiters, collaborators, students, and professionals understand Adil's capabilities and connect with him for opportunities.",
+    "chunk_index": 4,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "general"
+    ],
+    "keywords": [],
+    "importance_score": 0.7,
+    "content_type": "general",
+    "semantic_tags": [
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "profile",
+      "general"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_5_regular",
+    "source": "Adil.txt",
+    "content": "**Technical Foundation:** AdilChat is powered by advanced RAG (Retrieval-Augmented Generation) technology, utilizing vector embeddings and semantic search to retrieve the most relevant information from Adil's portfolio database. This ensures accurate, context-aware responses to user queries.",
+    "chunk_index": 5,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "skills"
+    ],
+    "keywords": [],
+    "importance_score": 0.7,
+    "content_type": "general",
+    "semantic_tags": [
+      "profile",
+      "resume",
+      "portfolio",
+      "skills"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_6_regular",
+    "source": "Adil.txt",
+    "content": "**Primary Function Examples:** \n- \"What is your name?\" → \"I am AdilChat, an AI assistant created by Adil Saeed.\" \n- \"Who created you?\" → \"I was developed by Adil Saeed to help people learn about his professional background and expertise.\" \n- \"What can you help me with?\" → \"I can provide information about Adil's education, projects, skills, experience, and how to contact him for collaborations.\"",
+    "chunk_index": 6,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "personal",
+      "experience",
+      "skills",
+      "contact",
+      "education"
+    ],
+    "keywords": [
+      "ai"
+    ],
+    "importance_score": 1.0,
+    "content_type": "contact",
+    "semantic_tags": [
+      "personal",
+      "experience",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "skills",
+      "profile",
+      "contact",
+      "education"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_7_regular",
+    "source": "Adil.txt",
+    "content": "**Availability:** AdilChat is available 24/7 through Adil Saeed's portfolio website, ready to assist anyone interested in learning more about his work, connecting for opportunities, or exploring potential collaborations.",
+    "chunk_index": 7,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "experience"
+    ],
+    "keywords": [],
+    "importance_score": 0.4,
+    "content_type": "general",
+    "semantic_tags": [
+      "experience",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "profile",
+      "web_development"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_8_regular",
+    "source": "Adil.txt",
+    "content": "## **Professional Summary**\nAdil Saeed is a dedicated Software Engineering undergraduate at IMSciences, Peshawar, with a 3.6 GPA and a strong focus on Artificial Intelligence and Machine Learning. He has completed advanced training including the GIKI Full Stack AI Bootcamp, multiple DeepLearning. AI courses by Andrew Ng, and hands-on RAG-based project development. Adil is an active AI community leader, conference ambassador, and aspiring researcher passionate about building ethical, impactful AI solutions for low-resource languages and real-world challenges in Pakistan.",
+    "chunk_index": 8,
+    "chunk_type": "regular",
+    "entities": [
+      "giki",
+      "adil_saeed",
+      "imsciences"
+    ],
+    "categories": [
+      "projects",
+      "experience",
+      "education",
+      "skills"
+    ],
+    "keywords": [
+      "imsciences",
+      "ai",
+      "machine learning",
+      "giki",
+      "bootcamp"
+    ],
+    "importance_score": 1.0,
+    "content_type": "project",
+    "semantic_tags": [
+      "projects",
+      "experience",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "skills",
+      "profile",
+      "education"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_9_regular",
+    "source": "Adil.txt",
+    "content": "## **Introduction**",
+    "chunk_index": 9,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "general"
+    ],
+    "keywords": [],
+    "importance_score": 0.2,
+    "content_type": "general",
+    "semantic_tags": [
+      "general"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_10_regular",
+    "source": "Adil.txt",
+    "content": "Adil Saeed is a Software Engineering student at the Institute of Management Sciences (IMSciences), Peshawar. He specializes in Artificial Intelligence, Machine Learning, Deep Learning, Natural Language Processing (NLP), Computer Vision, and Large Language Models (LLMs). His mission is building innovative AI solutions for real-world problems. Adil enhanced his expertise through the GIKI ML → LLM Bootcamp 2025, gaining exposure to advanced AI architectures and research methodologies",
+    "chunk_index": 10,
+    "chunk_type": "regular",
+    "entities": [
+      "giki",
+      "adil_saeed",
+      "imsciences"
+    ],
+    "categories": [
+      "experience",
+      "education",
+      "skills"
+    ],
+    "keywords": [
+      "imsciences",
+      "ml",
+      "ai",
+      "deep learning",
+      "machine learning",
+      "computer vision",
+      "nlp",
+      "giki",
+      "bootcamp"
+    ],
+    "importance_score": 1.0,
+    "content_type": "project",
+    "semantic_tags": [
+      "experience",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "skills",
+      "profile",
+      "education"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_11_regular",
+    "source": "Adil.txt",
+    "content": ". Adil enhanced his expertise through the GIKI ML → LLM Bootcamp 2025, gaining exposure to advanced AI architectures and research methodologies. He visited SkyElectric to observe AI-powered energy systems, GPU-based computation, and commercial AI applications. His research interests include ML/DL model optimization, Computer Vision for machine perception, NLP/LLMs for low-resource languages (Urdu, Pashto), and impactful AI/ML project development. Adil aims to pursue an MS in AI/ML research and contribute to the global AI community.",
+    "chunk_index": 11,
+    "chunk_type": "regular",
+    "entities": [
+      "giki",
+      "adil_saeed",
+      "skyelectric"
+    ],
+    "categories": [
+      "projects",
+      "experience",
+      "skills"
+    ],
+    "keywords": [
+      "ml",
+      "ai",
+      "computer vision",
+      "nlp",
+      "giki",
+      "bootcamp",
+      "skyelectric"
+    ],
+    "importance_score": 1.0,
+    "content_type": "project",
+    "semantic_tags": [
+      "projects",
+      "experience",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "skills",
+      "profile"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_12_regular",
+    "source": "Adil.txt",
+    "content": "## **Education**\n**Bachelor of Applied Science (BASc) - Computer Software Engineering** \n- Institution: Institute of Management Sciences (IMSciences), Peshawar \n- Description: The Institute of Management Sciences (IMSciences), based in Peshawar is a premier public sector business school of the country. The Institute imparts high quality education and training in the fields of management, information technology and allied disciplines. \n- Duration: September 2023 – September 2027 \n- GPA: 3.67",
+    "chunk_index": 12,
+    "chunk_type": "regular",
+    "entities": [
+      "imsciences"
+    ],
+    "categories": [
+      "experience",
+      "education",
+      "skills"
+    ],
+    "keywords": [
+      "imsciences"
+    ],
+    "importance_score": 0.8529411764705882,
+    "content_type": "education",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "experience",
+      "education",
+      "skills"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_13_regular",
+    "source": "Adil.txt",
+    "content": "- Duration: September 2023 – September 2027 \n- GPA: 3.67\n- Achievements: Alhamdulillah, selected for the Prime Minister's Laptop Scheme in the first merit list and also recived the laptop already.\n- Grade: A \n- Specializations: Web Development, Machine Learning, Software Architecture, UI/UX Design, System Design, Database Management \n- Core Skills: Software Development, Data Analysis, Java, Python, Requirements Engineering, MySQL",
+    "chunk_index": 13,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "projects",
+      "skills"
+    ],
+    "keywords": [
+      "mysql",
+      "machine learning",
+      "java",
+      "python",
+      "analysis"
+    ],
+    "importance_score": 0.6666666666666667,
+    "content_type": "project",
+    "semantic_tags": [
+      "web_development",
+      "projects",
+      "artificial_intelligence",
+      "skills"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_14_regular",
+    "source": "Adil.txt",
+    "content": "**Diploma in Information Technology (DIT)** \n- Institution: Mandani Institute of Technology and Sciences \n- Duration: February 2022 – March 2023 \n- Grade: A \n- Focus: Programming, Databases, Web Development, Operating Systems \n- Skills: Microsoft Office, Computer Systems, Programming, Networking \n\n**Higher Secondary School Certificate (HSSC) - Pre-Medical** \n- Institution: Islamia College Peshawar \n- Duration: March 2020 – April 2022 \n- Grade: A \n- Subjects: Biology, Chemistry, Physics \n- Skills: Data Interpretation, Human Anatomy, Scientific Reasoning",
+    "chunk_index": 14,
+    "chunk_type": "regular",
+    "entities": [
+      "islamia_college"
+    ],
+    "categories": [
+      "experience",
+      "education",
+      "skills"
+    ],
+    "keywords": [
+      "microsoft",
+      "islamia"
+    ],
+    "importance_score": 0.4554054054054055,
+    "content_type": "project",
+    "semantic_tags": [
+      "web_development",
+      "experience",
+      "education",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_15_regular",
+    "source": "Adil.txt",
+    "content": "**Secondary School Certificate (SSC) - Pre-Medical** \n- Institution: New Islamia School and College, Charsadda \n- Duration: September 2018 – September 2020 \n- Grade: A \n- Skills: Analytical Skills, Research Skills, Scientific Methods, Documentation \n\n**Additional Educational Platforms** \n- Panaversity: A platform for Pakistani students offering professional AI-driven technologies. Key figure: Zia Khan, an agentic engineer in Pakistan running Panaversity. Focused on advanced AI learning and practical skills development.",
+    "chunk_index": 15,
+    "chunk_type": "regular",
+    "entities": [
+      "islamia_college"
+    ],
+    "categories": [
+      "skills"
+    ],
+    "keywords": [
+      "ai",
+      "islamia"
+    ],
+    "importance_score": 0.6059701492537313,
+    "content_type": "project",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "skills"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_16_regular",
+    "source": "Adil.txt",
+    "content": "## **Professional Training**\n**GIKI ML → LLM Bootcamp 2025** \n- Advanced Machine Learning and Supervised Learning \n- Deep Learning and Artificial Neural Networks \n- Convolutional Neural Networks (CNN) and Recurrent Neural Networks (RNN) \n- Computer Vision and Natural Language Processing \n- Large Language Models (LLMs) and LLMOps \n- MLOps and Production AI Systems",
+    "chunk_index": 16,
+    "chunk_type": "regular",
+    "entities": [
+      "giki"
+    ],
+    "categories": [
+      "experience",
+      "skills"
+    ],
+    "keywords": [
+      "ml",
+      "ai",
+      "deep learning",
+      "machine learning",
+      "computer vision",
+      "giki",
+      "bootcamp"
+    ],
+    "importance_score": 0.3264150943396227,
+    "content_type": "experience",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "experience",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_17_regular",
+    "source": "Adil.txt",
+    "content": "## **Technical Skills**\n**Programming Languages:** Python, Java, JavaScript, HTML, CSS, SQL, MySQL \n**AI/ML Technologies:** Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing, Large Language Models, Scikit-learn, TensorFlow, PyTorch \n**Development Tools:** Git/GitHub, Jupyter Notebook, VS Code, OpenCV, FAISS, HuggingFace, Gradio \n**Web Development:** Frontend (HTML, CSS, JavaScript), Backend Development, UI/UX Design, Database Management \n**Software Engineering:** Software Architecture, System Design, Requirements Engineering, Agile Development",
+    "chunk_index": 17,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "projects",
+      "contact",
+      "skills"
+    ],
+    "keywords": [
+      "mysql",
+      "ml",
+      "opencv",
+      "vs code",
+      "html",
+      "tensorflow",
+      "scikit-learn",
+      "huggingface",
+      "sql",
+      "pytorch",
+      "css",
+      "python",
+      "faiss",
+      "deep learning",
+      "computer vision",
+      "github",
+      "javascript",
+      "gradio",
+      "ai",
+      "git",
+      "machine learning",
+      "java",
+      "jupyter"
+    ],
+    "importance_score": 0.8718750000000001,
+    "content_type": "contact",
+    "semantic_tags": [
+      "projects",
+      "artificial_intelligence",
+      "skills",
+      "web_development",
+      "contact"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_18_regular",
+    "source": "Adil.txt",
+    "content": "**Software Engineering:** Software Architecture, System Design, Requirements Engineering, Agile Development \n**Cloud Platforms:** Google Cloud Platform (Fundamentals)",
+    "chunk_index": 18,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "projects"
+    ],
+    "keywords": [],
+    "importance_score": 0.35,
+    "content_type": "project",
+    "semantic_tags": [
+      "projects"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_19_regular",
+    "source": "Adil.txt",
+    "content": "## **Projects Portfolio**\n**GIKI Prospectus Q&A Chatbot** \n- Technologies: Python, FAISS, HuggingFace, Gradio, OpenAI API \n- Features: Multilingual RAG chatbot (English/Urdu), FAISS vector search, document parsing, embeddings, efficient retrieval \n- Implementation: Gradio interface with chat export functionality \n- Context: Developed during GIKI internship",
+    "chunk_index": 19,
+    "chunk_type": "regular",
+    "entities": [
+      "giki"
+    ],
+    "categories": [
+      "projects",
+      "experience",
+      "skills"
+    ],
+    "keywords": [
+      "huggingface",
+      "gradio",
+      "chatbot",
+      "python",
+      "giki",
+      "faiss"
+    ],
+    "importance_score": 0.47790697674418614,
+    "content_type": "project",
+    "semantic_tags": [
+      "projects",
+      "experience",
+      "artificial_intelligence",
+      "skills",
+      "web_development"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_20_regular",
+    "source": "Adil.txt",
+    "content": "**Sentiment Analysis System** \n- Technologies: Python, Scikit-learn, NLP, TF-IDF, Logistic Regression \n- Achievement: 85% precision in sentiment classification \n- Enhancement: Improved robustness using advanced embeddings \n- Application: Text sentiment classification and analysis",
+    "chunk_index": 20,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "projects",
+      "skills"
+    ],
+    "keywords": [
+      "scikit-learn",
+      "python",
+      "nlp",
+      "analysis",
+      "sentiment"
+    ],
+    "importance_score": 0.38125,
+    "content_type": "skill",
+    "semantic_tags": [
+      "web_development",
+      "projects",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_21_regular",
+    "source": "Adil.txt",
+    "content": "**Face Recognition Application** \n- Technologies: Python, OpenCV, Convolutional Neural Networks (CNN) \n- Implementation: Real-time face recognition pipeline with deep learning \n- Enhancement: Improved accuracy through transfer learning and dataset expansion \n- Performance: High accuracy facial detection and recognition system",
+    "chunk_index": 21,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "projects",
+      "skills"
+    ],
+    "keywords": [
+      "face",
+      "opencv",
+      "deep learning",
+      "python",
+      "recognition"
+    ],
+    "importance_score": 0.37564102564102564,
+    "content_type": "skill",
+    "semantic_tags": [
+      "web_development",
+      "projects",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_22_regular",
+    "source": "Adil.txt",
+    "content": "**CardioDiagnosis - Heart Disease Prediction** \n- Technologies: Python, Random Forest, Support Vector Machine (SVM) \n- Achievement: 90% recall for cardiovascular risk assessment \n- Validation: ROC curves and cross-validation for model evaluation \n- Application: Medical diagnostic support system",
+    "chunk_index": 22,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "projects",
+      "skills"
+    ],
+    "keywords": [
+      "python",
+      "heart",
+      "disease",
+      "risk"
+    ],
+    "importance_score": 0.3716216216216216,
+    "content_type": "skill",
+    "semantic_tags": [
+      "web_development",
+      "projects",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_23_regular",
+    "source": "Adil.txt",
+    "content": "**Login Risk Detection Model** \n- Technologies: Python, RandomForestClassifier, Anomaly Detection \n- Purpose: Security system for detecting suspicious login patterns \n- Features: Advanced feature engineering for high-risk behavior detection \n- Implementation: Real-time anomaly detection for user authentication",
+    "chunk_index": 23,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "projects",
+      "skills"
+    ],
+    "keywords": [
+      "python",
+      "login",
+      "risk"
+    ],
+    "importance_score": 0.36666666666666664,
+    "content_type": "skill",
+    "semantic_tags": [
+      "web_development",
+      "projects",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_24_regular",
+    "source": "Adil.txt",
+    "content": "**OCR Text Recognition System** \n- Technologies: Python, Tesseract OCR, OpenCV \n- Support: PNG, JPEG, JPG, BMP, DOCX file formats \n- Features: Text extraction, direct copy/export functionality, preprocessing pipeline \n- Recognition: Advanced optical character recognition with high accuracy \n\n**Crop Yield Prediction Pipeline** \n- Technologies: Python, Regression Models, Machine Learning \n- Purpose: Agricultural yield forecasting using historical data \n- Process: Feature engineering, hyperparameter tuning, model optimization \n- Application: Data-driven agricultural decision support",
+    "chunk_index": 24,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "projects",
+      "skills"
+    ],
+    "keywords": [
+      "opencv",
+      "machine learning",
+      "python",
+      "recognition",
+      "ocr"
+    ],
+    "importance_score": 0.36428571428571427,
+    "content_type": "project",
+    "semantic_tags": [
+      "web_development",
+      "projects",
+      "artificial_intelligence",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_25_regular",
+    "source": "Adil.txt",
+    "content": "**Student Attendance Management System** \n- Technologies: MySQL, Frontend Development \n- Purpose: Database management practice project \n- Features: Complete attendance tracking and management system",
+    "chunk_index": 25,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "projects",
+      "education"
+    ],
+    "keywords": [
+      "mysql"
+    ],
+    "importance_score": 0.508695652173913,
+    "content_type": "project",
+    "semantic_tags": [
+      "projects",
+      "education"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_26_regular",
+    "source": "Adil.txt",
+    "content": "## **Professional Experience**\n**Ambassador – Institute of Emerging Careers | Digital Architect Conference (2025)** \n- Representation: Represented IMSciences at a six-day international Digital Architect Conference, engaging with global speakers and industry experts across 20+ sessions \n- Moderation: Moderated diverse sessions on AI, digital transformation, and emerging technologies, gaining exposure to global industry perspectives \n- Collaboration: Supported event coordination and participant engagement to enhance learning outcomes and knowledge exchange",
+    "chunk_index": 26,
+    "chunk_type": "regular",
+    "entities": [
+      "imsciences"
+    ],
+    "categories": [
+      "experience",
+      "education",
+      "skills"
+    ],
+    "keywords": [
+      "imsciences",
+      "ai"
+    ],
+    "importance_score": 0.5558823529411765,
+    "content_type": "education",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "experience",
+      "education",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_27_regular",
+    "source": "Adil.txt",
+    "content": "- Collaboration: Supported event coordination and participant engagement to enhance learning outcomes and knowledge exchange \n- Recognition: Awarded a verified certificate by IEC for contributions as an Ambassador, with mentorship and guidance from Sir Ommer and Ms. Maryam during moderation",
+    "chunk_index": 27,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "general"
+    ],
+    "keywords": [
+      "recognition"
+    ],
+    "importance_score": 0.505,
+    "content_type": "general",
+    "semantic_tags": [
+      "general"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_28_regular",
+    "source": "Adil.txt",
+    "content": "**AI/ML Lead - Microsoft Learn Student Ambassadors (2024 - Present)** \n- Leadership: Technical workshops on ML, DL, and NLP for 50+ students \n- Mentorship: Guided peers in scalable ML applications with focus on ethical AI \n- Organization: AI bootcamps bridging academia and industry \n- Impact: Community building through AI/ML education and training",
+    "chunk_index": 28,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "experience",
+      "education",
+      "skills"
+    ],
+    "keywords": [
+      "ml",
+      "nlp",
+      "microsoft",
+      "ai"
+    ],
+    "importance_score": 0.36538461538461536,
+    "content_type": "project",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "experience",
+      "education",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_29_regular",
+    "source": "Adil.txt",
+    "content": "**Project Intern - GIKI, Topi (Summer 2025)** \n- Development: RAG Chatbot for prospectus queries and information retrieval \n- Collaboration: Applied ML projects in NLP and vector search technologies \n- Training: Workshop assistance to enhance practical AI skills \n- Research: Hands-on experience with cutting-edge AI applications \n\n**Technical Team Member - MLSA Peshawar (May 2025 - Present)** \n- Contribution: Community engagement and technical collaboration \n- Focus: AI/ML knowledge sharing and skill development \n- Activities: Technical workshops and community impact initiatives",
+    "chunk_index": 29,
+    "chunk_type": "regular",
+    "entities": [
+      "giki"
+    ],
+    "categories": [
+      "projects",
+      "experience",
+      "skills"
+    ],
+    "keywords": [
+      "ml",
+      "ai",
+      "chatbot",
+      "nlp",
+      "giki"
+    ],
+    "importance_score": 0.4628205128205129,
+    "content_type": "project",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "projects",
+      "experience",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_30_regular",
+    "source": "Adil.txt",
+    "content": "**Member – Green Youth Movement (Government of Pakistan)** \nAdil Saeed is an active member of the Green Youth Movement scheme initiated by the Government of Pakistan under the leadership of Prime Minister Shehbaz Sharif. He contributes to youth-led environmental awareness and sustainability efforts, focusing on climate action, green innovation, and national development through youth participation.",
+    "chunk_index": 30,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "general"
+    ],
+    "keywords": [],
+    "importance_score": 0.7,
+    "content_type": "project",
+    "semantic_tags": [
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "profile",
+      "general"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_31_regular",
+    "source": "Adil.txt",
+    "content": "**Participant – Pakistan Youth Leadership Initiative (PYLI) | Onsite Training (2025)** \nAdil Saeed completed a four-day onsite leadership and civic engagement training program organized by the Pakistan Youth Leadership Initiative. He participated in practical tasks promoting the Clean and Green Pakistan initiative and collaborated with youth leaders to propose sustainable solutions. As part of the program, he presented an environmental solution in the form of a three-dimensional model focused on cleanliness, sustainability, and community impact.",
+    "chunk_index": 31,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "experience"
+    ],
+    "keywords": [],
+    "importance_score": 0.7,
+    "content_type": "general",
+    "semantic_tags": [
+      "experience",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "profile"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_32_regular",
+    "source": "Adil.txt",
+    "content": "**Extracurricular Initiatives** \n- Currently working to establish an organization/community at IMSciences for developers focused on development projects. This initiative will demonstrate progress over semesters to Director Usman Ghani. \n- Involved in collaborations with diverse professionals, awarded distinguished roles in various projects and events. \n- Emphasis on focus: Focus means saying no to many things to say yes to a few, enabling exceptional achievements in selected areas.",
+    "chunk_index": 32,
+    "chunk_type": "regular",
+    "entities": [
+      "imsciences"
+    ],
+    "categories": [
+      "education"
+    ],
+    "keywords": [
+      "imsciences"
+    ],
+    "importance_score": 0.853030303030303,
+    "content_type": "project",
+    "semantic_tags": [
+      "education"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_33_regular",
+    "source": "Adil.txt",
+    "content": "## **Certifications and Awards**\n**Full Stack AI Bootcamp Completion** \n- Issuer: Ghulam Ishaq Khan Institute of Engineering Sciences and Technology (GIKI) \n- Issued: July 2025 \n- Skills: Machine Learning · Deep Learning · Computer Vision · Natural Language Processing (NLP) · Large Language Models (LLM) · MLOps \n- Description: A 4-week advanced AI full-stack bootcamp covering abstract-level concepts, industry visits, and hands-on project development.",
+    "chunk_index": 33,
+    "chunk_type": "regular",
+    "entities": [
+      "giki"
+    ],
+    "categories": [
+      "projects",
+      "experience",
+      "skills"
+    ],
+    "keywords": [
+      "ai",
+      "deep learning",
+      "machine learning",
+      "computer vision",
+      "nlp",
+      "giki",
+      "bootcamp"
+    ],
+    "importance_score": 0.47187500000000004,
+    "content_type": "project",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "projects",
+      "experience",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_34_regular",
+    "source": "Adil.txt",
+    "content": "**Digital Architect Conference – Ambassador Certificate** \n- Issuer: Institute of Emerging Careers (IEC) \n- Issued: November 2025 \n- Skills: Collaborative Leadership · Stakeholder Engagement · Professional Networking · Cross-Cultural Communication · Diversity & Inclusion Awareness · Community Engagement \n- Recognition: Served as Ambassador and session moderator at international conference. \n\n**Publishing Excellence** \n- Issuer: Emerald Publishing \n- Issued: November 2025 \n- Skills: Academic Publishing · Scholarly Communication · Research Integrity",
+    "chunk_index": 34,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "education"
+    ],
+    "keywords": [
+      "recognition"
+    ],
+    "importance_score": 0.6528985507246376,
+    "content_type": "skill",
+    "semantic_tags": [
+      "education"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_35_regular",
+    "source": "Adil.txt",
+    "content": "**Introduction to Google Cloud Platform** \n- Issuer: SimpleLearn \n- Issued: October 2025 \n- Credential ID: 9081325 \n- Skills: Cloud Computing Fundamentals · Google Cloud Platform (GCP) Overview · Identity and Access Management (IAM) \n\n**Supervised Machine Learning: Regression and Classification** \n- Issuer: DeepLearning. AI (Coursera) – Andrew Ng \n- Issued: September 2025 \n- Credential ID: https://coursera.org/verify/4G51KHOUXCN0 \n- Skills: Machine Learning · Regression Models · Classification",
+    "chunk_index": 35,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "skills"
+    ],
+    "keywords": [
+      "machine learning",
+      "ai"
+    ],
+    "importance_score": 0.50625,
+    "content_type": "skill",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "skills"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_36_regular",
+    "source": "Adil.txt",
+    "content": "**Advanced Learning Algorithms** \n- Issuer: DeepLearning. AI (Coursera) – Andrew Ng \n- Issued: September 2025 \n- Credential ID: https://coursera.org/verify/3T2RBSQIGXW2 \n- Skills: Artificial Neural Networks · Regularization Techniques · Optimization in ML \n\n**Unsupervised Learning, Recommenders, Reinforcement Learning** \n- Issuer: DeepLearning. AI (Coursera) – Andrew Ng \n- Issued: September 2025 \n- Credential ID: https://coursera.org/verify/PIY6AYK094M2 \n- Skills: Deep Learning · Convolutional Neural Networks (CNN) · Sequence Models",
+    "chunk_index": 36,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "skills"
+    ],
+    "keywords": [
+      "ai",
+      "ml",
+      "deep learning"
+    ],
+    "importance_score": 0.509375,
+    "content_type": "skill",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "skills"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_37_regular",
+    "source": "Adil.txt",
+    "content": "**Permit to Work (PTW) – Certified Training** \n- Issuer: PAK Safety Solutions \n- Issued: October 2025 \n- Skills: Permit to Work System · Risk Assessment · Health & Safety \n- Description: Certified training on safe work authorization and control of high-risk tasks. \n\n**ISO 45001:2018 OHSMS** \n- Issuer: PAK Safety Solutions \n- Issued: August 2025 \n- Skills: Occupational Health and Safety Management Systems",
+    "chunk_index": 37,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "projects",
+      "experience"
+    ],
+    "keywords": [
+      "risk"
+    ],
+    "importance_score": 0.6532258064516129,
+    "content_type": "skill",
+    "semantic_tags": [
+      "projects",
+      "experience",
+      "artificial_intelligence"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_38_regular",
+    "source": "Adil.txt",
+    "content": "**ISO 45001:2018 OHSMS** \n- Issuer: PAK Safety Solutions \n- Issued: August 2025 \n- Skills: Occupational Health and Safety Management Systems \n\n**Additional Awards** \n- Verified Certificate from Institute of Emerging Careers (IEC) for Ambassador role at Digital Architect Conference (2025). \n- Participation Certificate from Pakistan Youth Leadership Initiative (PYLI) for onsite training (2025). \n- Distinguished roles in collaborations with professionals across AI and tech events. \n- Selection in Prime Minister's Laptop Scheme (First Merit List).",
+    "chunk_index": 38,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "experience",
+      "skills"
+    ],
+    "keywords": [
+      "ai"
+    ],
+    "importance_score": 0.5027027027027027,
+    "content_type": "skill",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "experience",
+      "skills"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_39_regular",
+    "source": "Adil.txt",
+    "content": "## **Contact Information**\n**Primary Contact** \n- Email: adilsaeed047@gmail.com (Preferred for professional inquiries) \n\n**Professional Networks** \n- LinkedIn: https://www.linkedin.com/in/adil-saeed-9b7b51363/ Professional networking and career updates \n- GitHub: https://github.com/AdilSaeed0347 (Code repositories and projects)",
+    "chunk_index": 39,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "contact"
+    ],
+    "keywords": [
+      "github"
+    ],
+    "importance_score": 0.8568965517241379,
+    "content_type": "contact",
+    "semantic_tags": [
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "profile",
+      "contact"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_40_regular",
+    "source": "Adil.txt",
+    "content": "**Social Media** \n- Facebook: https://www.facebook.com/adil.saeed.9406 (Social connection) \n- Medium: https://medium.com/@adilahmad0347 \n-Twitter: https://x.com/AdilSaeed1058?t=vM9Sc7hCDQN3Mdzq0N_EUQ&s=09\n-X acount :https://x.com/AdilSaeed1058?t=vM9Sc7hCDQN3Mdzq0N_EUQ&s=09\n\n**Project Links** \n- OCR Project: https://github.com/AdilSaeed0347/OCR_project \n- Login Risk Model: https://github.com/AdilSaeed0347/Login_Risk_Model \n\n**Professional Website** \n- Portfolio: About - Adil Saeed | AI Engineer \n- Schedule Call: Available for professional consultations",
+    "chunk_index": 40,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "projects",
+      "contact",
+      "skills"
+    ],
+    "keywords": [
+      "ai",
+      "login",
+      "risk",
+      "github",
+      "ocr"
+    ],
+    "importance_score": 1.0,
+    "content_type": "contact",
+    "semantic_tags": [
+      "projects",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "skills",
+      "profile",
+      "web_development",
+      "contact"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_41_regular",
+    "source": "Adil.txt",
+    "content": "## **Personal Background and Motivation**\n**Family Support System** \nAdil's elder brother, Asad Ali (age 29), serves as his primary mentor and inspiration. Asad Ali completed his Bachelor of Science in Software Engineering from an international university and has professional experience at La Shifa International (Islamabad) and Air University as a Controller. Asad Ali's guidance and encouragement were instrumental in Adil's participation in the GIKI bootcamp and his academic achievements.",
+    "chunk_index": 41,
+    "chunk_type": "regular",
+    "entities": [
+      "giki",
+      "adil_saeed",
+      "asad_ali"
+    ],
+    "categories": [
+      "personal",
+      "projects",
+      "experience",
+      "education"
+    ],
+    "keywords": [
+      "giki",
+      "bootcamp"
+    ],
+    "importance_score": 1.0,
+    "content_type": "education",
+    "semantic_tags": [
+      "personal",
+      "projects",
+      "experience",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "profile",
+      "education"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_42_regular",
+    "source": "Adil.txt",
+    "content": "**Mentorship and Inspiration** \nThe primary inspiration behind Adil's AI journey comes from Sir Ali Imran Sindhu, a respected teacher at GIKI. Sir Ali Imran has: \n- Organized bootcamps and training sessions for students \n- Worked extensively to create growth opportunities at GIKI \n- Invited renowned experts in LLMs, Agentic AI, and modern technologies \n- Provided industry-oriented guidance and motivation \n- Created a culture of learning and innovation at the university",
+    "chunk_index": 42,
+    "chunk_type": "regular",
+    "entities": [
+      "giki",
+      "sir_ali_imran",
+      "adil_saeed"
+    ],
+    "categories": [
+      "experience",
+      "education",
+      "skills"
+    ],
+    "keywords": [
+      "giki",
+      "ai"
+    ],
+    "importance_score": 1.0,
+    "content_type": "education",
+    "semantic_tags": [
+      "experience",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "skills",
+      "profile",
+      "education"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_43_regular",
+    "source": "Adil.txt",
+    "content": "Adil credits Sir Ali Imran Sindhu as the foundational inspiration for his AI projects and portfolio development. Adil is inspired by the quote: \"Be the best of whatever you are.\" This means pursuing your passion in a way that no one can match, loving what you do—that is the success behind Steve Jobs' story. Consistency is key, as seen in Sam Altman's journey: He developed Loopt in 2005, struggled continuously for 5-6 years without giving up, and eventually sold it for over 40 million to a company. That capital helped him invest and build OpenAI, now a competitor to Google and Facebook",
+    "chunk_index": 43,
+    "chunk_type": "regular",
+    "entities": [
+      "sir_ali_imran",
+      "adil_saeed"
+    ],
+    "categories": [
+      "projects",
+      "contact",
+      "skills"
+    ],
+    "keywords": [
+      "ai"
+    ],
+    "importance_score": 1.0,
+    "content_type": "contact",
+    "semantic_tags": [
+      "projects",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "skills",
+      "profile",
+      "contact"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_44_regular",
+    "source": "Adil.txt",
+    "content": ". That capital helped him invest and build OpenAI, now a competitor to Google and Facebook. Another guiding principle: \"Your time is limited, don't waste it living someone else's life. Don't be trapped by dogma, which is living with the results of other people's thinking. What will people say? It doesn't matter when you are doing the right things. Don't be in dogma.\"",
+    "chunk_index": 44,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "projects",
+      "contact"
+    ],
+    "keywords": [],
+    "importance_score": 0.8,
+    "content_type": "contact",
+    "semantic_tags": [
+      "projects",
+      "contact",
+      "artificial_intelligence"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_45_regular",
+    "source": "Adil.txt",
+    "content": "**Friends and Peer Network** \nAdil maintains strong connections with fellow students from Islamia College Peshawar: \n**Medical Students:** \n- Hasnain: MBBS student in Northwest Pakistan, Peshawar resident \n- Saad Khan: MBBS at Bacha Khan Medical College (BKMC), Mardan. Lives in Regi Model Town, Peshawar (near Board Bazar) \n- Rohail: MBBS at Saidu Medical College (SMC), Swat. Resident of Shabqadar \n- Umer Khan: MBBS at Peshawar Medical College (PMC), Peshawar. Also from Shabqadar \n**Law Student:**",
+    "chunk_index": 45,
+    "chunk_type": "regular",
+    "entities": [
+      "hasnain",
+      "islamia_college",
+      "adil_saeed",
+      "rohail",
+      "saad_khan",
+      "umer_khan"
+    ],
+    "categories": [
+      "personal",
+      "education"
+    ],
+    "keywords": [
+      "islamia"
+    ],
+    "importance_score": 1.0,
+    "content_type": "personal",
+    "semantic_tags": [
+      "personal",
+      "portfolio",
+      "artificial_intelligence",
+      "resume",
+      "profile",
+      "education"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_46_regular",
+    "source": "Adil.txt",
+    "content": "- Umer Khan: MBBS at Peshawar Medical College (PMC), Peshawar. Also from Shabqadar \n**Law Student:** \n- Daud Khan: Law student at University of the Punjab (PU), Lahore. Resident of Katlang, Mardan District \nAll friends completed their FSc (Intermediate) in Pre-Medical from Islamia College Peshawar, creating a strong educational foundation and lasting friendships.",
+    "chunk_index": 46,
+    "chunk_type": "regular",
+    "entities": [
+      "umer_khan",
+      "daud_khan",
+      "islamia_college"
+    ],
+    "categories": [
+      "personal",
+      "education"
+    ],
+    "keywords": [
+      "islamia"
+    ],
+    "importance_score": 1.0,
+    "content_type": "education",
+    "semantic_tags": [
+      "personal",
+      "education"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_47_regular",
+    "source": "Adil.txt",
+    "content": "## **Career Vision and Goals**\n**Immediate Goals** \n- Complete Bachelor's in Software Engineering with excellence \n- Pursue advanced research in AI/ML through MS program \n- Contribute to AI solutions for real-world problems \n- Currently involved in learning cutting-edge AI technologies to master them for personal and professional growth \n\n**Research Interests** \n- Low-resource language processing (Urdu, Pashto) \n- Healthcare AI applications and medical diagnostics \n- Energy sector AI solutions and optimization \n- Ethical AI development and responsible innovation",
+    "chunk_index": 47,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "personal",
+      "skills"
+    ],
+    "keywords": [
+      "ml",
+      "ai"
+    ],
+    "importance_score": 0.3551948051948052,
+    "content_type": "project",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "personal",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_48_regular",
+    "source": "Adil.txt",
+    "content": "**Long-term Vision** \n- Establish expertise in AI/ML research and development \n- Contribute to Pakistan's technology ecosystem advancement \n- Build bridges between academic research and industry applications \n- Develop AI solutions addressing local and global challenges \n\n**Professional Aspirations** \n- Become a leading AI/ML researcher and practitioner \n- Mentor next generation of AI developers \n- Contribute to international AI research community \n- Apply AI for social good and sustainable development",
+    "chunk_index": 48,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "projects",
+      "contact",
+      "education",
+      "skills"
+    ],
+    "keywords": [
+      "ml",
+      "ai"
+    ],
+    "importance_score": 0.5058823529411764,
+    "content_type": "project",
+    "semantic_tags": [
+      "projects",
+      "artificial_intelligence",
+      "skills",
+      "contact",
+      "education"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_49_regular",
+    "source": "Adil.txt",
+    "content": "## **Hobbies and Interests**\n**Technical Interests** \n- Exploring cutting-edge AI research papers and implementations \n- Experimenting with new ML/DL frameworks and architectures \n- Contributing to open-source AI projects and communities \n- Staying updated with latest developments in LLMs and Computer Vision \n\n**Learning Activities** \n- Participating in bootcamps, workshops, and technical seminars \n- Reading technical blogs and research publications \n- Practicing programming and algorithm optimization \n- Building personal projects to explore new technologies",
+    "chunk_index": 49,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "personal",
+      "skills"
+    ],
+    "keywords": [
+      "computer vision",
+      "ml",
+      "ai"
+    ],
+    "importance_score": 0.35833333333333334,
+    "content_type": "project",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "personal",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_50_regular",
+    "source": "Adil.txt",
+    "content": "**Community Engagement** \n- Organizing and participating in AI/ML study groups \n- Sharing knowledge through technical presentations \n- Mentoring junior students in programming and AI concepts \n- Contributing to technology communities and forums",
+    "chunk_index": 50,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "education",
+      "skills"
+    ],
+    "keywords": [
+      "ml",
+      "ai"
+    ],
+    "importance_score": 0.3625,
+    "content_type": "skill",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "education",
+      "skills"
+    ],
+    "has_complete_info": false
+  },
+  {
+    "id": "Adil.txt_chunk_51_regular",
+    "source": "Adil.txt",
+    "content": "## **Soft Skills**\n- Leadership and Team Collaboration: Demonstrated through roles as AI/ML Lead and Ambassador in various organizations. \n- Communication: Effective in moderating sessions, presenting projects, and mentoring peers. \n- Problem-Solving: Applied in developing AI solutions for real-world challenges like healthcare diagnostics and agricultural predictions. \n- Adaptability: Quick learner in diverse technologies from bootcamps and internships. \n- Time Management: Balanced academic pursuits with professional training, projects, and community involvement.",
+    "chunk_index": 51,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "experience",
+      "education",
+      "skills"
+    ],
+    "keywords": [
+      "ml",
+      "ai"
+    ],
+    "importance_score": 0.6557142857142857,
+    "content_type": "project",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "experience",
+      "education",
+      "skills"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_52_regular",
+    "source": "Adil.txt",
+    "content": "## **Languages**\n- English: Fluent (Professional and Academic) \n- Urdu: Native \n- Pashto: Proficient (Focus on low-resource language processing) \n\n## **Professional Availability**\nOpen to internships, freelance AI/ML projects, research collaborations, open-source contributions, and junior AI engineer roles (remote or onsite). Particularly interested in RAG systems, LLM fine-tuning, low-resource NLP, and healthcare/energy AI applications.",
+    "chunk_index": 52,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "education",
+      "skills"
+    ],
+    "keywords": [
+      "nlp",
+      "ml",
+      "ai"
+    ],
+    "importance_score": 0.6613207547169812,
+    "content_type": "project",
+    "semantic_tags": [
+      "artificial_intelligence",
+      "education",
+      "skills"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_53_regular",
+    "source": "Adil.txt",
+    "content": "## **References**\nAvailable upon request. Key references include: \n- Sir Ali Imran Sindhu (GIKI Mentor) \n- Asad Ali (Brother and Professional Mentor) \n- Director Usman Ghani (IMSciences)\n\n## **Key Achievements Highlights**\n- Developed multilingual RAG chatbot during GIKI internship \n- Achieved 3.6 GPA in BS Software Engineering \n- Selected for Prime Minister's Laptop Scheme (First List) \n- Led AI/ML workshops for 50+ students as Microsoft Learn Student Ambassador \n- Moderated international conference sessions on AI and digital transformation",
+    "chunk_index": 53,
+    "chunk_type": "regular",
+    "entities": [
+      "giki",
+      "sir_ali_imran",
+      "asad_ali",
+      "imsciences"
+    ],
+    "categories": [
+      "personal",
+      "projects",
+      "experience",
+      "skills",
+      "education"
+    ],
+    "keywords": [
+      "imsciences",
+      "ml",
+      "ai",
+      "chatbot",
+      "microsoft",
+      "giki"
+    ],
+    "importance_score": 1.0,
+    "content_type": "project",
+    "semantic_tags": [
+      "personal",
+      "projects",
+      "experience",
+      "artificial_intelligence",
+      "skills",
+      "education"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_54_regular",
+    "source": "Adil.txt",
+    "content": "## **Future Learning Roadmap**\nCurrently mastering: LangChain, LlamaIndex, Agentic AI workflows, Advanced RAG techniques, Deployment on cloud platforms (Vercel, Render, Pinecone). Planning to contribute to open-source LLM projects.\n\n## **Personal Values / Work Philosophy**\nBelieves in focused excellence ('Focus means saying no to many good opportunities to say yes to a few great ones'), consistency, ethical AI development, and using technology for social good in Pakistan.\n\n## **Location and Time Zone**\n- Location: Peshawar, Khyber Pakhtunkhwa, Pakistan \n- Time Zone: PKT (UTC+5)",
+    "chunk_index": 54,
+    "chunk_type": "regular",
+    "entities": [],
+    "categories": [
+      "personal",
+      "contact",
+      "experience",
+      "skills"
+    ],
+    "keywords": [
+      "ai"
+    ],
+    "importance_score": 0.802439024390244,
+    "content_type": "project",
+    "semantic_tags": [
+      "personal",
+      "experience",
+      "artificial_intelligence",
+      "skills",
+      "contact"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_55_regular",
+    "source": "Adil.txt",
+    "content": "## **Location and Time Zone**\n- Location: Peshawar, Khyber Pakhtunkhwa, Pakistan \n- Time Zone: PKT (UTC+5)\n\n## **Quick Links**\n- GitHub: https://github.com/AdilSaeed0347 \n- LinkedIn: https://www.linkedin.com/in/adil-saeed-9b7b51363/",
+    "chunk_index": 55,
+    "chunk_type": "regular",
+    "entities": [
+      "adil_saeed"
+    ],
+    "categories": [
+      "contact"
+    ],
+    "keywords": [
+      "github"
+    ],
+    "importance_score": 0.858,
+    "content_type": "contact",
+    "semantic_tags": [
+      "profile",
+      "contact",
+      "portfolio",
+      "resume"
+    ],
+    "has_complete_info": true
+  },
+  {
+    "id": "Adil.txt_chunk_56_section_personal",
+    "source": "Adil.txt",
+    "content": "## **Personal Background and Motivation**",
+    "chunk_index": 56,
+    "chunk_type": "section_personal",
+    "entities": [],
+    "categories": [
+      "personal"
+    ],
+    "keywords": [],
+    "importance_score": 0.35,
+    "content_type": "personal",
+    "semantic_tags": [
+      "personal"
+    ],
+    "has_complete_info": false
+  }
+]

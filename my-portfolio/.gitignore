@@ -1,7 +1,7 @@
 # ====================================
 # Ignore RAG (too heavy for GitHub)
 # ====================================
-rag/
+
 
 # ====================================
 # Backend (Python)
@@ -31,3 +31,12 @@ build/
 .vscode/
 .DS_Store
 Thumbs.db
+
+
+
+Backend
+# Vector store (rebuilt at runtime)
+rag/vectorstore/faiss.index
+rag/vectorstore/*.index
+backend/logs/
+*.log

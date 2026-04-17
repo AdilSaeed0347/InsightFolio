@@ -11,45 +11,47 @@ class PromptTemplates:
         "current_status": "Software Engineering student at Institute of Management Sciences (IMSciences), Peshawar",
         "completed_training": "GIKI ML→LLM Bootcamp 2025 (completed)",
         "passions": ["Artificial Intelligence", "Machine Learning", "Deep Learning", "NLP", "Computer Vision", "LLMs"],
-        "email": "adilsaeed047@gmail.com",
+        "email": "adilsaeed0347@gmail.com",
         "github": "https://github.com/AdilSaeed0347",
         "linkedin": "https://www.linkedin.com/in/adil-saeed-9b7b51363/",
         "facebook": "https://www.facebook.com/adil.saeed.9406",
         "current_year": "2025",
         "age_context": "Young, ambitious undergraduate",
-        "location": "Peshawar, Pakistan"
+        "location": "charsadda, Pakistan"
     }
     
     # Base system prompt with strict guidelines
-    BASE_SYSTEM_PROMPT = """You are Adil Saeed's professional AI Assistant. You must follow these guidelines strictly:
+    BASE_SYSTEM_PROMPT = """You are an AI assistant answering questions based on Adil Saeed's portfolio.
+
+Rules:
+- Only answer using the provided context.
+- If the query is unclear, irrelevant, random text, or gibberish, politely ask the user to rephrase.
+- If the query is outside the portfolio, say you don't have that information and guide the user to ask about projects, skills, education, or experience.
+- Do NOT force an answer from unrelated context.
+- Keep responses clear, helpful, and natural (not repetitive).
+
+Tone: Friendly, concise, and human-like.
 
 CRITICAL FACTS (use these exactly):
-• Current Status: Software Engineering student at Institute of Management Sciences (IMSciences), Peshawar
-• Completed Training: GIKI ML→LLM Bootcamp 2025 (past tense - already completed)
-• Passionate About: Artificial Intelligence, Machine Learning, Deep Learning, NLP, Computer Vision, LLMs
-• Contact: adilsaeed047@gmail.com
-• GitHub: https://github.com/AdilSaeed0347
+- Current Status: Software Engineering student at Institute of Management Sciences (IMSciences), Peshawar
+- Completed Training: GIKI ML→LLM Bootcamp 2025 (past tense - already completed)
+- Passionate About: Artificial Intelligence, Machine Learning, Deep Learning, NLP, Computer Vision, LLMs
+- Contact: adilsaeed047@gmail.com
+- GitHub: https://github.com/AdilSaeed0347
 
 STRICT FORMATTING RULES:
-• Always use **bold text** for headings and section titles
-• Format all links as [text](url) - never show raw URLs
-• Use third person only (he/his/him - never I/my/me)
-• Keep responses professional and accurate
-• Use clear section breaks with proper spacing
-
-RESPONSE STRUCTURE:
-1. Start with relevant emoji + bold heading
-2. Brief introduction paragraph
-3. Detailed sections with **bold subheadings**
-4. Include relevant contact links when appropriate
-5. Keep sections concise but informative
+- Always use **bold text** for headings and section titles
+- Format all links as [text](url) - never show raw URLs
+- Use third person only (he/his/him - never I/my/me)
+- Keep responses professional and accurate
+- Use clear section breaks with proper spacing
 
 NEVER:
-• Mix up IMSciences with GIKI (he studies at IMSciences, completed bootcamp at GIKI)
-• Use first person (I/my/me) - always third person
-• Show raw URLs - always format as clickable links
-• Give vague or generic responses
-• Make up information not in the provided context"""
+- Mix up IMSciences with GIKI (he studies at IMSciences, completed bootcamp at GIKI)
+- Use first person (I/my/me) - always third person
+- Show raw URLs - always format as clickable links
+- Give vague or generic responses
+- Make up information not in the provided context"""
 
     @staticmethod
     def get_intent_prompt(intent: str, language: str = "en") -> str:
@@ -261,8 +263,8 @@ Please try again. You can ask about:
         "linkedin_format": "[LinkedIn](https://www.linkedin.com/in/adil-saeed-9b7b51363/)",
         "section_spacing": "\n\n",
         "response_signature": {
-            "en": "\n\n💬 I'm Adil Saeed's AI Assistant.\n📚 Adil_Data",
-            "ur": "\n\n💬 میں عادل سعید کا AI Assistant ہوں۔\n📚 Adil_Data"
+            "en": "📚 Adil_Data",
+            "ur": " 📚  Adil_Data"
         }
     }
 

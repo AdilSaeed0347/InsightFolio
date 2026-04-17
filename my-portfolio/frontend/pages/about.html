@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Adil Saeed | AI Engineer</title>
+  <!-- ADD THIS AS THE FIRST SCRIPT IN <head> -->
+  <script src="../config.js"></script>
   <link rel="stylesheet" href="../styles/global.css">
-  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="../styles/about.css">
   <link rel="stylesheet" href="../styles/chatbot.css">
 </head>
 <body>
@@ -14,17 +16,23 @@
     <nav class="navbar">
       <div class="nav-container">
         <h2 class="nav-logo">
-          <img src="../documents/logo.png" alt="Logo" class="nav-logo-icon"> <!-- Corrected to images.png -->
+          <img src="../documents/logo.png" alt="Logo" class="nav-logo-icon">
           <span class="nav-logo-text">XAdilTeam</span>
         </h2>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <ul class="nav-links">
           <li><a href="home.html">Home</a></li>
-          <li><a href="index.html" class="active">About</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>
+    <div class="menu-overlay"></div>
 
     <!-- About Details Section -->
     <main>
@@ -42,7 +50,7 @@
                 <a href="contact.html" class="hire-option" data-tooltip="Perfect for project-based work and collaborations">🤝 Freelance Collaboration</a>
               </div>
             </div>
-            <a href="../documents/My_CV (2).pdf" class="btn-primary resume-btn" target="_blank" rel="noopener noreferrer">📄 My Resume</a>
+            <a href="../documents/AdilSaeed_CV.pdf" class="btn-primary resume-btn" target="_blank" rel="noopener noreferrer">📄 My Resume</a>
           </div>
           <div class="about-text">
             <p>I'm <b>Adil Saeed</b>, a Software Engineering student at IMSciences Peshawar, driven by a passion for Artificial Intelligence, Machine Learning, Deep Learning, NLP, Computer Vision, and Large Language Models. My journey includes hands-on experience from the GIKI ML → LLM Bootcamp 2025 and a visit to SkyElectric, inspiring me to tackle real-world challenges with innovative solutions.</p>
@@ -83,6 +91,7 @@
   <!-- Footer -->
   <div id="footer-container"></div>
   <!-- Scripts -->
+  <script src="../utils/navigation.js"></script>
   <script src="../utils/common.js"></script>
   <script src="../utils/chatbot.js"></script>
   <script src="../utils/about.js"></script>

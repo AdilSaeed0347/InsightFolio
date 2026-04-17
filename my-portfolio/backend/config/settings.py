@@ -1,86 +1,105 @@
 """
-Configuration settings for portfolio backend
+backend/config/settings.py
+Single, clean Settings class — merges your original fields with the new email fields.
+All secrets come from .env — NEVER hardcode API keys in this file.
 """
+
 import os
-from typing import List
+import logging
+from functools import lru_cache
 from pydantic_settings import BaseSettings
 from dotenv import load_dotenv
 
 load_dotenv()
 
+logger = logging.getLogger(__name__)
+
+
 class Settings(BaseSettings):
-    # API Configuration
-    API_V1_STR: str = "/api/v1"
+    # ── App ────────────────────────────────────────────────────────────────
+    API_V1_STR:   str = "/api/v1"
     PROJECT_NAME: str = "Portfolio RAG Chatbot"
-    VERSION: str = "1.0.0"
-    
-    # Server Configuration
-    HOST: str = os.getenv("HOST", "0.0.0.0")
-    PORT: int = int(os.getenv("PORT", 8000))
-    DEBUG: bool = os.getenv("DEBUG", "True").lower() == "true"
-    
-    # CORS Configuration
-    ALLOWED_ORIGINS: List[str] = os.getenv(
-        "ALLOWED_ORIGINS", 
-        "http://localhost:3000,http://127.0.0.1:3000,http://localhost:8080"
-    ).split(",")
-    
-    # Groq Configuration - Updated for Llama 4
-    GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
-    
-    # Updated models - now using Llama 4 Scout from your .env file
-    GROQ_MODEL_EN: str = os.getenv("GROQ_MODEL_EN", "meta-llama/llama-4-scout-17b-16e-instruct")
-    GROQ_MODEL_UR: str = os.getenv("GROQ_MODEL_UR", "meta-llama/llama-4-scout-17b-16e-instruct")
-    
-    # General fallback model (used in /health, / root, etc.) - updated to use GROQ_MODEL_EN
-    GROQ_MODEL_NAME: str = os.getenv("GROQ_MODEL_EN", "meta-llama/llama-4-scout-17b-16e-instruct")
-    
-    GROQ_TEMPERATURE: float = float(os.getenv("GROQ_TEMPERATURE", 0.2))
-    GROQ_MAX_TOKENS: int = int(os.getenv("GROQ_MAX_TOKENS", 500))
-    
-    # RAG Configuration
-    EMBEDDING_MODEL: str = os.getenv("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
-    RETRIEVAL_TOP_K: int = int(os.getenv("RETRIEVAL_TOP_K", 5))
-    MIN_SIMILARITY_SCORE: float = float(os.getenv("MIN_SIMILARITY_SCORE", 0.3))
-    
-    # Vector Store Configuration
-    VECTOR_STORE_TYPE: str = os.getenv("VECTOR_STORE_TYPE", "faiss")
-    VECTOR_STORE_PATH: str = os.getenv("VECTOR_STORE_PATH", "./rag/vectorstore/")
-    
-    # Memory Configuration
-    MAX_CONVERSATION_TURNS: int = int(os.getenv("MAX_CONVERSATION_TURNS", 5))
-    SESSION_CLEANUP_HOURS: int = int(os.getenv("SESSION_CLEANUP_HOURS", 24))
-    
-    # Safety Configuration
-    MAX_QUERY_LENGTH: int = int(os.getenv("MAX_QUERY_LENGTH", 500))
-    ENABLE_CONTENT_FILTERING: bool = os.getenv("ENABLE_CONTENT_FILTERING", "True").lower() == "true"
-    
-    # Logging Configuration
-    LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
-    LOG_FILE: str = os.getenv("LOG_FILE", "logs/app.log")
-    
+    VERSION:      str = "1.0.0"
+    APP_ENV:      str = "development"
+    DEBUG:        bool = False
+
+    # ── Server ─────────────────────────────────────────────────────────────
+    HOST: str = "0.0.0.0"
+    PORT: int = 8000
+
+    # ── CORS ───────────────────────────────────────────────────────────────
+    # Local dev:  "*"
+    # Production: "https://your-portfolio.vercel.app"
+    # Set in Railway dashboard as an env var — do NOT hardcode production URLs here
+    # During deployment, you will override this via environment variable.
+# The value below is just a safe default — NOT used in production.
+    ALLOWED_ORIGINS: str = "http://localhost:3000,http://127.0.0.1:3000"
+
+    # ── Groq ───────────────────────────────────────────────────────────────
+    # Never put real keys here — set them in .env or Railway env vars dashboard
+    GROQ_API_KEY:     str = ""
+    GROQ_MODEL_EN:    str = "meta-llama/llama-4-scout-17b-16e-instruct"
+    GROQ_MODEL_UR:    str = "meta-llama/llama-4-scout-17b-16e-instruct"
+    GROQ_MODEL_NAME:  str = "meta-llama/llama-4-scout-17b-16e-instruct"
+    GROQ_TEMPERATURE: float = 0.2
+    GROQ_MAX_TOKENS:  int = 500
+
+    # ── Resend (email) ──────────────────────────────────────────────────────
+    # Never put real keys here — set them in .env or Railway env vars dashboard
+    RESEND_API_KEY:         str = ""
+    # LOCAL:      onboarding@resend.dev   (Resend sandbox, no domain needed)
+    # PRODUCTION: portfolio@insightfolio.dev  (after DNS verified in Resend)
+    RESEND_FROM_EMAIL:      str = "onboarding@resend.dev"
+    CONTACT_RECEIVER_EMAIL: str = "adilsaeed047@gmail.com"
+
+    # ── RAG / Vector store ─────────────────────────────────────────────────
+    EMBEDDING_MODEL:      str = "sentence-transformers/all-MiniLM-L6-v2"
+    RETRIEVAL_TOP_K:      int = 5
+    MIN_SIMILARITY_SCORE: float = 0.3
+    VECTOR_STORE_TYPE:    str = "faiss"
+    VECTOR_STORE_PATH:    str = "./rag/vectorstore/"
+
+    # ── Memory ─────────────────────────────────────────────────────────────
+    MAX_CONVERSATION_TURNS: int = 5
+    SESSION_CLEANUP_HOURS:  int = 24
+
+    # ── Safety ─────────────────────────────────────────────────────────────
+    MAX_QUERY_LENGTH:         int = 500
+    ENABLE_CONTENT_FILTERING: bool = True
+
+    # ── Logging ────────────────────────────────────────────────────────────
+    LOG_LEVEL: str = "INFO"
+    LOG_FILE:  str = "logs/app.log"
+
     class Config:
-        case_sensitive = True
-        env_file = ".env"
+        env_file          = ".env"
+        env_file_encoding = "utf-8"
+        case_sensitive    = True
+        extra             = "ignore"
 
-# Global settings instance
-settings = Settings()
 
-# Validation
-def validate_settings():
-    """Validate critical settings"""
+@lru_cache()
+def get_settings() -> Settings:
+    return Settings()
+
+
+# Single global instance — import this everywhere
+settings = get_settings()
+
+
+def validate_settings() -> bool:
+    """
+    Validate critical settings at startup.
+    Call this inside lifespan(), NOT at module level,
+    so Railway env vars are loaded before validation runs.
+    """
     if not settings.GROQ_API_KEY:
-        raise ValueError("❌ GROQ_API_KEY is required! Get it from https://console.groq.com/")
+        raise ValueError("GROQ_API_KEY is missing — set it in Railway env vars or .env")
 
-    # Create necessary directories
-    directories = ["logs", "rag/vectorstore", "rag/embeddings"]
-    for directory in directories:
+    if not settings.RESEND_API_KEY:
+        logger.warning("RESEND_API_KEY not set — contact form emails will fail")
+
+    for directory in ["logs", "rag/vectorstore", "rag/embeddings"]:
         os.makedirs(directory, exist_ok=True)
-    
+
     return True
-
-# Run validation on import
-validate_settings()
-
-
-#last code run 

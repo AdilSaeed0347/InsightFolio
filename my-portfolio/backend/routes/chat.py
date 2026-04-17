@@ -7,7 +7,7 @@ from typing import List, Optional, Dict, Any
 import time
 import logging
 from datetime import datetime
-
+from services.rag_pipeline import RAGPipeline
 from services.safety import SafetyChecker
 from services.memory import ConversationMemory
 from config.settings import settings

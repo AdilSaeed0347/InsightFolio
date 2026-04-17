@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - My Portfolio</title>
+  <!-- ADD THIS AS THE FIRST SCRIPT IN <head> -->
+  <script src="../config.js"></script>
   <link rel="stylesheet" href="../styles/global.css" />
   <link rel="stylesheet" href="../styles/contact.css" />
   <link rel="stylesheet" href="../styles/chatbot.css" />
@@ -17,14 +19,20 @@
           <img src="../documents/logo.png" alt="Logo" class="nav-logo-icon">
           <span class="nav-logo-text">XAdilTeam</span>
         </h2>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <ul class="nav-links">
           <li><a href="home.html">Home</a></li>
-          <li><a href="index.html">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
         </ul>
       </div>
     </nav>
+    <div class="menu-overlay"></div>
 
     <main class="main-content">
       <section class="hero-section">
@@ -54,7 +62,7 @@
               <div class="social-links">
                 <a href="https://www.linkedin.com/in/adil-saeed-9b7b51363/" target="_blank" class="social-link">LinkedIn</a>
                 <a href="https://github.com/AdilSaeed0347" target="_blank" class="social-link">GitHub</a>
-                <a href="#" target="_blank" class="social-link">Twitter</a>
+                <a href="https://x.com/AdilSaeed1058?t=vM9Sc7hCDQN3Mdzq0N_EUQ&s=09" target="_blank" class="social-link">Twitter</a>
               </div>
             </div>
 
@@ -119,6 +127,7 @@
     <div id="footer-container"></div>
 
 
+  <script src="../utils/navigation.js"></script>
   <script src="../utils/common.js"></script>
   <script src="../utils/chatbot.js"></script>
   <script src="../utils/contact.js"></script>

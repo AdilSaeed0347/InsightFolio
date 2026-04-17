@@ -209,21 +209,18 @@ class ProjectsManager {
         });
     }
 
-    handleProjectHover(event) {
-        const card = event.currentTarget;
-        setTimeout(() => {
-            card.style.transform = 'scale(1.03)'; // Zoom effect
-            card.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
-        }, 2000); // Sync with 2s CSS transition
-    }
+   handleProjectHover(event) {
+    const card = event.currentTarget;
+    card.style.transform = 'scale(1.03)';
+    card.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
+}
 
-    handleProjectLeave(event) {
-        const card = event.currentTarget;
-        setTimeout(() => {
-            card.style.transform = 'scale(1.0)'; // Reset to original size
-            card.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
-        }, 2000); // Sync with 2s CSS transition
-    }
+handleProjectLeave(event) {
+    const card = event.currentTarget;
+    // Remove setTimeout OR reduce to very small value
+    card.style.transform = 'scale(1.0)';
+    card.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+}
 
     handleCardClick(event) {
         const card = event.currentTarget;

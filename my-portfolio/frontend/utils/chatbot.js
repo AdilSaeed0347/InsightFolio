@@ -3,7 +3,9 @@ class PortfolioChatbot {
         this.isOpen = false;
         this.messages = [];
         this.localStorageKey = "portfolioChatHistory";
-        this.backendUrl = "http://127.0.0.1:8000/api/v1/chat";
+        this.backendUrl = (window.CONFIG && window.CONFIG.BACKEND_URL
+           ? window.CONFIG.BACKEND_URL
+           : "http://127.0.0.1:8000") + "/api/v1/chat";
         this.isTyping = false;
         this.isUserScrolling = false;
         this.isGeneratingResponse = false;
@@ -22,6 +24,7 @@ class PortfolioChatbot {
         
         const chatMessages = document.getElementById('chat-messages');
         if (chatMessages) chatMessages.addEventListener('scroll', () => this.handleScroll());
+        this.showWelcomePopup();
     }
 
     bindEvents() {
@@ -43,6 +46,26 @@ class PortfolioChatbot {
                     e.preventDefault();
                     this.sendMessage();
                 }
+            });
+        }
+    }
+
+    showWelcomePopup() {
+        const welcomePopup = document.getElementById("chatbot-welcome");
+        const chatButton = document.getElementById("chatbot-button");
+
+        if (!welcomePopup) return;
+
+        setTimeout(() => {
+            welcomePopup.classList.remove("hidden");
+            setTimeout(() => {
+                welcomePopup.classList.add("hidden");
+            }, 6000);
+        }, 2000);
+
+        if (chatButton) {
+            chatButton.addEventListener("click", () => {
+                welcomePopup.classList.add("hidden");
             });
         }
     }
@@ -102,15 +125,13 @@ class PortfolioChatbot {
     validateInput(input) {
         const inputLower = input.toLowerCase();
         
-        // Remove 'kill' if it's part of skill-related words
         let cleanedInput = inputLower;
         if (inputLower.includes('skill') || inputLower.includes('skil')) {
-            cleanedInput = inputLower.replace(/skills?|skils?/g, ''); // Remove skill variations
+            cleanedInput = inputLower.replace(/skills?|skils?/g, '');
         }
         
         const foundKeywords = this.securityKeywords.filter(keyword => {
             if (keyword === 'kill') {
-                // Only check for 'kill' in the cleaned input (without skill words)
                 return cleanedInput.includes('kill');
             }
             return inputLower.includes(keyword);
@@ -154,7 +175,8 @@ class PortfolioChatbot {
             text: "Hi! I'm Adil Saeed's AI Assistant. Ask me about his projects, skills, education, or contact information.\n\nI'm Adil Saeed's AI Assistant.",
             isUser: false,
             timestamp: new Date().toISOString(),
-            type: 'welcome'
+            type: 'welcome',
+            isDefaultMessage: true
         };
         this.messages.push(welcomeMessage);
         const chatMessages = document.getElementById('chat-messages');
@@ -167,13 +189,16 @@ class PortfolioChatbot {
     openChat() {
         const chatWindow = document.getElementById('chat-window');
         const chatButton = document.getElementById('chatbot-button');
+        const welcomePopup = document.getElementById("chatbot-welcome");
+
         if (chatWindow && chatButton) {
             this.isOpen = true;
             chatButton.style.display = 'none';
             chatWindow.classList.remove('hidden');
+            if (welcomePopup) welcomePopup.classList.add("hidden");
             this.scrollToBottom(true);
             this.updateButtonState();
-            setTimeout(() => document.getElementById('chat-input')?.focus(), 300);
+            setTimeout(() => document.getElementById('chat-input')?.focus(), 100);
         }
     }
 
@@ -216,7 +241,6 @@ class PortfolioChatbot {
             const botResponse = await this.getBotResponse(messageText);
             this.hideTypingIndicator();
             
-            // NEW: Handle both text and images
             await this.streamMessageText(botResponse.answer || botResponse, {
                 sources: botResponse.sources || [],
                 queryType: botResponse.query_type || 'unknown',
@@ -244,43 +268,107 @@ class PortfolioChatbot {
             text: text,
             isUser: false,
             timestamp: new Date().toISOString(),
-            metadata: metadata
+            metadata: metadata,
+            isDefaultMessage: false
         };
         this.messages.push(message);
         this.saveHistory();
-        
+
         const chatMessages = document.getElementById('chat-messages');
         if (!chatMessages) return;
-        
+
         const messageElement = document.createElement('div');
         messageElement.className = 'message bot-message';
         messageElement.id = messageId;
+
         messageElement.innerHTML = `
             <div class="message-content"></div>
+            <div class="message-actions">
+                <button class="action-btn copy-btn" data-message-id="${messageId}" title="Copy message">
+                    ⧉
+                </button>
+                <button class="action-btn regenerate-btn" data-message-id="${messageId}" title="Regenerate response">
+                    🔄
+                </button>
+            </div>
             <div class="message-time">${this.formatTime(new Date(message.timestamp))}</div>
         `;
         chatMessages.appendChild(messageElement);
+
+        const contentDiv = messageElement.querySelector('.message-content');
+
+        // Parse and prepare the text with signature at the end
+        let mainText = text;
+        let hasSignature = false;
         
-        // Stream the text first
-        let currentText = '';
-        for (let i = 0; i < text.length; i++) {
+        // Check if text contains the signature
+        if (text.includes('📚 Adil Data')) {
+            mainText = text.replace(/📚 Adil Data/g, '').trim();
+            hasSignature = true;
+        }
+
+        const fullFormattedText = this.parseSimpleMarkdown(mainText);
+
+        // Stream the main content smoothly
+        let i = 0;
+        let currentHTML = '';
+
+        while (i < fullFormattedText.length) {
             if (!this.isGeneratingResponse) break;
-            currentText = text.slice(0, i + 1);
-            const formattedText = this.parseSimpleMarkdown(currentText);
-            
-            messageElement.innerHTML = `
-                <div class="message-content">${formattedText}</div>
-                <div class="message-time">${this.formatTime(new Date(message.timestamp))}</div>
-            `;
-            
+
+            if (fullFormattedText[i] === '<') {
+                const tagEnd = fullFormattedText.indexOf('>', i);
+                if (tagEnd !== -1) {
+                    currentHTML = fullFormattedText.slice(0, tagEnd + 1);
+                    contentDiv.innerHTML = currentHTML;
+                    i = tagEnd + 1;
+
+                    if (Date.now() - this.lastScrollTime >= 50) {
+                        this.scrollToBottom();
+                        this.lastScrollTime = Date.now();
+                    }
+                    await this.sleep(1);
+                    continue;
+                }
+            }
+
+            currentHTML = fullFormattedText.slice(0, i + 1);
+            contentDiv.innerHTML = currentHTML;
+
             if (Date.now() - this.lastScrollTime >= 100) {
                 this.scrollToBottom();
                 this.lastScrollTime = Date.now();
             }
-            await this.sleep(8);
+
+            await this.sleep(3);
+            i++;
+        }
+
+        // Add signature cleanly at the end if it exists
+        if (hasSignature) {
+            const signatureHTML = '<div class="message-signature">📚 Adil Data</div>';
+            contentDiv.innerHTML = currentHTML + signatureHTML;
         }
         
-        // NEW: Handle images with streaming effect
+        // Attach event listeners after streaming completes
+        const copyBtn = messageElement.querySelector('.copy-btn');
+        const regenBtn = messageElement.querySelector('.regenerate-btn');
+
+        if (copyBtn) {
+            copyBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.copyMessage(messageId);
+            });
+        }
+
+        if (regenBtn) {
+            regenBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.regenerateResponse(messageId);
+            });
+        }
+        
+        // Handle images with streaming effect
         if (metadata.images && metadata.images.length > 0) {
             await this.handleImageDisplay(messageElement, metadata.images, metadata.showImagesAfter || 2500);
         }
@@ -288,11 +376,9 @@ class PortfolioChatbot {
         this.scrollToBottom();
     }
 
-    // NEW: Image display with streaming effect
     async handleImageDisplay(messageElement, images, delay) {
         const messageContent = messageElement.querySelector('.message-content');
         
-        // Add "generating image" placeholder
         const imageSpinner = document.createElement('div');
         imageSpinner.className = 'image-spinner';
         imageSpinner.innerHTML = `
@@ -304,10 +390,8 @@ class PortfolioChatbot {
         messageContent.appendChild(imageSpinner);
         this.scrollToBottom();
         
-        // Wait for the specified delay
         await this.sleep(delay);
         
-        // Remove spinner and show images
         imageSpinner.remove();
         
         const imageGallery = document.createElement('div');
@@ -331,7 +415,6 @@ class PortfolioChatbot {
             imageCard.appendChild(caption);
             imageGallery.appendChild(imageCard);
             
-            // Fade in effect
             setTimeout(() => {
                 imageCard.style.transition = 'opacity 0.4s ease';
                 imageCard.style.opacity = '1';
@@ -385,7 +468,8 @@ class PortfolioChatbot {
             text: text,
             isUser: isUser,
             timestamp: new Date().toISOString(),
-            metadata: metadata
+            metadata: metadata,
+            isDefaultMessage: false
         };
         this.messages.push(message);
         this.renderMessage(message);
@@ -399,48 +483,93 @@ class PortfolioChatbot {
         
         const messageElement = document.createElement('div');
         messageElement.className = `message ${message.isUser ? 'user-message' : 'bot-message'}`;
-        const parsedText = message.isUser ? this.escapeHtml(message.text) : this.parseSimpleMarkdown(message.text);
+        messageElement.id = message.id;
+        
+        if (message.metadata && message.metadata.regenerated) {
+            messageElement.setAttribute('data-regenerated', 'true');
+        }
+        
+        let displayText = message.text;
+        let hasSignature = false;
+        
+        if (displayText.includes('📚 Adil Data')) {
+            displayText = displayText.replace(/📚 Adil Data/g, '').trim();
+            hasSignature = true;
+        }
+        
+        const parsedText = message.isUser ? this.escapeHtml(displayText) : this.parseSimpleMarkdown(displayText);
         const timeString = this.formatTime(new Date(message.timestamp));
         
-        messageElement.innerHTML = `
-            <div class="message-content">${parsedText}</div>
-            <div class="message-time">${timeString}</div>
-        `;
+        if (message.isUser) {
+            messageElement.innerHTML = `
+                <div class="message-content">${parsedText}</div>
+                <div class="message-time">${timeString}</div>
+            `;
+        } else {
+            // Check if this is the default welcome message
+            const isDefault = message.isDefaultMessage === true || message.type === 'welcome';
+            
+            let actionsHTML = '';
+            if (!isDefault) {
+                actionsHTML = `
+                    <div class="message-actions">
+                        <button class="action-btn copy-btn" data-message-id="${message.id}" title="Copy">⧉</button>
+                        <button class="action-btn regenerate-btn" data-message-id="${message.id}" title="Regenerate">🔄</button>
+                    </div>
+                `;
+            }
+            
+            let finalContent = parsedText;
+            if (hasSignature) {
+                finalContent += '<div class="message-signature">📚 Adil Data</div>';
+            }
+            
+            messageElement.innerHTML = `
+                <div class="message-content">${finalContent}</div>
+                ${actionsHTML}
+                <div class="message-time">${timeString}</div>
+            `;
+            
+            if (!isDefault) {
+                requestAnimationFrame(() => {
+                    const copyBtn = messageElement.querySelector('.copy-btn');
+                    const regenBtn = messageElement.querySelector('.regenerate-btn');
+                    
+                    if (copyBtn) copyBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        this.copyMessage(message.id);
+                    });
+                    
+                    if (regenBtn) regenBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        this.regenerateResponse(message.id);
+                    });
+                });
+            }
+        }
+        
         chatMessages.appendChild(messageElement);
         this.scrollToBottom();
     }
 
     parseSimpleMarkdown(text) {
-        // Clean HTML artifacts
         text = text.replace(/target="_blank"[^>]*>/g, '">');
         text = text.replace(/rel="[^"]*"/g, '');
         text = text.replace(/class="[^"]*">/g, '');
-        
+
         text = this.escapeHtml(text);
-        
-        // ChatGPT-style formatting - simple and clean:
-        
-        // 1. Bold text
+
+        // Bold text
         text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        
-        // 2. Convert word-only links to clickable links (no raw URLs)
-        text = text.replace(/\[GitHub\]/g, 
-            '<a href="https://github.com/AdilSaeed0347" target="_blank" style="color: #1a73e8; text-decoration: none;">GitHub</a>');
-        text = text.replace(/\[LinkedIn\]/g, 
-            '<a href="https://www.linkedin.com/in/adil-saeed-9b7b51363/" target="_blank" style="color: #1a73e8; text-decoration: none;">LinkedIn</a>');
-        text = text.replace(/\[Facebook\]/g, 
-            '<a href="https://www.facebook.com/adil.saeed.9406" target="_blank" style="color: #1a73e8; text-decoration: none;">Facebook</a>');
-        text = text.replace(/\[Email\]/g, 
-            '<a href="mailto:adilsaeed047@gmail.com" style="color: #1a73e8; text-decoration: none;">Email</a>');
-        
-        // 3. Line breaks
+
+        // Convert markdown links to clickable links
+        text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g,
+            '<a href="$2" target="_blank" class="chat-link">$1</a>');
+
+        // Line breaks
         text = text.replace(/\n\n/g, '<br><br>');
         text = text.replace(/\n/g, '<br>');
-        
-        // 4. Clean signature - NOT italic, normal font
-        text = text.replace(/(💬 I'm Adil Saeed's AI Assistant\. 📚 Adil_Data)/g, 
-            '<div style="margin-top: 12px; color: #666; font-size: 0.9em; font-weight: normal;">$1</div>');
-        
+
         return text;
     }
 
@@ -520,17 +649,34 @@ class PortfolioChatbot {
     injectSimpleStyles() {
         const styles = document.createElement('style');
         styles.textContent = `
-            /* ChatGPT-style clean formatting */
-            .message-content a {
-                color: #1a73e8;
+            /* Smooth link rendering */
+            .chat-link {
+                color: #1a73e8 !important;
                 text-decoration: none;
-                transition: text-decoration 0.2s ease;
+                font-weight: 500;
+                cursor: pointer;
+                transition: color 0.15s ease;
+                display: inline;
             }
-            .message-content a:hover {
+            .chat-link:hover {
+                color: #1557b0 !important;
                 text-decoration: underline;
             }
             .message-content strong {
                 font-weight: 600;
+            }
+            
+            /* Signature styling */
+            .message-signature {
+                margin-top: 12px;
+                padding-top: 8px;
+                border-top: 1px solid #e5e7eb;
+                color: #6b7280;
+                font-size: 0.875rem;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 4px;
             }
             
             /* Image display styles */
@@ -594,7 +740,7 @@ class PortfolioChatbot {
                 100% { transform: rotate(360deg); }
             }
             
-            /* OLD BLUE typing indicator with bounce animation */
+            /* Typing indicator animation */
             .typing-animation {
                 display: inline-flex;
                 gap: 3px;
@@ -631,8 +777,113 @@ class PortfolioChatbot {
                 background-color: #fef3c7;
                 border-color: #f59e0b;
             }
+            
+            /* Copy button feedback */
+            .action-btn.copied {
+                color: #10b981;
+            }
         `;
         document.head.appendChild(styles);
+    }
+
+    copyMessage(messageId) {
+        const message = this.messages.find(m => m.id === messageId);
+        if (!message) {
+            console.error('Message not found:', messageId);
+            return;
+        }
+        
+        const tempDiv = document.createElement('div');
+        let textToCopy = message.text;
+        
+        // Remove signature from copy
+        textToCopy = textToCopy.replace(/📚 Adil Data/g, '').trim();
+        
+        tempDiv.innerHTML = this.parseSimpleMarkdown(textToCopy);
+        const plainText = tempDiv.textContent || tempDiv.innerText || '';
+        
+        navigator.clipboard.writeText(plainText).then(() => {
+            const btn = document.querySelector(`.copy-btn[data-message-id="${messageId}"]`);
+            if (btn) {
+                const originalText = btn.textContent;
+                btn.textContent = '✓';
+                btn.classList.add('copied');
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            }
+        }).catch(err => {
+            console.error('Copy failed:', err);
+            alert('Failed to copy message');
+        });
+    }
+
+    async regenerateResponse(messageId) {
+        const messageIndex = this.messages.findIndex(m => m.id === messageId);
+        if (messageIndex === -1 || messageIndex === 0) {
+            console.error('Cannot regenerate: message not found or is first message');
+            return;
+        }
+        
+        const userMessage = this.messages[messageIndex - 1];
+        if (!userMessage || !userMessage.isUser) {
+            console.error('Cannot find user message to regenerate from');
+            return;
+        }
+        
+        const regenBtn = document.querySelector(`.regenerate-btn[data-message-id="${messageId}"]`);
+        if (regenBtn) {
+            regenBtn.textContent = '⟳';
+            regenBtn.classList.add('regenerating');
+            regenBtn.disabled = true;
+        }
+        
+        try {
+            const reAskedMessage = {
+                id: this.generateMessageId(),
+                text: userMessage.text,
+                isUser: true,
+                timestamp: new Date().toISOString(),
+                metadata: { regenerated: true }
+            };
+            
+            this.messages.push(reAskedMessage);
+            this.renderMessage(reAskedMessage);
+            this.saveHistory();
+            this.scrollToBottom(true);
+            
+            await this.sleep(300);
+            
+            this.isGeneratingResponse = true;
+            this.showTypingIndicator();
+            
+            const botResponse = await this.getBotResponse(userMessage.text);
+            this.hideTypingIndicator();
+            
+            await this.streamMessageText(botResponse.answer || botResponse, {
+                sources: botResponse.sources || [],
+                queryType: botResponse.query_type || 'unknown',
+                images: botResponse.images || [],
+                showImagesAfter: botResponse.show_images_after_ms || 0
+            });
+            
+            this.scrollToBottom(true);
+            
+        } catch (error) {
+            this.hideTypingIndicator();
+            console.error('Regeneration error:', error);
+            await this.streamMessageText(this.getErrorMessage(error), { type: 'error' });
+        } finally {
+            this.isGeneratingResponse = false;
+            
+            if (regenBtn && regenBtn.parentElement) {
+                regenBtn.textContent = '🔄';
+                regenBtn.classList.remove('regenerating');
+                regenBtn.disabled = false;
+            }
+        }
     }
 }
 
@@ -640,7 +891,7 @@ class PortfolioChatbot {
 document.addEventListener('DOMContentLoaded', function() {
     try {
         window.portfolioChatbot = new PortfolioChatbot();
-        console.log('Image-enabled chatbot initialized');
+        console.log('Enhanced chatbot initialized successfully');
     } catch (error) {
         console.error('Failed to initialize chatbot:', error);
     }
