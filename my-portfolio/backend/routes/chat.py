@@ -11,6 +11,12 @@ from services.rag_pipeline import RAGPipeline
 from services.safety import SafetyChecker
 from services.memory import ConversationMemory
 from config.settings import settings
+from config.fallback_answers import get_fallback_answer, DEFAULT_FALLBACK
+
+def _generate_simple_fallback(query: str, language: str) -> str:
+    if language == "ur":
+        return DEFAULT_FALLBACK  # or a separate Urdu registry later
+    return get_fallback_answer(query)
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -43,7 +49,11 @@ class ChatRequest(BaseModel):
         if v not in ['en', 'ur']:
             return 'en'
         return v
-
+class RetrievedChunk(BaseModel):
+        id: str = ""
+        content: str
+        source: str
+        score: float 
 class ChatResponse(BaseModel):
     answer: str = Field(..., description="Bot response")
     sources: List[str] = Field(default=[], description="Information sources")
@@ -55,6 +65,8 @@ class ChatResponse(BaseModel):
     images: List[Dict[str, str]] = Field(default=[], description="Images to display")
     show_images_after_ms: int = Field(default=0, description="Delay before showing images")
     response_length: Optional[str] = Field(default=None, description="Response length type")
+    retrieved_chunks: List[RetrievedChunk] = Field(default=[], description="Chunks used for this answer")
+    
 
 @router.post("/chat", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest, http_request: Request):
@@ -102,6 +114,7 @@ async def chat_endpoint(request: ChatRequest, http_request: Request):
             query_type = result.get("query_type", "general")
             images = result.get("images", [])
             show_images_after_ms = result.get("show_images_after_ms", 0)
+            retrieved_chunks = result.get("retrieved_chunks", [])
             response_length = result.get("response_length", None)
             
             logger.info("RAG pipeline processed successfully")
@@ -120,7 +133,7 @@ async def chat_endpoint(request: ChatRequest, http_request: Request):
         
         # Calculate processing time
         processing_time = (time.time() - start_time) * 1000
-        
+      
         # Build response - UPDATED with new fields
         response = ChatResponse(
             answer=response_text,
@@ -131,7 +144,8 @@ async def chat_endpoint(request: ChatRequest, http_request: Request):
             session_id=request.session_id,
             images=images,
             show_images_after_ms=show_images_after_ms,
-            response_length=response_length
+            response_length=response_length,
+            retrieved_chunks=retrieved_chunks
         )
         
         logger.info(f"Request processed in {processing_time:.2f}ms")
@@ -154,29 +168,6 @@ async def chat_endpoint(request: ChatRequest, http_request: Request):
             images=[],
             show_images_after_ms=0
         )
-
-def _generate_simple_fallback(query: str, language: str) -> str:
-    """Simple fallback response"""
-    if language == "ur":
-        return f"""معذرت، میں '{query}' کے بارے میں مکمل معلومات نہیں دے سکا۔
-
-میں عادل سعید کا AI Assistant ہوں۔ آپ پوچھ سکتے ہیں:
-- عادل کے projects
-- Technical skills
-- Educational background
-- Contact information
-
-📧 رابطہ: adilsaeed047@gmail.com"""
-    else:
-        return f"""I couldn't provide complete information about '{query}'.
-
-I'm Adil Saeed's AI Assistant. You can ask about:
-- Adil's projects
-- Technical skills  
-- Educational background
-- Contact information
-
-📧 Contact: adilsaeed047@gmail.com"""
 
 def _get_error_message(language: str) -> str:
     """Get error message"""

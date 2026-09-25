@@ -26,7 +26,7 @@ class ProjectsManager {
                 image: "../documents/Model-Risk-in-RA.jpg",
                 technologies: ["Python", "Pandas", "Scikit-learn", "NumPy"],
                 liveUrl: "#",
-                githubUrl: "#",
+                githubUrl: "https://github.com/AdilSaeed0347/Login_Risk_Model",
                 price: "$150",
                 rating: "4.8",
                 overview: "Analyzes login patterns to predict risks using RandomForestClassifier.",

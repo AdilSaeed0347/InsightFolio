@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/frontend/documents/Portfolio_Icon.png">
     <title>Home - My Portfolio</title>
         <!-- ADD THIS AS THE FIRST SCRIPT IN <head> -->
+    <script src="../env.js"></script>
     <script src="../config.js"></script>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/home.css">
@@ -18,7 +20,7 @@
             <div class="nav-container">
                 <h2 class="nav-logo">
                     <img src="../documents/logo.png" alt="Logo" class="nav-logo-icon">
-                    <span class="nav-logo-text">XAdilTeam</span>
+                    <span class="nav-logo-text">InsightFolio</span>
                 </h2>
                 <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span></span>
@@ -26,10 +28,10 @@
                     <span></span>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="home.html" class="active" aria-current="page">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/" class="active" aria-current="page">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -116,9 +118,7 @@
                                 <li data-index="4">CS50 Course</li>
                             </ul>
                         </div>
-                    </div></li>
-                              
-                            </ul>
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -157,12 +157,16 @@
             </span>
         </div>
         <div class="header-actions">
+            <button class="reset-chat-btn" id="reset-chat" title="Clear conversation" aria-label="Clear conversation">🗑️</button>
             <button class="close-chat" id="close-chat" aria-label="Close chat">×</button>
         </div>
     </div>
+
                 <div class="chat-messages" id="chat-messages">
                     <!-- Messages will be dynamically added here -->
                 </div>
+
+                <div id="suggested-questions" class="suggested-questions" aria-label="Suggested questions"></div>
                 <div class="chat-input-container">
                     <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off" maxlength="500" aria-label="Type your message here">
                     <button id="micBtn" class="mic-btn" title="Click to speak" aria-label="Use microphone">

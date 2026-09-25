@@ -243,6 +243,7 @@ class PortfolioChatbot {
             
             await this.streamMessageText(botResponse.answer || botResponse, {
                 sources: botResponse.sources || [],
+                chunks: botResponse.retrieved_chunks || [],
                 queryType: botResponse.query_type || 'unknown',
                 images: botResponse.images || [],
                 showImagesAfter: botResponse.show_images_after_ms || 0
@@ -261,8 +262,20 @@ class PortfolioChatbot {
         }
     }
 
-    async streamMessageText(text, metadata = {}) {
+       async streamMessageText(text, metadata = {}) {
         const messageId = this.generateMessageId();
+
+        let sourcesHTML = '';
+        if (metadata.chunks && metadata.chunks.length > 0) {
+            sourcesHTML = `
+                <button class="action-btn sources-btn" data-message-id="${messageId}" title="Sources">📎 ${metadata.chunks.length}</button>
+                <div class="source-panel" id="sources-${messageId}" style="display:none">
+                    ${metadata.chunks.map(c =>
+                        `<div class="source-chunk"><span class="source-score">${Math.round(c.score*100)}%</span> ${this.escapeHtml(c.content)}...</div>`
+                    ).join('')}
+                </div>`;
+        }
+
         const message = {
             id: messageId,
             text: text,
@@ -290,6 +303,7 @@ class PortfolioChatbot {
                 <button class="action-btn regenerate-btn" data-message-id="${messageId}" title="Regenerate response">
                     🔄
                 </button>
+                ${sourcesHTML}
             </div>
             <div class="message-time">${this.formatTime(new Date(message.timestamp))}</div>
         `;
@@ -297,11 +311,9 @@ class PortfolioChatbot {
 
         const contentDiv = messageElement.querySelector('.message-content');
 
-        // Parse and prepare the text with signature at the end
         let mainText = text;
         let hasSignature = false;
-        
-        // Check if text contains the signature
+
         if (text.includes('📚 Adil Data')) {
             mainText = text.replace(/📚 Adil Data/g, '').trim();
             hasSignature = true;
@@ -309,7 +321,6 @@ class PortfolioChatbot {
 
         const fullFormattedText = this.parseSimpleMarkdown(mainText);
 
-        // Stream the main content smoothly
         let i = 0;
         let currentHTML = '';
 
@@ -344,13 +355,11 @@ class PortfolioChatbot {
             i++;
         }
 
-        // Add signature cleanly at the end if it exists
         if (hasSignature) {
             const signatureHTML = '<div class="message-signature">📚 Adil Data</div>';
             contentDiv.innerHTML = currentHTML + signatureHTML;
         }
-        
-        // Attach event listeners after streaming completes
+
         const copyBtn = messageElement.querySelector('.copy-btn');
         const regenBtn = messageElement.querySelector('.regenerate-btn');
 
@@ -367,12 +376,20 @@ class PortfolioChatbot {
                 this.regenerateResponse(messageId);
             });
         }
-        
-        // Handle images with streaming effect
+
+        const sourcesBtn = messageElement.querySelector('.sources-btn');
+        if (sourcesBtn) {
+            sourcesBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const panel = document.getElementById(`sources-${messageId}`);
+                if (panel) panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+            });
+        }
+
         if (metadata.images && metadata.images.length > 0) {
             await this.handleImageDisplay(messageElement, metadata.images, metadata.showImagesAfter || 2500);
         }
-        
+
         this.scrollToBottom();
     }
 
@@ -479,6 +496,16 @@ class PortfolioChatbot {
 
     renderMessage(message) {
         const chatMessages = document.getElementById('chat-messages');
+        let sourcesHTML = '';
+if (message.metadata?.chunks?.length) {
+    sourcesHTML = `
+        <button class="action-btn sources-btn" data-message-id="${message.id}" title="Sources">📎 ${message.metadata.chunks.length}</button>
+        <div class="source-panel" id="sources-${message.id}" style="display:none">
+            ${message.metadata.chunks.map(c =>
+                `<div class="source-chunk"><span class="source-score">${Math.round(c.score*100)}%</span> ${this.escapeHtml(c.content)}...</div>`
+            ).join('')}
+        </div>`;
+}
         if (!chatMessages) return;
         
         const messageElement = document.createElement('div');
@@ -525,10 +552,11 @@ class PortfolioChatbot {
             }
             
             messageElement.innerHTML = `
-                <div class="message-content">${finalContent}</div>
-                ${actionsHTML}
-                <div class="message-time">${timeString}</div>
-            `;
+                  <div class="message-content">${finalContent}</div>
+                  ${actionsHTML}
+                  ${sourcesHTML}
+                  <div class="message-time">${timeString}</div>
+              `;
             
             if (!isDefault) {
                 requestAnimationFrame(() => {
@@ -545,6 +573,12 @@ class PortfolioChatbot {
                         this.regenerateResponse(message.id);
                     });
                 });
+                const sourcesBtn = messageElement.querySelector('.sources-btn');
+if (sourcesBtn) sourcesBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const panel = document.getElementById(`sources-${message.id}`);
+    if (panel) panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+});
             }
         }
         
@@ -864,6 +898,7 @@ class PortfolioChatbot {
             
             await this.streamMessageText(botResponse.answer || botResponse, {
                 sources: botResponse.sources || [],
+                chunks: botResponse.retrieved_chunks || [],
                 queryType: botResponse.query_type || 'unknown',
                 images: botResponse.images || [],
                 showImagesAfter: botResponse.show_images_after_ms || 0

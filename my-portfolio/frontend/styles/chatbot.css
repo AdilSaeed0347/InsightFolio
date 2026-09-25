@@ -579,3 +579,7 @@
     opacity: 0.6;
     margin-right: 4px;
 }
+
+.source-panel { margin-top: 6px; font-size: 0.82em; border-left: 2px solid #ccc; padding-left: 8px; }
+.source-chunk { margin-bottom: 6px; opacity: 0.85; }
+.source-score { font-weight: 600; margin-right: 6px; }

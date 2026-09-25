@@ -1,8 +1,9 @@
 {
-  "builds": [
-    { "src": "frontend/pages/index.html", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "frontend/pages/index.html" }
+  "rewrites": [
+    { "source": "/", "destination": "/pages/home.html" },
+    { "source": "/home", "destination": "/pages/home.html" },
+    { "source": "/about", "destination": "/pages/about.html" },
+    { "source": "/projects", "destination": "/pages/projects.html" },
+    { "source": "/contact", "destination": "/pages/contact.html" }
   ]
 }
