@@ -879,17 +879,15 @@ CITATIONS: [C#], [C#]
             txt = (resp.choices[0].message.content or "").strip()
         except Exception as exc:
             logger.error(f"Generation error: {exc}")
+            if chunks:
+                top = chunks[0]
+                raw = (top.get("content") or "").strip()
+                sentences = re.split(r'(?<=[.!?])\s+', raw)
+                snippet = " ".join(sentences[:3]).strip()
+                answer = f"{snippet}\n\n(Retrieved directly from Adil's portfolio data — AI-generated response temporarily unavailable.)"
+                sources = [self._safe_source_label(top, 1)]
+                return answer, sources, 0.4
             return get_fallback_answer(query), ["📎 Offline mode"], 0.3
-
-        answer, citation_ids = self._split_citations(txt)
-        sources = self._map_citations_to_sources(citation_ids, chunks)
-
-        grounded_ratio = min(1.0, len(citation_ids) / max(1, min(4, len(chunks))))
-        if not sources:
-            # fallback source list
-            sources = [self._safe_source_label(d, i + 1) for i, d in enumerate(chunks[:2])]
-
-        return answer, sources, grounded_ratio
 
     @staticmethod
     def _split_citations(text: str) -> Tuple[str, List[str]]:

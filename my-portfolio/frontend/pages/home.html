@@ -124,60 +124,47 @@
                 </div>
             </div>
         </section>
-
-        <!-- Enhanced Chatbot Code -->
-        <div id="chatbot-container">
-            <div id="chatbot-button" class="chatbot-button">
-                <div id="chatbot-button" class="chatbot-button">
-  <!-- Professional SMS/Chat Icon -->
-  <svg xmlns="http://www.w3.org/2000/svg" 
-       viewBox="0 0 24 24" 
-       class="chatbot-icon">
-    <path d="M20 2H4c-1.1 0-2 .9-2 2v16l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
-    <line x1="7" y1="9" x2="17" y2="9" stroke="white" stroke-width="2" stroke-linecap="round"/>
-    <line x1="7" y1="13" x2="13" y2="13" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  </svg>
-</div>
-
-                <!-- <div class="chat-message">✋ How can I help you?</div> -->
-            </div>
-
-            <!-- 👇 Runtime Welcome Popup -->
-           <div id="chatbot-welcome" class="welcome-popup hidden">
-             👋 Hi, I’m AdilChat, How can I help you.
-             </div>
-
-
-            <div id="chat-window" class="chat-window hidden">
-    <div class="chat-header">
-        <div class="header-info">
-            <h3>AdilChat</h3>
-            <span class="online-status">
-                <span class="status-dot"></span> Online
-            </span>
-        </div>
-        <div class="header-actions">
-            <button class="reset-chat-btn" id="reset-chat" title="Clear conversation" aria-label="Clear conversation">🗑️</button>
-            <button class="close-chat" id="close-chat" aria-label="Close chat">×</button>
-        </div>
+<!-- Enhanced Chatbot Code -->
+<div id="chatbot-container">
+    <div id="chatbot-button" class="chatbot-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="chatbot-icon">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v16l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+            <line x1="7" y1="9" x2="17" y2="9" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="7" y1="13" x2="13" y2="13" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
     </div>
 
-                <div class="chat-messages" id="chat-messages">
-                    <!-- Messages will be dynamically added here -->
-                </div>
+    <!-- 👇 Runtime Welcome Popup -->
+    <div id="chatbot-welcome" class="welcome-popup hidden">
+        👋 Hi, I'm AdilChat, How can I help you.
+    </div>
 
-                <div id="suggested-questions" class="suggested-questions" aria-label="Suggested questions"></div>
-                <div class="chat-input-container">
-                    <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off" maxlength="500" aria-label="Type your message here">
-                    <button id="micBtn" class="mic-btn" title="Click to speak" aria-label="Use microphone">
-                        🎤
-                    </button>
-                    <button id="send-btn" class="send-btn" title="Send message" aria-label="Send message">➤</button>
-                </div>
+    <div id="chat-window" class="chat-window hidden">
+        <div class="chat-header">
+            <div class="header-info">
+                <h3>AdilChat</h3>
+                <span class="online-status">
+                    <span class="status-dot"></span> Online
+                </span>
+            </div>
+            <div class="header-actions">
+                <button class="reset-chat-btn" id="reset-chat" title="Clear conversation" aria-label="Clear conversation">🗑️</button>
+                <button class="close-chat" id="close-chat" aria-label="Close chat">×</button>
             </div>
         </div>
+
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+
+        <div id="suggested-questions" class="suggested-questions" aria-label="Suggested questions"></div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off" maxlength="500" aria-label="Type your message here">
+            <button id="micBtn" class="mic-btn" title="Click to speak" aria-label="Use microphone">🎤</button>
+            <button id="send-btn" class="send-btn" title="Send message" aria-label="Send message">➤</button>
+        </div>
     </div>
-    <!-- Page wrapper-container closing tag -->
+</div>    <!-- Page wrapper-container closing tag -->
     <div id="footer-container"></div>
 
     <script src="../utils/navigation.js"></script>

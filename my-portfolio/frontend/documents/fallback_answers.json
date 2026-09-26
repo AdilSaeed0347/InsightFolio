@@ -1,0 +1,130 @@
+{
+  "about_assistant": {
+    "triggers": ["who are you", "your name", "what is adilchat", "what can you do", "what can you help", "are you a bot", "are you ai"],
+    "answer": "I'm AdilChat, an AI assistant created by Adil Saeed to share information about his education, skills, projects, experience, and how to get in touch with him."
+  },
+  "professional_summary": {
+    "triggers": ["who is adil", "tell me about adil", "about adil", "introduce", "summary", "overview of adil", "background"],
+    "answer": "Adil Saeed is a Software Engineering undergraduate at IMSciences, Peshawar (GPA 3.67), focused on AI, Machine Learning, Deep Learning, NLP, and Computer Vision. He completed the GIKI Full Stack AI Bootcamp, multiple DeepLearning.AI courses by Andrew Ng, and leads AI/ML initiatives as a Microsoft Learn Student Ambassador."
+  },
+  "skills_programming": {
+    "triggers": ["programming language", "coding language", "python", "java", "javascript", "sql", "code in"],
+    "answer": "Adil's core programming languages are Python, Java, JavaScript, HTML, CSS, SQL, and MySQL."
+  },
+  "skills_ai_ml": {
+    "triggers": ["ai skill", "ml skill", "machine learning", "deep learning", "neural network", "nlp skill", "computer vision skill", "llm skill"],
+    "answer": "Adil's AI/ML skill set covers Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing, and Large Language Models, using Scikit-learn, TensorFlow, and PyTorch."
+  },
+  "skills_tools": {
+    "triggers": ["tools", "framework", "tech stack", "git", "github", "opencv", "faiss", "huggingface", "gradio", "jupyter", "vs code"],
+    "answer": "Adil's toolset includes Git/GitHub, Jupyter Notebook, VS Code, OpenCV, FAISS, HuggingFace, and Gradio, alongside Google Cloud Platform fundamentals."
+  },
+  "education_current": {
+    "triggers": ["education", "degree", "university", "college", "gpa", "imsciences", "what is he studying", "bachelor"],
+    "answer": "Adil is pursuing a BASc in Computer Software Engineering at IMSciences, Peshawar (September 2023 – September 2027), with a 3.67 GPA, specializing in Web Development, Machine Learning, Software Architecture, and System Design."
+  },
+  "education_earlier": {
+    "triggers": ["diploma", "dit", "hssc", "ssc", "pre-medical", "high school", "before university", "islamia college"],
+    "answer": "Before university, Adil completed a Diploma in Information Technology from Mandani Institute, HSSC (Pre-Medical) from Islamia College Peshawar, and SSC (Pre-Medical) from New Islamia School and College, Charsadda — all with Grade A."
+  },
+  "bootcamp": {
+    "triggers": ["bootcamp", "giki bootcamp", "training program", "full stack ai"],
+    "answer": "Adil completed the GIKI ML → LLM Bootcamp 2025 (July 2025), a 4-week intensive program covering Machine Learning, Deep Learning, CNNs, RNNs, Computer Vision, NLP, LLMs, and MLOps."
+  },
+  "projects_overview": {
+    "triggers": ["project", "portfolio", "built", "what has he built", "apps", "creations", "work he did"],
+    "answer": "Adil's key projects include a Multilingual RAG Chatbot for GIKI, a Sentiment Analysis System (85% precision), a Heart Disease Prediction model (90% recall), a Face Recognition app, a Login Risk Detection model, and an OCR Text Recognition system."
+  },
+  "project_rag_chatbot": {
+    "triggers": ["rag chatbot", "giki prospectus", "prospectus chatbot", "rag project", "retrieval augmented"],
+    "answer": "Adil built a Multilingual RAG Chatbot (English/Urdu) for GIKI's prospectus queries, using Python, FAISS vector search, HuggingFace embeddings, and a Gradio interface, developed during his GIKI internship."
+  },
+  "project_sentiment": {
+    "triggers": ["sentiment analysis", "text classification", "tf-idf"],
+    "answer": "Adil built a Sentiment Analysis System using Python, Scikit-learn, TF-IDF, and Logistic Regression, achieving 85% precision in classifying text sentiment."
+  },
+  "project_face_recognition": {
+    "triggers": ["face recognition", "facial detection", "cnn project"],
+    "answer": "Adil developed a real-time Face Recognition application using Python, OpenCV, and Convolutional Neural Networks, improving accuracy through transfer learning."
+  },
+  "project_heart_disease": {
+    "triggers": ["heart disease", "cardio", "cardiovascular", "medical prediction"],
+    "answer": "Adil built CardioDiagnosis, a heart disease prediction model using Random Forest and SVM, achieving 90% recall for cardiovascular risk assessment, validated with ROC curves and cross-validation."
+  },
+  "project_login_risk": {
+    "triggers": ["login risk", "anomaly detection", "security model", "fraud"],
+    "answer": "Adil built a Login Risk Detection model using RandomForestClassifier and anomaly detection to identify suspicious login patterns in real time."
+  },
+  "project_ocr": {
+    "triggers": ["ocr", "text recognition", "text extraction", "tesseract"],
+    "answer": "Adil developed an OCR Text Recognition system using Python, Tesseract OCR, and OpenCV, supporting PNG, JPEG, JPG, BMP, and DOCX formats with direct copy/export functionality."
+  },
+  "project_other": {
+    "triggers": ["crop yield", "attendance system", "agriculture project", "database project"],
+    "answer": "Other projects include a Crop Yield Prediction pipeline using regression models for agricultural forecasting, and a Student Attendance Management System built with MySQL."
+  },
+  "experience_overview": {
+    "triggers": ["experience", "job", "internship", "work experience", "career history"],
+    "answer": "Adil's experience includes a Project Internship at GIKI (Summer 2025), the role of AI/ML Lead at Microsoft Learn Student Ambassadors (2024–present), and Technical Team Member at MLSA Peshawar."
+  },
+  "experience_giki": {
+    "triggers": ["giki intern", "giki internship", "summer 2025"],
+    "answer": "As a Project Intern at GIKI (Summer 2025), Adil developed a RAG Chatbot for prospectus queries, applying ML in NLP and vector search alongside hands-on AI research experience."
+  },
+  "experience_mlsa": {
+    "triggers": ["mlsa", "microsoft learn", "ai/ml lead", "student ambassador"],
+    "answer": "As AI/ML Lead for Microsoft Learn Student Ambassadors (2024–present), Adil has led technical workshops on ML/DL/NLP for 50+ students, mentoring peers in ethical, scalable AI applications."
+  },
+  "experience_ambassador": {
+    "triggers": ["ambassador", "digital architect", "conference", "moderated"],
+    "answer": "Adil served as Ambassador for the Digital Architect Conference 2025, representing IMSciences at a six-day international event and moderating sessions on AI and digital transformation."
+  },
+  "certifications": {
+    "triggers": ["certification", "certificate", "coursera", "andrew ng", "credential", "awards"],
+    "answer": "Adil holds the GIKI Full Stack AI Bootcamp certificate, three DeepLearning.AI (Coursera) specializations by Andrew Ng, GCP Fundamentals from SimpleLearn, and the Digital Architect Conference Ambassador certificate from IEC."
+  },
+  "achievements": {
+    "triggers": ["achievement", "award", "prime minister", "laptop scheme", "highlight"],
+    "answer": "Adil's key achievements include selection for the Prime Minister's Laptop Scheme (First Merit List), a 3.67 GPA in Software Engineering, and leading AI/ML workshops for 50+ students as a Microsoft Learn Student Ambassador."
+  },
+  "contact": {
+    "triggers": ["contact", "email", "reach", "hire", "get in touch", "connect with"],
+    "answer": "You can reach Adil at adilsaeed047@gmail.com (preferred for professional inquiries), or connect via LinkedIn and GitHub linked on the Contact page."
+  },
+  "social_media": {
+    "triggers": ["linkedin", "github", "facebook", "medium", "twitter", "social media", "x account"],
+    "answer": "Adil is active on LinkedIn (linkedin.com/in/adil-saeed-9b7b51363), GitHub (github.com/AdilSaeed0347), Facebook, Medium, and X/Twitter — all linked on the Contact page."
+  },
+  "research_interests": {
+    "triggers": ["research", "research interest", "low resource", "urdu nlp", "pashto"],
+    "answer": "Adil's research interests include ML/DL model optimization, Computer Vision, NLP for low-resource languages like Urdu and Pashto, and healthcare/energy AI applications."
+  },
+  "career_goals": {
+    "triggers": ["goals", "future plans", "roadmap", "ms degree", "master's", "career vision"],
+    "answer": "Adil plans to pursue an MS in AI/ML research, and is currently mastering LangChain, LlamaIndex, Agentic AI workflows, and cloud deployment on platforms like Vercel, Render, and Pinecone."
+  },
+  "mentors_family": {
+    "triggers": ["mentor", "inspiration", "brother", "asad", "sir ali imran", "family"],
+    "answer": "Adil is mentored by his elder brother Asad Ali, a Software Engineer, and finds his primary AI inspiration in Sir Ali Imran Sindhu at GIKI, who guided his bootcamp participation and research direction."
+  },
+  "soft_skills": {
+    "triggers": ["soft skill", "leadership", "communication", "problem solving", "teamwork"],
+    "answer": "Adil's soft skills include leadership (as AI/ML Lead and Ambassador), effective communication through session moderation and mentoring, problem-solving in real-world AI applications, and strong time management."
+  },
+  "languages": {
+    "triggers": ["languages spoken", "speak", "english", "urdu", "pashto fluency"],
+    "answer": "Adil is fluent in English (professional/academic), native in Urdu, and proficient in Pashto — relevant to his research interest in low-resource language NLP."
+  },
+  "availability": {
+    "triggers": ["available", "hire him", "freelance", "open to work", "opportunity"],
+    "answer": "Adil is open to AI/ML internships, freelance projects, research collaborations, open-source contributions, and junior AI engineer roles — remote or onsite — particularly in RAG systems, LLM fine-tuning, and low-resource NLP."
+  },
+  "location": {
+    "triggers": ["location", "where is he", "city", "based in", "time zone"],
+    "answer": "Adil is based in Peshawar, Khyber Pakhtunkhwa, Pakistan (PKT, UTC+5)."
+  },
+  "values": {
+    "triggers": ["values", "philosophy", "work philosophy", "motivation quote"],
+    "answer": "Adil believes in focused excellence — 'Focus means saying no to many good opportunities to say yes to a few great ones' — along with consistency, ethical AI development, and using technology for social good in Pakistan."
+  }
+}
