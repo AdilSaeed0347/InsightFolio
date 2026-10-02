@@ -64,7 +64,7 @@ class PortfolioChatbot {
 
     async loadFallbackData() {
     try {
-        const res = await fetch('../documents/fallback_answers.json');
+        const res = await fetch('/documents/fallback_answers.json');
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         this.fallbackData = await res.json();
     } catch (e) {
