@@ -10,7 +10,7 @@ import logging
 import time
 from datetime import datetime, timedelta
 from typing import Dict, List, Any, Optional, Tuple
-# from config.fallback_answers import get_fallback_answer
+from config.fallback_answers import get_fallback_answer
 
 from groq import AsyncGroq
 from config.settings import settings

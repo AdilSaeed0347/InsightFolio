@@ -11,7 +11,7 @@ from services.rag_pipeline import RAGPipeline
 from services.safety import SafetyChecker
 from services.memory import ConversationMemory
 from config.settings import settings
-# from config.fallback_answers import get_fallback_answer, DEFAULT_FALLBACK
+from config.fallback_answers import get_fallback_answer, DEFAULT_FALLBACK
 
 def _generate_simple_fallback(query: str, language: str) -> str:
     if language == "ur":
