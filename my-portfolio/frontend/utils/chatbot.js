@@ -62,45 +62,122 @@ class PortfolioChatbot {
     if (window.showSuggestedQuestions) window.showSuggestedQuestions();
 }
 
-    async loadFallbackData() {
+   async loadFallbackData() {
     try {
         const res = await fetch('/documents/fallback_answers.json');
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         this.fallbackData = await res.json();
+        console.log(`Fallback data loaded: ${Object.keys(this.fallbackData).length} categories`);
     } catch (e) {
         console.warn('Fallback data failed to load:', e);
         this.fallbackData = {};
     }
+    this.buildFallbackIndex();
 }
 
+// Builds a Fuse.js fuzzy-search index plus a TF-IDF document-frequency
+// table over the fallback entries, once, after the JSON loads.
+buildFallbackIndex() {
+    const data = this.fallbackData || {};
+    this.fallbackEntries = Object.keys(data).map(key => ({
+        key,
+        triggers: data[key].triggers,
+        searchText: data[key].triggers.join(' '),
+        answer: data[key].answer
+    }));
+
+    if (typeof Fuse === 'undefined' || this.fallbackEntries.length === 0) {
+        console.warn('Fuse.js unavailable or no fallback entries — using plain substring matching.');
+        this.fuseIndex = null;
+        return;
+    }
+
+    this.fuseIndex = new Fuse(this.fallbackEntries, {
+        keys: ['searchText'],
+        includeScore: true,
+        threshold: 0.45,        // 0 = exact only, 1 = match almost anything
+        ignoreLocation: true,
+        minMatchCharLength: 3
+    });
+
+    // Document frequency per word, across all entries — needed for TF-IDF
+    this.fallbackDocFreq = {};
+    this.fallbackEntries.forEach(entry => {
+        const seen = new Set();
+        entry.triggers.forEach(trigger => {
+            trigger.toLowerCase().split(/\s+/).forEach(word => {
+                if (word.length < 3 || seen.has(word)) return;
+                seen.add(word);
+                this.fallbackDocFreq[word] = (this.fallbackDocFreq[word] || 0) + 1;
+            });
+        });
+    });
+}
+
+// TF-IDF relevance score of one fallback entry against the query's words.
+scoreEntryTfIdf(queryWords, entry) {
+    const totalDocs = this.fallbackEntries.length || 1;
+    const entryWords = entry.searchText.toLowerCase().split(/\s+/);
+    let score = 0;
+    queryWords.forEach(qw => {
+        if (qw.length < 3) return;
+        const termFreq = entryWords.filter(w => w === qw).length;
+        if (termFreq === 0) return;
+        const df = this.fallbackDocFreq[qw] || 1;
+        const idf = Math.log(totalDocs / df + 1);
+        score += termFreq * idf;
+    });
+    return score;
+}
 getClientFallbackAnswer(query) {
     const q = query.toLowerCase();
-    const data = this.fallbackData || {};
-    let bestKey = null;
+    const queryWords = q.split(/\s+/).filter(w => w.length >= 3);
+
+    let bestEntry = null;
     let bestScore = 0;
 
-    for (const key in data) {
-        const entry = data[key];
-        let score = 0;
-        for (const trigger of entry.triggers) {
-            if (q.includes(trigger)) score += trigger.split(' ').length;
-        }
-        if (score > bestScore) {
-            bestScore = score;
-            bestKey = key;
+    if (this.fuseIndex) {
+        // Stage 1 — Fuse.js: fuzzy search narrows to the top candidates,
+        // tolerating typos and reordered/partial phrasing.
+        const fuseResults = this.fuseIndex.search(q, { limit: 5 });
+
+        // Stage 2 — TF-IDF: among those candidates, pick the one whose
+        // trigger vocabulary is most specifically relevant to this query
+        // (rare, meaningful words count more than common ones).
+        fuseResults.forEach(result => {
+            const tfidf = this.scoreEntryTfIdf(queryWords, result.item);
+            const fuzzyCloseness = 1 - result.score;   // Fuse: 0 = perfect match
+            const combined = tfidf + fuzzyCloseness * 2;
+            if (combined > bestScore) {
+                bestScore = combined;
+                bestEntry = result.item;
+            }
+        });
+    } else {
+        // Safety net if Fuse.js failed to load — original substring matching.
+        const data = this.fallbackData || {};
+        for (const key in data) {
+            const entry = data[key];
+            let score = 0;
+            for (const trigger of entry.triggers) {
+                if (q.includes(trigger)) score += trigger.split(' ').length;
+            }
+            if (score > bestScore) {
+                bestScore = score;
+                bestEntry = { key, answer: entry.answer };
+            }
         }
     }
 
-    if (bestKey) {
-        const entry = data[bestKey];
+    if (bestEntry && bestScore > 0.3) {
         return {
-            answer: entry.answer + "\n\n(Offline mode — full responses resume once the server reconnects.)",
+            answer: bestEntry.answer + "\n\n(Offline mode — full responses resume once the server reconnects.)",
             sources: ["📎 Adil_Data (Offline • Verified)"],
             retrieved_chunks: [{
                 id: 'OFFLINE',
-                content: entry.answer,
+                content: bestEntry.answer,
                 source: '✅ Verified — Adil_Data (Offline mode)',
-                score: Math.min(1, bestScore / 4)
+                score: Math.min(1, bestScore / 5)
             }],
             query_type: "offline_fallback",
             confidence: 0.5
