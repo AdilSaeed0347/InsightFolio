@@ -3,9 +3,9 @@ class ContactForm {
         this.form = document.getElementById('contact-form');
         this.submitBtn = this.form?.querySelector('.submit-btn');
         this.messageDiv = document.getElementById('form-message');
-        this.API_URL = (window.CONFIG && window.CONFIG.BACKEND_URL
-         ? window.CONFIG.BACKEND_URL
-         : "http://127.0.0.1:8000") + "/api/v1/contact";
+        // Same-origin Vercel serverless function (frontend/api/contact.js).
+        // No separate backend is needed any more.
+        this.API_URL = '/api/contact';
         this.init();
     }
 
@@ -37,18 +37,23 @@ class ContactForm {
                 body: JSON.stringify(data)
             });
 
-            const result = await response.json();
+            let result = {};
+            try {
+                result = await response.json();
+            } catch (e) {
+                /* non-JSON reply (e.g. the function isn't available locally) */
+            }
 
             if (response.ok) {
                 this.showMessage('Your message was sent successfully!', 'success');
                 this.form.reset();
             } else {
-                this.showMessage(result.detail || 'Something went wrong. Try again.', 'error');
+                this.showMessage(result.error || 'Something went wrong. Please try again.', 'error');
             }
 
         } catch (err) {
             console.error('Contact form error:', err);
-            this.showMessage('Could not reach the server. Is it running?', 'error');
+            this.showMessage('Could not send your message. Please check your connection and try again.', 'error');
         } finally {
             this.setLoading(false);
         }
@@ -90,4 +95,3 @@ class ContactForm {
 document.addEventListener('DOMContentLoaded', () => {
     new ContactForm();
 });
- 
