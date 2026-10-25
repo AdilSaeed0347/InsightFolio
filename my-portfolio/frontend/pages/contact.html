@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../documents/Portfolio_Icon.png">
   <title>Contact - My Portfolio</title>
   <!-- ADD THIS AS THE FIRST SCRIPT IN <head> -->
   <script src="../config.js"></script>
@@ -11,123 +12,394 @@
   <link rel="stylesheet" href="../styles/chatbot.css" />
 </head>
 <body>
+  <!-- Decorative background layer: gradient blobs + grid + noise. Fixed and
+       behind everything, purely visual, aria-hidden so screen readers skip it. -->
+  <div class="contact-bg" aria-hidden="true">
+    <span class="bg-blob bg-blob-1"></span>
+    <span class="bg-blob bg-blob-2"></span>
+    <span class="bg-grid"></span>
+    <span class="bg-noise"></span>
+  </div>
+
+  <!-- Cursor-follow glow (desktop only, disabled on touch / reduced-motion via JS) -->
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
   <div class="page-wrapper">
     <!-- Navbar -->
     <nav class="navbar">
       <div class="nav-container">
         <h2 class="nav-logo">
-    <a href="/" aria-label="Go to Home">
-        <img src="../documents/logo.png" alt="Logo" class="nav-logo-icon">
-        <span class="nav-logo-text">XAdilTeam</span>
-    </a>
-</h2>
+          <a href="/" aria-label="Go to Home">
+            <img src="../documents/logo.png" alt="Logo" class="nav-logo-icon">
+            <span class="nav-logo-text">InsightFolio</span>
+          </a>
+        </h2>
         <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
         <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/projects">Projects</a></li>
-    <li><a href="/contact" class="active" aria-current="page">Contact</a></li>
-</ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contact" class="active" aria-current="page">Contact</a></li>
+        </ul>
       </div>
     </nav>
     <div class="menu-overlay"></div>
 
     <main class="main-content">
+
+      <!-- ============================= HERO ============================= -->
       <section class="hero-section">
-        <div class="container" style="font-family: 'Times New Roman', Times, serif;">
-          <h1>Get In Touch</h1>
-          <p>I'd love to hear from you. Send me a message and I'll respond as soon as possible.</p>
+        <div class="container">
+          <h1 class="hero-title reveal" data-anim="fade-up">
+            Let's Build Something <span class="hero-highlight">Amazing</span> Together
+          </h1>
+          <span class="hero-underline reveal" data-anim="zoom" aria-hidden="true"></span>
+          <p class="hero-subtitle reveal" data-anim="fade-up" data-delay="120">
+            Have a project in mind, a role to discuss, or just want to say hello?
+            I'd love to hear from you — I usually reply within a day.
+          </p>
         </div>
       </section>
 
-      <section class="contact-section">
+      <!-- ===================== CONTACT INFO CARDS ===================== -->
+      <section class="info-cards-section">
         <div class="container">
-          <div class="contact-content">
-            <div class="contact-info">
-              <h2>Let's Connect</h2>
-              <div class="contact-item">
-                <h3>📧 Email</h3>
-                <p>adilahmad0347@gmail.com</p>
-              </div>
-              <div class="contact-item">
-                <h3>📱 Phone</h3>
-                <p>+92 3091914026</p>
-              </div>
-              <div class="contact-item">
-                <h3>📍 Location</h3>
-                <p>Charsadda, CH</p>
-              </div>
-              <div class="social-links">
-                <a href="https://www.linkedin.com/in/adil-saeed-9b7b51363/" target="_blank" class="social-link">LinkedIn</a>
-                <a href="https://github.com/AdilSaeed0347" target="_blank" class="social-link">GitHub</a>
-                <a href="https://x.com/AdilSaeed1058?t=vM9Sc7hCDQN3Mdzq0N_EUQ&s=09" target="_blank" class="social-link">Twitter</a>
-              </div>
+          <div class="info-cards-grid">
+
+            <div class="glass-card info-card tilt-card reveal" data-anim="fade-up" data-delay="0">
+              <span class="info-card-border" aria-hidden="true"></span>
+              <span class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4z" stroke-linejoin="round"/><path d="m4 7 8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <h3>Email</h3>
+              <p><a href="mailto:adilahmad0347@gmail.com">adilahmad0347@gmail.com</a></p>
             </div>
 
-            <div class="contact-form-container">
-              <form id="contact-form" class="contact-form" action="#" method="POST">
-                <div class="form-group">
-                  <label for="name">Full Name</label>
-                  <input type="text" id="name" name="name" required />
-                </div>
-                <div class="form-group">
-                  <label for="email">Email Address</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
-                <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="6" required></textarea>
-                </div>
-                <button type="submit" class="btn-primary submit-btn">Send Message</button>
-              </form>
-              <div id="form-message" class="form-message hidden"></div>
+            <div class="glass-card info-card tilt-card reveal" data-anim="fade-up" data-delay="80">
+              <span class="info-card-border" aria-hidden="true"></span>
+              <span class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+              </span>
+              <h3>Location</h3>
+              <p>Peshawar, Pakistan</p>
             </div>
+
+            <div class="glass-card info-card tilt-card reveal" data-anim="fade-up" data-delay="160">
+              <span class="info-card-border" aria-hidden="true"></span>
+              <span class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <h3>Time Zone</h3>
+              <p>PKT &middot; UTC+5</p>
+            </div>
+
+            <div class="glass-card info-card tilt-card reveal" data-anim="fade-up" data-delay="240">
+              <span class="info-card-border" aria-hidden="true"></span>
+              <span class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg>
+              </span>
+              <h3>Status</h3>
+              <p>Available for Freelance &amp; Full-Time Opportunities</p>
+            </div>
+
+            <div class="glass-card info-card tilt-card reveal" data-anim="fade-up" data-delay="320">
+              <span class="info-card-border" aria-hidden="true"></span>
+              <span class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke-linejoin="round"/></svg>
+              </span>
+              <h3>Response Time</h3>
+              <p>Usually replies within 24 hours</p>
+            </div>
+
           </div>
         </div>
       </section>
-    </main>
 
-     <!-- Chatbot
-    
-    <div id="chatbot-container">
-        <div id="chatbot-button" class="chatbot-button">
-            <div class="robot-icon">
-                <div class="robot-head">
-                    <div class="robot-eyes"></div>
+      <!-- ========================= MAIN CONTENT GRID ========================= -->
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+
+            <!-- ---------- LEFT COLUMN ---------- -->
+            <div class="contact-left">
+
+              <!-- Availability card -->
+              <div class="glass-card availability-card tilt-card reveal" data-anim="slide-right">
+                <div class="availability-header">
+                  <span class="pulse-dot" aria-hidden="true"></span>
+                  <h3>Currently Available</h3>
                 </div>
-                <div class="robot-body"></div>
-                <div class="robot-arm robot-arm-left"></div>
-                <div class="robot-arm robot-arm-right"></div>
+                <p class="availability-sub">Open for:</p>
+                <ul class="availability-list">
+                  <li><span class="check-icon" aria-hidden="true">✔</span> Freelance Projects</li>
+                  <li><span class="check-icon" aria-hidden="true">✔</span> Full-Time Jobs</li>
+                  <li><span class="check-icon" aria-hidden="true">✔</span> Remote Work</li>
+                  <li><span class="check-icon" aria-hidden="true">✔</span> Open Source Collaboration</li>
+                </ul>
+              </div>
+
+              <!-- Response time / chat mock -->
+              <div class="glass-card chat-card reveal" data-anim="slide-right" data-delay="120">
+                <h3 class="chat-card-title"><span aria-hidden="true">💬</span> How I Respond</h3>
+                <div class="chat-thread" id="chat-thread">
+                  <div class="chat-bubble chat-bubble-client" data-chat-step="1">
+                    <span class="chat-label">Client</span>
+                    <p>Hi, are you available for a new project?</p>
+                  </div>
+                  <div class="chat-typing" id="chat-typing" data-chat-step="2">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="chat-bubble chat-bubble-me" id="chat-reply" data-chat-step="3">
+                    <span class="chat-label">My Reply</span>
+                    <p>Yes! I'd love to hear more about your project.</p>
+                  </div>
+                </div>
+                <div class="response-time-footer">
+                  <span aria-hidden="true">⚡</span>
+                  <div>
+                    <strong>Average Response Time</strong>
+                    <span>Within 24 Hours</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Map -->
+              <div class="glass-card map-card reveal" data-anim="zoom" data-delay="160">
+                <span class="map-pin" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg>
+                </span>
+                <div class="map-skeleton" id="map-skeleton" aria-hidden="true"></div>
+                <iframe
+                  id="map-frame"
+                  class="map-frame"
+                  title="Map showing Peshawar, Pakistan"
+                  src="https://www.google.com/maps?q=Peshawar,Pakistan&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+
+              <!-- Resume download -->
+              <div class="resume-cta reveal" data-anim="fade-up">
+                <a href="../documents/AdilSaeed_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-glow resume-download-btn magnetic ripple-target">
+                  <span class="btn-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12" stroke-linecap="round"/><path d="m7 10 5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 19h16" stroke-linecap="round"/></svg>
+                  </span>
+                  Download Resume
+                </a>
+              </div>
+
+              <!-- Social icons: GitHub, LinkedIn, X, Reddit, Email only -->
+              <div class="social-section reveal" data-anim="fade-up">
+                <h3 class="social-title">Find Me Online</h3>
+                <div class="social-grid" id="social-grid">
+
+                  <a href="https://github.com/AdilSaeed0347" target="_blank" rel="noopener noreferrer"
+                     class="social-icon magnetic ripple-target" data-tooltip="GitHub" style="--i:0">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.35 4.68-4.58 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+                  </a>
+
+                  <a href="https://www.linkedin.com/in/adil-saeed-9b7b51363/" target="_blank" rel="noopener noreferrer"
+                     class="social-icon magnetic ripple-target" data-tooltip="LinkedIn" style="--i:1">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3.5a1.96 1.96 0 1 0 0 3.92 1.96 1.96 0 0 0 0-3.92ZM20.44 20h-3.37v-5.8c0-1.38-.03-3.15-1.92-3.15-1.93 0-2.22 1.5-2.22 3.05V20H9.56V8.5h3.24v1.57h.05c.45-.85 1.56-1.75 3.21-1.75 3.43 0 4.06 2.26 4.06 5.2V20Z"/></svg>
+                  </a>
+
+                  <a href="https://x.com/AdilSaeed1058" target="_blank" rel="noopener noreferrer"
+                     class="social-icon magnetic ripple-target" data-tooltip="X" style="--i:2">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644Z"/></svg>
+                  </a>
+
+                  <a href="https://www.reddit.com/u/Real_Option3410/s/lRcOVWgpJI" target="_blank" rel="noopener noreferrer"
+                     class="social-icon magnetic ripple-target" data-tooltip="Reddit" style="--i:3">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0Zm5.01 13.943c.034.211.052.427.052.646 0 2.318-2.703 4.199-6.038 4.199s-6.038-1.881-6.038-4.199c0-.219.018-.435.052-.646a1.635 1.635 0 0 1-.822-1.418 1.635 1.635 0 0 1 1.635-1.635c.44 0 .837.176 1.128.462a7.42 7.42 0 0 1 3.542-1.147l.673-3.164a.36.36 0 0 1 .415-.284l2.21.474a1.11 1.11 0 1 1 .012 1.261l-1.977-.423-.594 2.79a7.42 7.42 0 0 1 3.542 1.147 1.635 1.635 0 0 1 1.128-.462 1.635 1.635 0 0 1 1.635 1.635c0 .615-.34 1.15-.822 1.418ZM8.812 12.24a1.11 1.11 0 1 0 0 2.221 1.11 1.11 0 0 0 0-2.221Zm6.376 0a1.11 1.11 0 1 0 0 2.221 1.11 1.11 0 0 0 0-2.221Zm-5.376 3.943c1.083.72 3.293.72 4.376 0a.24.24 0 0 0-.267-.399c-.94.626-3.902.626-4.842 0a.24.24 0 0 0-.267.399Z"/></svg>
+                  </a>
+
+                  <a href="mailto:adilahmad0347@gmail.com"
+                     class="social-icon magnetic ripple-target" data-tooltip="Email" style="--i:4">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 6h16v12H4z" stroke-linejoin="round"/><path d="m4 7 8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+
+                </div>
+              </div>
+
             </div>
-            <div class="chat-message">How can I help you?</div>
-        </div>
-        <div id="chat-window" class="chat-window hidden">
-            <div class="chat-header">
-                <h3>XAdilTeam</h3>
-                <button class="close-chat" >×</button>
-            </div>
-            <div class="chat-messages" id="chat-messages">
-                <div class="message bot-message">
-                    <div class="message-content">
-                        Hi! I'm your AI assistant. Ask me anything about projects, skills, or experience!
+
+            <!-- ---------- RIGHT COLUMN: FORM ---------- -->
+            <div class="contact-right">
+              <div class="glass-card contact-form-container reveal" data-anim="slide-left">
+                <h2 class="form-title">Send a Message</h2>
+
+                <form id="contact-form" class="contact-form" action="#" method="POST" novalidate>
+
+                  <!-- Honeypot field: hidden from real users, bots tend to fill every field -->
+                  <div class="hp-field" aria-hidden="true">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+                  </div>
+
+                  <div class="form-group floating">
+                    <input type="text" id="name" name="name" required maxlength="80" placeholder=" ">
+                    <label for="name">Full Name</label>
+                    <span class="field-status" aria-hidden="true"></span>
+                    <span class="field-error" role="alert"></span>
+                  </div>
+
+                  <div class="form-group floating">
+                    <input type="email" id="email" name="email" required maxlength="120" placeholder=" ">
+                    <label for="email">Email Address</label>
+                    <span class="field-status" aria-hidden="true"></span>
+                    <span class="field-error" role="alert"></span>
+                  </div>
+
+                  <div class="form-group floating">
+                    <input type="text" id="subject" name="subject" required maxlength="120" placeholder=" ">
+                    <label for="subject">Subject</label>
+                    <span class="field-status" aria-hidden="true"></span>
+                    <span class="field-error" role="alert"></span>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group floating select-group">
+                      <select id="service" name="service" required>
+                        <option value="" disabled selected hidden></option>
+                        <option value="AI / ML Engineering"> ML Engineering</option>
+                        <option value="LLM / Chatbot Integration">AI Integration</option>
+                        <option value="Full-Stack Development">Full-Stack Development</option>
+                        <option value="Consulting">Consulting</option>
+                        <option value="Other">Other</option>
+                      </select>
+                      <label for="service">Service Required</label>
+                      <span class="field-error" role="alert"></span>
                     </div>
-                    <div class="message-time">Just now</div>
+
+                    <div class="form-group floating select-group">
+                      <select id="budget" name="budget">
+                        <option value="" selected>Not sure yet</option>
+                        <option value="Under $100">Under $100</option>
+                        <option value="$200 - $1000">$200 &ndash; $1000</option>
+                        <option value="$2000 - $3000">$2000 &ndash; $3000</option>
+                        <option value="$5000+">$5,000+</option>
+                      </select>
+                      <label for="budget">Budget (Optional)</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group floating">
+                    <textarea id="message" name="message" rows="5" required maxlength="2000" placeholder=" "></textarea>
+                    <label for="message">Message</label>
+                    <span class="char-counter"><span id="char-count">0</span>/2000</span>
+                    <span class="field-error" role="alert"></span>
+                  </div>
+
+                  <button type="submit" class="btn-glow submit-btn ripple-target">
+                    <span class="btn-label">Send Message</span>
+                    <span class="btn-spinner" aria-hidden="true"></span>
+                  </button>
+                </form>
+
+                <!-- Success state (hidden until a send succeeds) -->
+                <div id="form-success" class="form-success hidden">
+                  <span class="success-check" aria-hidden="true">
+                    <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="m14 27 8 8 16-16"/></svg>
+                  </span>
+                  <h3>Message Sent!</h3>
+                  <p>Thanks for reaching out I'll get back to you within 24 hours.</p>
+                  <button type="button" class="btn-glow send-another-btn">Send Another Message</button>
                 </div>
+
+                <div id="form-message" class="form-message hidden" aria-live="polite"></div>
+              </div>
             </div>
-            <div class="chat-input-container">
-                <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off">
-                <button id="send-btn" class="send-btn">➤</button>
-            </div>
+
+          </div>
         </div>
-    </div> -->
-</div>
+      </section>
+
+      <!-- ============================ FAQ ============================ -->
+      <section class="faq-section">
+        <div class="container">
+          <h2 class="section-title reveal" data-anim="fade-up">Frequently Asked Questions</h2>
+          <div class="faq-accordion">
+
+            <div class="faq-item reveal" data-anim="fade-up" data-delay="0">
+              <button class="faq-question" aria-expanded="false">
+                Do you work remotely?
+                <span class="faq-arrow" aria-hidden="true">▾</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes  I work remotely with clients and teams anywhere, and I'm comfortable with asynchronous communication across time zones.</p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal" data-anim="fade-up" data-delay="60">
+              <button class="faq-question" aria-expanded="false">
+                What technologies do you specialize in?
+                <span class="faq-arrow" aria-hidden="true">▾</span>
+              </button>
+              <div class="faq-answer">
+                <p>Python, FastAPI, LangChain/LangGraph, Hugging Face, PyTorch/TensorFlow, and building production RAG and agentic AI systems, alongside full-stack web development.</p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal" data-anim="fade-up" data-delay="120">
+              <button class="faq-question" aria-expanded="false">
+                Are you available for freelance work?
+                <span class="faq-arrow" aria-hidden="true">▾</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, I'm currently open to freelance projects as well as full-time opportunities — see the Status card above for the latest.</p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal" data-anim="fade-up" data-delay="180">
+              <button class="faq-question" aria-expanded="false">
+                Can we schedule a meeting?
+                <span class="faq-arrow" aria-hidden="true">▾</span>
+              </button>
+              <div class="faq-answer">
+                <p>Absolutely  send a message with a bit of context and a few times that work for you, and I'll confirm a slot.</p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal" data-anim="fade-up" data-delay="240">
+              <button class="faq-question" aria-expanded="false">
+                How quickly do you respond?
+                <span class="faq-arrow" aria-hidden="true">▾</span>
+              </button>
+              <div class="faq-answer">
+                <p>Usually within 24 hours — often sooner during the day (PKT, UTC+5).</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================== FINAL CTA ========================== -->
+      <section class="final-cta-section">
+        <canvas id="cta-particles" class="cta-particles" aria-hidden="true"></canvas>
+        <div class="container">
+          <h2 class="cta-title reveal" data-anim="zoom">Have an idea?</h2>
+          <p class="cta-subtitle reveal" data-anim="fade-up" data-delay="100">Let's turn it into reality.</p>
+          <a href="#contact-form" class="btn-glow cta-btn magnetic ripple-target reveal" data-anim="fade-up" data-delay="200">
+            Start a Conversation
+          </a>
+        </div>
+      </section>
+
+    </main>
+               
     <!-- Footer -->
     <div id="footer-container"></div>
 
+    <!-- Back to top (page-local; the shared footer partial is not modified here) -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 15 6-6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
 
   <script src="../utils/navigation.js"></script>
   <script src="../utils/common.js"></script>
